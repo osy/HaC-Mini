@@ -1,6 +1,7 @@
 /**
  * TB3 For NUC Hades Canyon
  */
+#define FORCE_POWER_GPIO_ADDRESS 0xFDAE0468
 DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 {
     External (\_SB.PCI0.RP05, DeviceObj)
@@ -93,6 +94,29 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
     Scope (\_SB.PCI0.RP05)
     {
+        OperationRegion (GPIO, SystemMemory, FORCE_POWER_GPIO_ADDRESS, 0x4)
+        Field (GPIO, AnyAcc, NoLock, Preserve)
+        {
+            FPGP, 32, 
+            Offset (0x04)
+        }
+
+        Method (_PS0, 0, Serialized)  // _PS0: Power State 0
+        {
+            FPGP = 1
+            Local0 = 10000 // 10 seconds
+            While (Local0 > 0 && \_SB.PCI0.RP05.PXSX.AVND == 0xFFFFFFFF)
+            {
+                Sleep (1)
+                Local0--
+            }
+        }
+
+        Method (_PS3, 0, Serialized)  // _PS3: Power State 3
+        {
+            //FPGP = 0
+        }
+
         Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
         {
             Return (Zero)
