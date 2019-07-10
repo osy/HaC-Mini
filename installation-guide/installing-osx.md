@@ -27,9 +27,8 @@ Note all data on the USB drive **will be erased**.
       4. UEFI Drivers -&gt; SMCHelper-64 \(for FakeSMC support\)
       5. UEFI Drivers -&gt; AptioMemoryFix-64 \(for FileVault support\)
       6. UEFI Drivers -&gt; HFSPlus \(for HFS+ support\)
-      7. UEFI Drivers -&gt; UsbKbDxe-64 \(USB Keyboard\)
-      8. UEFI Drivers -&gt; UsbMouseDxe-64 \(USB Mouse\)
-      9. FileVault 2 UEFI Drivers -&gt; AppleUISupport-64 \(for FileVault support\)
+      7. UEFI Drivers -&gt; UsbKbDxe-64 \(needed for FileVault support\)
+      8. FileVault 2 UEFI Drivers -&gt; AppleUISupport-64 \(for FileVault support\)
 6. Once the installation completes, you should see a new drive named **EFI** get mounted.
 7. Download the [HaC Mini release package](https://github.com/osy86/HaC-Mini/releases) and merge the `EFI` directory into the one on the EFI drive. Replace any existing file \(which should just be _config.plist_\).
 8. Safely remove the USB drive.

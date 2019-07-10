@@ -11,14 +11,14 @@ Please note that OSX software license prohibits running it on non-Apple hardware
 
 ### Drivers
 
-We will use a variety of drivers \(KEXTs\) to get all devices to work. Do not add any other KEXT such as WhateverGreen \(it does nothing for us\).
+We will use a variety of drivers \(KEXTs\) to get all devices to work. Do not add any other KEXT such as WhateverGreen \(it does nothing for us as IGPU is disabled\) or UsbInjectAll \(we use a custom SSDT\).
 
 * [FakeSMC](https://github.com/RehabMan/OS-X-FakeSMC-kozlek): required for all PCs to masquerade as a Macintosh
 * [IntelMausiEthernet](https://github.com/Mieze/IntelMausiEthernet): driver for the first ethernet port \(I219-LM\)
-* [AppleIGB](https://github.com/andyvand/Intel-OS-X-LAN-Driver/tree/master/AppleIGB): driver for the second ethernet port \(I210-at\)
+* [SmallTreeIntel](https://www.small-tree.com/support/download_category?cat_id=5): driver for the second ethernet port \(I210-at\), must be patched
 * [AppleALC](https://github.com/osy86/AppleALC): audio driver patches
-* [Polaris22Fixup](https://github.com/osy86/Polaris22Fixup): fix graphics issues for Vega M, a custom build of Lilu is needed for now
-* [Lilu](https://github.com/acidanthera/Lilu): kernel patching framework used by AppleALC and Polaris22Fixup
+* [Polaris22Fixup](https://github.com/osy86/Polaris22Fixup): fix graphics issues for Vega M
+* [Lilu](https://github.com/acidanthera/Lilu): kernel patching framework used by AppleALC
 * OldX4000HWLibs: macOS 10.14.5 broke Vega M support, so we load a patched version from 10.14.5 beta 1 instead
 
 All of the above are pre-built as part of the [HaC Mini release](https://github.com/osy86/HaC-Mini/releases).
