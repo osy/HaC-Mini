@@ -27,4 +27,3 @@ All of the above are pre-built as part of the [HaC Mini release](https://github.
 We will be doing a clean installation. That means the SSD will be wiped and **any existing data will be lost**. If you plan to boot Windows and/or Linux, it is advised that you install those systems after OSX.
 {% endhint %}
 
-* * * 

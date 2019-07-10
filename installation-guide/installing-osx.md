@@ -41,9 +41,9 @@ Note all data on the USB drive **will be erased**.
 4. You should see the Clover menu. Select the USB drive.
 5. The OSX installer should load.
    1. Partition your SSD using **Disk Utility**. You should wipe the entire drive and format it as APFS with GUID Partition Map. This will also create the EFI and Recovery partitions.
-   2. Installation will reboot a few times. Each time it reboots, you must press **F10** at boot and select the USB drive again.
+   2. Installation will reboot a few times. Each time it reboots, you must press **F10** at boot and boot from the USB drive again.
    3. Once in Clover, you should select the drive named **Boot macOS Install from ...** if it appears.
-6. After installation completes, you will boot into your new installation with the USB and select **Boot macOS from ...**.
+6. After installation completes, you should still boot from the USB drive and in Clover, select **Boot macOS from ...**.
 
 ### Installing Clover Bootloader
 
@@ -66,4 +66,3 @@ If you have an existing Clover installation, it will be replaced. Please back up
 
 You can now eject the USB installer and you no longer need it to boot into the system!
 
-1. 2. 3. 4. 
