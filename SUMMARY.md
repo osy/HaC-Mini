@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Mac vs HaC](untitled.md)
+* [Mac vs HaC](mac-vs-hac.md)
 
 ## Installation Guide
 
