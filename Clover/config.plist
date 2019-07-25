@@ -94,20 +94,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change XHC.GPEH to XHC1.GPEH</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1NCX1BDSTBYSENfR1BFSA==
-					</data>
-					<key>Replace</key>
-					<data>
-					X1NCX1BDSTBYSEMxR1BFSA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change PNP0C09 to PNPFFFF</string>
 					<key>Disabled</key>
 					<false/>
@@ -118,6 +104,48 @@
 					<key>Replace</key>
 					<data>
 					QdD//w==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HS09._UPC to HS09.XUPC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SFMwORQMX1VQQw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SFMwORQMWFVQQw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0ZYMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					SUdQVQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change H_EC to EC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SF9FQw==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
 					</data>
 				</dict>
 			</array>
@@ -134,7 +162,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>alcid=11</string>
+		<string>alcid=11 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -162,10 +190,8 @@
 			</dict>
 			<key>PciRoot(0)/Pci(31,0)</key>
 			<dict>
-				<key>device-id</key>
-				<data>
-				wZwAAA==
-				</data>
+				<key>name</key>
+				<string>pci8086,9cc1</string>
 			</dict>
 		</dict>
 	</dict>
@@ -173,6 +199,16 @@
 	<dict>
 		<key>Scan</key>
 		<true/>
+	</dict>
+	<key>Graphics</key>
+	<dict>
+		<key>Inject</key>
+		<dict>
+			<key>Intel</key>
+			<true/>
+		</dict>
+		<key>ig-platform-id</key>
+		<string>0x59120003</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
