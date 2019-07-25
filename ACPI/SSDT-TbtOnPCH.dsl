@@ -1,7 +1,6 @@
 /**
  * TB3 For NUC Hades Canyon
  */
-#define FORCE_POWER_GPIO_ADDRESS 0xFDAE0468
 DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 {
     External (\_SB.PCI0.RP05, DeviceObj)
@@ -15,47 +14,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.SS01, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.SS02, DeviceObj)
-
-    Method (DTGP, 5, NotSerialized)
-    {
-        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
-        {
-            If ((Arg1 == One))
-            {
-                If ((Arg2 == Zero))
-                {
-                    Arg4 = Buffer (One)
-                        {
-                             0x03                                             // .
-                        }
-                    Return (One)
-                }
-
-                If ((Arg2 == One))
-                {
-                    Return (One)
-                }
-            }
-        }
-
-        Arg4 = Buffer (One)
-            {
-                 0x00                                             // .
-            }
-        Return (Zero)
-    }
-
-    Method (OSDW, 0, NotSerialized)
-    {
-        If (CondRefOf (\_OSI, Local0))
-        {
-            If (_OSI ("Darwin"))
-            {
-                Return (One) // Is OSX
-            }
-        }
-        Return (Zero)
-    }
 
     Method (RWAK, 1, Serialized)
     {
@@ -81,7 +39,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
         // use NUC's own hot plug detection
         Method (NTFY, 1, Serialized)
         {
-            If (OSDW () && Arg0 == 0x05)
+            If (\_SB.PCI0.RP05.OSDW () && Arg0 == 0x05)
             {
                 Notify (\_SB.PCI0.RP05.PXSX.DSB0.NHI0, Zero) // TB3 controller
             }
@@ -94,27 +52,45 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
     Scope (\_SB.PCI0.RP05)
     {
-        OperationRegion (GPIO, SystemMemory, FORCE_POWER_GPIO_ADDRESS, 0x4)
-        Field (GPIO, AnyAcc, NoLock, Preserve)
+        Method (DTGP, 5, NotSerialized)
         {
-            FPGP, 32, 
-            Offset (0x04)
-        }
-
-        Method (_PS0, 0, Serialized)  // _PS0: Power State 0
-        {
-            FPGP = 1
-            Local0 = 10000 // 10 seconds
-            While (Local0 > 0 && \_SB.PCI0.RP05.PXSX.AVND == 0xFFFFFFFF)
+            If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
             {
-                Sleep (1)
-                Local0--
+                If ((Arg1 == One))
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        Arg4 = Buffer (One)
+                            {
+                                 0x03                                             // .
+                            }
+                        Return (One)
+                    }
+
+                    If ((Arg2 == One))
+                    {
+                        Return (One)
+                    }
+                }
             }
+
+            Arg4 = Buffer (One)
+                {
+                     0x00                                             // .
+                }
+            Return (Zero)
         }
 
-        Method (_PS3, 0, Serialized)  // _PS3: Power State 3
+        Method (OSDW, 0, NotSerialized)
         {
-            //FPGP = 0
+            If (CondRefOf (\_OSI, Local0))
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (One) // Is OSX
+                }
+            }
+            Return (Zero)
         }
 
         Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
@@ -327,15 +303,15 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
                     Name (HS, Package (0x01)
                     {
-                        "XHC1"
+                        "XHC"
                     })
                     Name (FS, Package (0x01)
                     {
-                        "XHC1"
+                        "XHC"
                     })
                     Name (LS, Package (0x01)
                     {
-                        "XHC1"
+                        "XHC"
                     })
 
                     Scope (RHUB)
@@ -358,17 +334,17 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
                             Name (HS, Package (0x02)
                             {
-                                "XHC1", 
+                                "XHC", 
                                 0x0C
                             })
                             Name (FS, Package (0x02)
                             {
-                                "XHC1", 
+                                "XHC", 
                                 0x0C
                             })
                             Name (LS, Package (0x02)
                             {
-                                "XHC1", 
+                                "XHC", 
                                 0x0C
                             })
                         }
@@ -391,17 +367,17 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                             
                             Name (HS, Package (0x02)
                             {
-                                "XHC1", 
+                                "XHC", 
                                 0x0D
                             })
                             Name (FS, Package (0x02)
                             {
-                                "XHC1", 
+                                "XHC", 
                                 0x0D
                             })
                             Name (LS, Package (0x02)
                             {
-                                "XHC1", 
+                                "XHC", 
                                 0x0D
                             })
                         }
