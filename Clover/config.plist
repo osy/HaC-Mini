@@ -68,7 +68,7 @@
 					<key>Comment</key>
 					<string>change XHC to XHC2 on TBDU</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					WEhDXwhfQURSAA==
@@ -82,7 +82,7 @@
 					<key>Comment</key>
 					<string>change TBDU.XHC to TBDU.XHC2</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					VEJEVVhIQ18=
