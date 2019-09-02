@@ -148,6 +148,20 @@
 					RUNfXw==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HECI to IMEI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SEVDSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					SU1FSQ==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>SSDT</key>
@@ -162,7 +176,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>alcid=11 -disablegfxfirmware</string>
+		<string>alcid=11 shikigva=32 shiki-id=Mac-BE088AF8C5EB4FA2 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -176,13 +190,6 @@
 	<dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0)/Pci(1,0)/Pci(0,0)</key>
-			<dict>
-				<key>device-id</key>
-				<data>
-				4GcAAA==
-				</data>
-			</dict>
 			<key>PciRoot(0)/Pci(1,2)/Pci(0,0)</key>
 			<dict>
 				<key>name</key>
