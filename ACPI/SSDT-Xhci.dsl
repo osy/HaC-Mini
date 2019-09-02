@@ -268,7 +268,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                         Return (Local0)
                     }
                 }
-
+/*
                 Scope (HS12) // TB3 USB-C HS/LS
                 {
                     Name (SSP, Package (0x02)
@@ -318,7 +318,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                         Return (Local0)
                     }
                 }
-
+*/
                 Scope (HS14) // not used
                 {
                     Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -356,12 +356,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
         }
-
-        Method (MBSD, 0, NotSerialized)
-        {
-            Return (One)
-        }
-
+/*
         Name (SSP, Package (0x01)
         {
             "XHC2"
@@ -370,6 +365,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
         {
             "XHC2"
         })
+*/
     }
 
     Device (\_SB.USBX)
