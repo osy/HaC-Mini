@@ -50,7 +50,7 @@ General buying advice for Mac mini is if you require high CPU performance and do
 
 \*\*Mac mini can be configured for 10Gb Ethernet for $100 extra.
 
-\*\*\*Requires [replacing the wireless card](installation-guide/wifi.md) for OSX to work.
+\*\*\*Requires [replacing the wireless card](post-installation/wifi.md) for OSX to work.
 
 \*\*\*\*Apple products rarely sell under MSRP while NUCs can often be found on sale for as much as 20% off.
 
