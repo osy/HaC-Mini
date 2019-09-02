@@ -8,7 +8,12 @@
 * [Getting Started](installation-guide/getting-started.md)
 * [BIOS Settings](installation-guide/bios-settings.md)
 * [Installation](installation-guide/installing-osx.md)
-* [Replacing Wifi Card](installation-guide/wifi.md)
+
+## Post-Installation
+
+* [Replacing Wifi Card](post-installation/wifi.md)
+* [Workarounds](post-installation/workarounds.md)
+* [Support](post-installation/support.md)
 
 ## Technical Details <a id="details"></a>
 
