@@ -23,12 +23,12 @@ Note all data on the USB drive **will be erased**.
    4. You'll want to check the following options \(you can also install any additional theme, but don't check anything else\):
       1. Clover for UEFI booting only
       2. Install Clover in the ESP
-      3. UEFI Drivers -&gt; ApfsDriverLoader-64 \(for APFS support\)
-      4. UEFI Drivers -&gt; SMCHelper-64 \(for FakeSMC support\)
-      5. UEFI Drivers -&gt; AptioMemoryFix-64 \(for FileVault support\)
-      6. UEFI Drivers -&gt; HFSPlus \(for HFS+ support\)
-      7. UEFI Drivers -&gt; UsbKbDxe-64 \(needed for FileVault support\)
-      8. FileVault 2 UEFI Drivers -&gt; AppleUISupport-64 \(for FileVault support\)
+      3. UEFI Drivers -&gt; Recommened drivers -&gt; ApfsDriverLoader \(for APFS support\)
+      4. UEFI Drivers -&gt; Recommened drivers -&gt; SMCHelper \(for FakeSMC support\)
+      5. UEFI Drivers -&gt; Recommened drivers -&gt; AptioMemoryFix \(for FileVault support\)
+      6. UEFI Drivers -&gt; Recommened drivers -&gt; HFSPlus \(for HFS+ support\)
+      7. UEFI Drivers -&gt; Human Interface Devices -&gt; UsbKbDxe \(needed for FileVault support\)
+      8. UEFI Drivers -&gt; FileVault 2 UEFI Drivers -&gt; AppleUiSupport \(for FileVault support\)
 6. Once the installation completes, you should see a new drive named **EFI** get mounted.
 7. Download the [HaC Mini release package](https://github.com/osy86/HaC-Mini/releases) and merge the `EFI` directory into the one on the EFI drive. Replace any existing file \(which should just be _config.plist_\).
 8. Safely remove the USB drive.
