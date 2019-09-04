@@ -10,20 +10,6 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					U0FUMA==
-					</data>
-					<key>Replace</key>
-					<data>
-					U0FUQQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change HDAS to HDEF</string>
 					<key>Disabled</key>
 					<false/>
@@ -199,6 +185,11 @@
 			<dict>
 				<key>name</key>
 				<string>pci8086,9cc1</string>
+			</dict>
+			<key>PciRoot(0)/Pci(23,0)</key>
+			<dict>
+				<key>name</key>
+				<string>pci8086,a102</string>
 			</dict>
 		</dict>
 	</dict>
