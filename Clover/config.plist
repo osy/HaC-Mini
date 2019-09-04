@@ -68,7 +68,7 @@
 					<key>Comment</key>
 					<string>change XHC to XHC2 on TBDU</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					WEhDXwhfQURSAA==
@@ -82,7 +82,7 @@
 					<key>Comment</key>
 					<string>change TBDU.XHC to TBDU.XHC2</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					VEJEVVhIQ18=
@@ -176,7 +176,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>alcid=11 shikigva=32 shiki-id=Mac-BE088AF8C5EB4FA2 -disablegfxfirmware</string>
+		<string>alcid=11 shikigva=32 shiki-id=Mac-BE088AF8C5EB4FA2</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
