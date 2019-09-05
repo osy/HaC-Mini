@@ -1057,15 +1057,15 @@
 			<dict>
 				<key>POSTINSTALL_PATH</key>
 				<dict>
-					<key>PATH</key>
-					<string>/Users/yifanlu/Library/Mobile Documents/com~apple~CloudDocs/Documents/Development/Other/HaC-Mini/Installer/set_backup.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>0</integer>
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
+					<key>PATH</key>
+					<string>set_backup.sh</string>
 					<key>PATH_TYPE</key>
-					<integer>0</integer>
+					<integer>1</integer>
 				</dict>
 				<key>RESOURCES</key>
 				<array/>
@@ -1111,15 +1111,15 @@
 			<dict>
 				<key>POSTINSTALL_PATH</key>
 				<dict>
-					<key>PATH</key>
-					<string>/Users/yifanlu/Library/Mobile Documents/com~apple~CloudDocs/Documents/Development/Other/HaC-Mini/Installer/set_security.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>0</integer>
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
+					<key>PATH</key>
+					<string>set_security.sh</string>
 					<key>PATH_TYPE</key>
-					<integer>0</integer>
+					<integer>1</integer>
 				</dict>
 				<key>RESOURCES</key>
 				<array/>
@@ -1165,15 +1165,15 @@
 			<dict>
 				<key>POSTINSTALL_PATH</key>
 				<dict>
-					<key>PATH</key>
-					<string>/Users/yifanlu/Library/Mobile Documents/com~apple~CloudDocs/Documents/Development/Other/HaC-Mini/Installer/set_regenserial.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>0</integer>
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
+					<key>PATH</key>
+					<string>set_regenserial.sh</string>
 					<key>PATH_TYPE</key>
-					<integer>0</integer>
+					<integer>1</integer>
 				</dict>
 				<key>RESOURCES</key>
 				<array/>
@@ -1212,9 +1212,22 @@
 		</dict>
 		<dict>
 			<key>MUST-CLOSE-APPLICATION-ITEMS</key>
-			<array/>
+			<array>
+				<dict>
+					<key>APPLICATION_ID</key>
+					<string>com.apple.InstallAssistant.Catalina</string>
+					<key>STATE</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>APPLICATION_ID</key>
+					<string>com.apple.InstallAssistant.Mojave</string>
+					<key>STATE</key>
+					<true/>
+				</dict>
+			</array>
 			<key>MUST-CLOSE-APPLICATIONS</key>
-			<false/>
+			<true/>
 			<key>PACKAGE_FILES</key>
 			<dict>
 				<key>DEFAULT_INSTALL_LOCATION</key>
