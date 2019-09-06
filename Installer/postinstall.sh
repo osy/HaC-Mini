@@ -45,5 +45,5 @@ else
 fi
 
 echo "Unmounting ESP..."
-umount "$EFI_ROOT_DIR"
+diskutil unmount "$EFI_ROOT_DIR"
 rm -f "$EFI_ROOT_DIR"

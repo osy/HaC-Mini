@@ -1903,8 +1903,8 @@
 											<integer>0</integer>
 											<key>IC_REQUIREMENT_FILES_LIST</key>
 											<array>
-												<string>/Install macOS Catalina.app/Contents/SharedSupport/InstallESD.dmg</string>
-												<string>/Install macOS Mojave.app/Contents/SharedSupport/InstallESD.dmg</string>
+												<string>/Install macOS Catalina.app/Contents/SharedSupport/InstallInfo.plist</string>
+												<string>/Install macOS Mojave.app/Contents/SharedSupport/InstallInfo.plist</string>
 											</array>
 											<key>IC_REQUIREMENT_FILES_SELECTOR</key>
 											<integer>0</integer>
@@ -2084,17 +2084,15 @@
 					<integer>3</integer>
 					<key>DICTIONARY</key>
 					<dict>
-						<key>IC_REQUIREMENT_OS_DISK_TYPE</key>
-						<integer>0</integer>
-						<key>IC_REQUIREMENT_OS_DISTRIBUTION_TYPE</key>
-						<integer>0</integer>
-						<key>IC_REQUIREMENT_OS_MINIMUM_VERSION</key>
-						<integer>101405</integer>
+						<key>IC_REQUIREMENT_JAVASCRIPT_FUNCTION</key>
+						<string>targetCheck</string>
+						<key>IC_REQUIREMENT_JAVASCRIPT_PARAMETERS</key>
+						<array/>
 					</dict>
 					<key>IC_REQUIREMENT_CHECK_TYPE</key>
 					<integer>1</integer>
 					<key>IDENTIFIER</key>
-					<string>fr.whitebox.Packages.requirement.os</string>
+					<string>fr.whitebox.Packages.requirement.javascript</string>
 					<key>MESSAGE</key>
 					<array>
 						<dict>
@@ -2314,11 +2312,19 @@
 	<key>SHARED_GLOBAL_DATA</key>
 	<dict>
 		<key>IC_REQUIREMENT_JAVASCRIPT_SHARED_SOURCE_CODE</key>
-		<string>function systemHasGPT(){
-	var obj = system.ioregistry.matchingName("EFI System Partition");
-	if (obj)
-		return true;
-	return false;
+		<string>function isInOsxInstaller(){
+	var args = system.sysctl('kern.bootargs');
+	res = args.match(/root-dmg=file.*BaseSystem\.dmg/g);
+	return res !== null;
+}
+
+function isMinVer(){
+	var sysVer = (my.target.systemVersion || system.files.plistAtPath(my.target.mountpoint + "/System/Library/CoreServices/SystemVersion.plist"));
+	return system.compareVersions(sysVer.ProductVersion, '10.14.5') &gt;= 0;
+}
+
+function targetCheck(){
+	return isInOsxInstaller() || isMinVer();
 }</string>
 	</dict>
 	<key>TYPE</key>
