@@ -2,7 +2,7 @@
 name: Installer bug report
 about: Issues with installer
 title: ''
-labels: ''
+labels: installer
 assignees: ''
 
 ---
