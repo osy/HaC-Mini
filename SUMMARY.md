@@ -5,15 +5,18 @@
 
 ## Installation Guide
 
-* [Getting Started](installation-guide/getting-started.md)
 * [BIOS Settings](installation-guide/bios-settings.md)
-* [Installation](installation-guide/installing-osx.md)
 
 ## Post-Installation
 
 * [Replacing Wifi Card](post-installation/wifi.md)
 * [Workarounds](post-installation/workarounds.md)
 * [Support](post-installation/support.md)
+
+## Legacy Guide \(Clover\)
+
+* [Getting Started](legacy-guide-clover/legacy-getting-started.md)
+* [Installation](legacy-guide-clover/legacy-installing-osx.md)
 
 ## Technical Details <a id="details"></a>
 

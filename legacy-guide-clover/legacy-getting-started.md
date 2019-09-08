@@ -1,9 +1,12 @@
 # Getting Started
 
+**This is the legacy guide that uses Clover and requires the user to manually set up the settings. It is recommended that everyone use the new guide with the automated installer. These pages are retained here for historical and educational purposes.**
+
 ### Prerequisites
 
 * A Mac or another Hackintosh to prepare the installer
 * USB flash drive with at least 16GB of storage
+* [BIOS settings](../installation-guide/bios-settings.md)
 
 {% hint style="info" %}
 Please note that OSX software license prohibits running it on non-Apple hardware.
@@ -21,7 +24,7 @@ We will use a variety of drivers \(KEXTs\) to get all devices to work. Do not ad
 * [Lilu](https://github.com/acidanthera/Lilu): kernel patching framework used by AppleALC
 * OldX4000HWLibs: macOS 10.14.5 broke Vega M support, so we load a patched version from 10.14.5 beta 1 instead
 
-All of the above are pre-built as part of the [HaC Mini release](https://github.com/osy86/HaC-Mini/releases).
+All of the above are pre-built as part of the [HaC Mini release](https://github.com/osy86/HaC-Mini/releases) \(use version v1.x for legacy Clover\).
 
 {% hint style="warning" %}
 We will be doing a clean installation. That means the SSD will be wiped and **any existing data will be lost**. If you plan to boot Windows and/or Linux, it is advised that you install those systems after OSX.

@@ -6,7 +6,7 @@ The goal of this guide is to create the perfect Mac mini alternative using the I
 
 This guide is in two parts. The installation guide are for those who just want to get everything working. The details section goes into more technical details about the inner workings of the various patches and pieces glued together to make it all work. The recommended audience for the second part are for those with technical knowledge and interest in how things work.
 
-[Get started with the build!](installation-guide/getting-started.md)
+[Get started with the build!](legacy-guide-clover/legacy-getting-started.md)
 
 ### Status
 
