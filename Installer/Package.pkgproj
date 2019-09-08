@@ -2302,7 +2302,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>HaC Mini</string>
+			<string>HaCMini</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>
