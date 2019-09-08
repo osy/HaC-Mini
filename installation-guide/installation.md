@@ -58,12 +58,13 @@ We will be doing a clean installation. That means the SSD will be wiped and **an
 {% endhint %}
 
 1. Insert your newly created USB installer into any USB slot and power on the NUC.
-2. Press **F10** at the prompt to get into the boot menu.
-3. Select your USB drive and press enter.
+2. Press **F2** to enter BIOS and in **Boot** -&gt; **Boot Priority**, make sure your USB drive is first.
+3. Reboot and you should boot into the OSX installer
+   1. If not, you need to [get into the boot picker](../post-installation/support.md#getting-into-boot-picker-menu) menu and select the installer.
 4. The OSX installer should load.
    1. Partition your SSD using **Disk Utility**. You should wipe the entire drive and format it as APFS with GUID Partition Map. This will also create the EFI and Recovery partitions.
-   2. Installation will reboot a few times. Each time it reboots, you must press **F10** at boot and boot from the USB drive again.
-5. After installation completes, you can remove the USB and boot from your SSD.
+   2. Installation will reboot a few times. Because USB has first boot priority, you do not have to touch anything.
+5. After installation completes, you can remove the USB and boot from your SSD. You can revert the boot priority changes if desired.
 
 ### Installing other OS
 
