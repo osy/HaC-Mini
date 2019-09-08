@@ -12,6 +12,8 @@ fi
 
 EFI_ROOT_DIR="${DEST_VOL}"/EFIROOTDIR
 OLD_CONFIG="$INSTALLER_TEMP/config.old.plist"
+NEW_CONFIG="$EFI_ROOT_DIR/EFI/OC/config.plist"
+PLIST_BUDDY="/usr/libexec/PlistBuddy"
 
 # Regenerate serial
 if [ ! -f "$INSTALLER_TEMP/regenserial" ]; then
@@ -35,9 +37,12 @@ if [ -d "$INSTALLER_TEMP/Old" ]; then
 fi
 
 echo "Setting up unique identifiers..."
-./copy_serial.sh "$OLD_CONFIG" "$EFI_ROOT_DIR/EFI/OC/config.plist"
+./copy_serial.sh "$OLD_CONFIG" "$NEW_CONFIG"
 
 if [ -f "$INSTALLER_TEMP/security" ]; then
+    echo "Setting secure boot settings..."
+    $PLIST_BUDDY -c "Set :Misc:Security:RequireSignature true" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Set :Misc:Security:RequireVault true" "$NEW_CONFIG"
 	echo "Generating secure vault..."
 	./sign_oc.sh "$EFI_ROOT_DIR/EFI/OC"
 else
