@@ -83,4 +83,5 @@ You should never use MultiBeast or similar OSX "distributions" as they include b
 
 1. Download the installer and run **HaCMini.pkg**
 2. Run the installer to completion \(that's it\)
+3. If you're updating from an OpenCore release \(v2.0+\) then your previous serial/UUID will be preserved by default. If you're updating from a Clover release \(v1.x\), then a new serial/UUID will be generated. If you wish to use your old values, you need to manually edit `EFI/OC/config.plist` and copy the values over from `EFI/Clover/config.plist`.
 
