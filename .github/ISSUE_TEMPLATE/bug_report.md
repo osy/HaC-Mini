@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Issues with installation
+about: Issues after installation
 title: ''
 labels: bug
 assignees: ''
