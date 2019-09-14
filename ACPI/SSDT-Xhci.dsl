@@ -34,6 +34,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
     External (\_SB.PCI0.XHC.RHUB.SS10, DeviceObj)    // (from opcode)
     External (\_SB.PCI0.XHC.RHUB.USR1, DeviceObj)    // (from opcode)
     External (\_SB.PCI0.XHC.RHUB.USR2, DeviceObj)    // (from opcode)
+    External (\_SB.PCI0.XHC._PRW, MethodObj)
 
     Scope (\_SB.PCI0.XHC)
     {
@@ -390,6 +391,17 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
             }
 
             Return (Zero)
+        }
+    }
+
+    Device (\_SB.USBW)
+    {
+        Name (_HID, "PNP0D10")  // _HID: Hardware ID
+        Name (_UID, "WAKE")  // _UID: Unique ID
+
+        Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+        {
+            Return (\_SB.PCI0.XHC._PRW ())
         }
     }
 }
