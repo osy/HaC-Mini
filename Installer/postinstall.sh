@@ -10,7 +10,8 @@ else
     DEST_VOL="$3"
 fi
 
-EFI_ROOT_DIR="${DEST_VOL}"/EFIROOTDIR
+DEST_TMP="${DEST_VOL}"/tmp
+EFI_ROOT_DIR="${DEST_TMP}"/EFIROOTDIR
 OLD_CONFIG="$INSTALLER_TEMP/config.old.plist"
 NEW_CONFIG="$EFI_ROOT_DIR/EFI/OC/config.plist"
 PLIST_BUDDY="/usr/libexec/PlistBuddy"
@@ -52,3 +53,7 @@ fi
 echo "Unmounting ESP..."
 diskutil unmount "$EFI_ROOT_DIR"
 rm -f "$EFI_ROOT_DIR"
+
+if [ -f "$INSTALLER_TEMP/faketmp" ]; then
+    rmdir -p "$DEST_TMP" || true
+fi

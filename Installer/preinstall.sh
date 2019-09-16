@@ -16,8 +16,15 @@ else
     DEST_VOL="$3"
 fi
 
-EFI_ROOT_DIR="${DEST_VOL}"/EFIROOTDIR
+DEST_TMP="${DEST_VOL}"/tmp
+EFI_ROOT_DIR="${DEST_TMP}"/EFIROOTDIR
 OLD_CONFIG="$INSTALLER_TEMP/config.old.plist"
+
+if [ ! -d "$DEST_TMP" ]; then
+    echo "Creating $DEST_TMP"
+    mkdir -p "$DEST_TMP"
+    touch "$INSTALLER_TEMP/faketmp"
+fi
 
 echo "Mounting ESP to $EFI_ROOT_DIR"
 ./mount_esp.sh "$DEST_VOL" "$EFI_ROOT_DIR"
