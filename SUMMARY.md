@@ -25,4 +25,5 @@
 * [Clover Settings Annotated](details/clover-settings-annotated.md)
 * [Thunderbolt 3 Fix](details/thunderbolt-3-fix.md)
 * [HDA Fix](details/hda-fix.md)
+* [USB Fix](details/usb-fix.md)
 
