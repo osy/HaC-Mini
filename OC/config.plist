@@ -441,8 +441,6 @@
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
 			<string>C07WT1YGJYVX</string>
-			<key>SystemUUID</key>
-			<string>B5E5FF1C-C573-4819-8419-EBF16775B613</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
