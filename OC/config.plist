@@ -393,11 +393,13 @@
 		<dict>
 			<key>HibernateMode</key>
 			<string>None</string>
-			<key>HideSelf</key>
-			<true/>
 			<key>UsePicker</key>
 			<true/>
 		</dict>
+		<key>BlessOverride</key>
+		<array>
+			<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
+		</array>
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>

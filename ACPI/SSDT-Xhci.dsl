@@ -369,39 +369,43 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 */
     }
 
-    Device (\_SB.USBX)
+    // These ACPI fixes only apply to OSX
+    If (\_SB.PCI0.XHC.OSDW ())
     {
-        Name(_ADR, 0)
-        Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+        Device (\_SB.USBX)
         {
-            If (\_SB.PCI0.XHC.OSDW ())
+            Name(_ADR, 0)
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
-                If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
+                If (\_SB.PCI0.XHC.OSDW ())
                 {
-                    Local0 = Package ()
-                        {
-                            "kUSBSleepPortCurrentLimit", 1500,
-                            "kUSBSleepPowerSupply", 9600,
-                            "kUSBWakePortCurrentLimit", 1500,
-                            "kUSBWakePowerSupply", 9600,
-                        }
-                    \_SB.PCI0.XHC.DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
-                    Return (Local0)
+                    If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
+                    {
+                        Local0 = Package ()
+                            {
+                                "kUSBSleepPortCurrentLimit", 1500,
+                                "kUSBSleepPowerSupply", 9600,
+                                "kUSBWakePortCurrentLimit", 1500,
+                                "kUSBWakePowerSupply", 9600,
+                            }
+                        \_SB.PCI0.XHC.DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                        Return (Local0)
+                    }
                 }
+
+                Return (Zero)
             }
-
-            Return (Zero)
         }
-    }
 
-    Device (\_SB.USBW)
-    {
-        Name (_HID, "PNP0D10")  // _HID: Hardware ID
-        Name (_UID, "WAKE")  // _UID: Unique ID
-
-        Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+        Device (\_SB.USBW)
         {
-            Return (\_SB.PCI0.XHC._PRW ())
+            Name (_HID, "PNP0D10")  // _HID: Hardware ID
+            Name (_UID, "WAKE")  // _UID: Unique ID
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+                Return (\_SB.PCI0.XHC._PRW ())
+            }
         }
     }
 }
