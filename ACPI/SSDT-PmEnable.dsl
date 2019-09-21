@@ -1,7 +1,7 @@
 /**
- * XCPM enable by adding plugin-type
+ * Enable OSX power management features
  */
-DefinitionBlock ("", "SSDT", 2, "OSY86 ", "LoadXcpm", 0x00001000)
+DefinitionBlock ("", "SSDT", 2, "OSY86 ", "PmEnable", 0x00001000)
 {
     External (\_PR.PR00, ProcessorObj)
 
@@ -48,6 +48,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "LoadXcpm", 0x00001000)
             Return (Zero)
         }
 
+        // This enables XCPM
         Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
         {
             If (OSDW ())
@@ -64,6 +65,24 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "LoadXcpm", 0x00001000)
             }
 
             Return (Zero)
+        }
+    }
+
+    Scope (\_SB)
+    {
+        // This enables deep idle
+        Method (LPS0, 0, NotSerialized)
+        {
+            Return (One)
+        }
+    }
+     
+    Scope (\_GPE)
+    {
+        // This tells xnu to evaluate _GPE.Lxx methods on resume
+        Method (LXEN, 0, NotSerialized)
+        {
+            Return (One)
         }
     }
 }

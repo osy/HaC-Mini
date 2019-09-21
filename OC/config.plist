@@ -8,11 +8,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Enable XCPM</string>
+				<string>Enable power management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-LoadXcpm.aml</string>
+				<string>SSDT-PmEnable.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
