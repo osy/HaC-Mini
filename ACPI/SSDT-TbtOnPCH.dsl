@@ -8,6 +8,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
     External (XWAK, MethodObj) // renamed in Clover patch
     External (\_GPE.XTFY, MethodObj) // renamed in Clover patch
     External (\_SB.PCI0.RP05.VDID, FieldUnitObj)
+    External (\_SB.TBFP, MethodObj)    // 1 Arguments (from opcode)
 
     External (\_SB.PCI0.RP05.PXSX.TBDU, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2, DeviceObj)
@@ -96,6 +97,24 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
         Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
         {
             Return (Zero)
+        }
+
+        If (OSDW ()) // only do force power patch for OSX
+        {
+            Method (_PS0, 0, Serialized)  // _PS0: Power State 0
+            {
+                \_SB.TBFP (One)
+                Local0 = 10000 // 10 seconds
+                While (Local0 > 0 && \_SB.PCI0.RP05.PXSX.AVND == 0xFFFFFFFF)
+                {
+                    Sleep (1)
+                    Local0--
+                }
+            }
+
+            Method (_PS3, 0, Serialized)  // _PS3: Power State 3
+            {
+            }
         }
 
         Scope (PXSX)
@@ -218,7 +237,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                             Local0 = Package (0x03)
                                 {
                                     "power-save", 
-                                    One, 
+                                    Zero, 
                                     Buffer (One)
                                     {
                                          0x00                                             // .

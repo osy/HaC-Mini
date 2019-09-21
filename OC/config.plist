@@ -464,6 +464,7 @@
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
 			<string>VirtualSmc.efi</string>
+			<string>TbtForcePower.efi</string>
 		</array>
 		<key>Protocols</key>
 		<dict>
