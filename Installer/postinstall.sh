@@ -25,7 +25,7 @@ fi
 # Backup
 if [ -d "$INSTALLER_TEMP/Old" ]; then
     if [ -f "$INSTALLER_TEMP/backup" ]; then
-        backupRootDir="$DEST_VOL/EFI-Backups" # backup on destination volume (default)
+        backupRootDir="$DEST_VOL/Library/EFI-Backups" # backup on destination volume (default)
         backupDir="${backupRootDir}/OC/"$( date -j "+%F-%Hh%M" )
         echo "Backing up old OC to $backupDir"
         mkdir -p "$backupDir"

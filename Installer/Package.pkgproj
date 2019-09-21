@@ -1790,7 +1790,7 @@
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>If checked, existing installation will be copied to /EFI-Backups. Otherwise, existing EFI/OC will be deleted including all configurations, patches, drivers, etc.</string>
+										<string>If checked, existing installation will be copied to /Library/EFI-Backups. Otherwise, existing EFI/OC will be deleted including all configurations, patches, drivers, etc.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
