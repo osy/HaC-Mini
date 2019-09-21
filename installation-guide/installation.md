@@ -13,6 +13,7 @@ A brand new clean install is the recommended way. Existing installations may hav
 ### Prerequisites
 
 * A Mac or another Hackintosh to prepare the installer
+* macOS 10.14.5+ installer
 * USB flash drive with at least 16GB of storage
 
 {% hint style="info" %}
@@ -25,7 +26,7 @@ Please note that OSX software license prohibits running it on non-Apple hardware
 Note all data on the USB drive **will be erased**.
 {% endhint %}
 
-1. On another OSX machine \(or another Hackintosh\), download **macOS Mojave** from the [App Store](https://apps.apple.com/us/app/macos-mojave/id1398502828).
+1. On another OSX machine \(or another Hackintosh\), download **macOS Mojave** or higher from the [App Store](https://apps.apple.com/us/app/macos-mojave/id1398502828).
 2. Insert your USB drive and open up Terminal.
 3. Open up Disk Utility to format your USB drive:
    1. Find your USB drive in the left sidebar under External \(if there are multiple sub-drives under your USB drive, select the top-most one\).
@@ -68,7 +69,7 @@ We will be doing a clean installation. That means the SSD will be wiped and **an
 
 ### Installing other OS
 
-After you install OSX, you can optionally install other operating systems. Directions are outside the scope of this guide. The recommended order of installation is: OSX, Windows, Linux. After you install everything, OpenCore will get overwritten by Windows. You need to restore it with the following command \(run as Administrator in Windows\).
+After you install OSX, you can optionally install other operating systems. Directions are outside the scope of this guide. The recommended order of installation is: OSX, Windows, Linux. After you install everything, OpenCore will get overwritten by Windows. You need to restore it with the following command \(run as Administrator in Windows PowerShell\). You need to trigger the [boot picker menu](../post-installation/support.md#getting-into-boot-picker-menu) to boot into Windows.
 
 ```text
 bcdedit /set '{bootmgr}' path \EFI\OC\OpenCore.efi

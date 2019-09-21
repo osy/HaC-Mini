@@ -8,6 +8,26 @@ Support are provided in the following ways:
 
 Do **not** ask for help in tonymacx86 \(better yet, stop going to tonymacx86!\). They do not permit discussion of anything except for their own "approved" installation methods--which are all pretty problematic. We tried to provide help there in the past but was banned for linking to a non-tonymac approved guide.
 
+## Known Issues
+
+Outstanding issues are tracked and worked on in the [Github issues](https://github.com/osy86/HaC-Mini/issues). Some of the most common unresolved issues are documented here along with possible workarounds.
+
+### [USB disconnected on sleep wakeup](https://github.com/osy86/HaC-Mini/issues/8)
+
+This is a hardware issue and cannot be worked around without Intel support or extensive kernel patching. If you require a USB device to not be disconnected \(an external HDD for example\), you can use the blue USB 3.0 Type A port on the front of the NUC. This port is connected to the CPU directly \(does not go through the buggy PCH\) and does not exhibit the same wakeup issue. However, it does experience a separate issue where if you have the device connected before powering on, then it will get disconnected after the first sleep. You should either plug in the device after OSX boots or suffer a single disconnect before the issue goes away. 
+
+### Thunderbolt 3 ports not working
+
+If a firmware bug/crash happens the TB3 controller does not automatically reset when the computer restarts. You need to either do a full power reset \(power down, unplug, wait a minute, re-plug\) or restart with a TB3 or USB-C device plugged into a TB3 port to trigger a controller reset.
+
+### [Audio issues](https://github.com/osy86/HaC-Mini/issues/4)
+
+The front HP jack is not working yet, use the back audio out with your headphones. The headphone mic will not work. Digital out does not work either.
+
+### Black screen on reboot
+
+If you have Windows installed, make sure fast boot is disabled in both BIOS and in Windows settings. Sometimes even with fast boot disabled, the NUC will still try to fast-boot into Windows. As a result you will see the display power on and your USB devices power on but nothing shows up on screen. If you get into this situation, you need to power off the NUC then hold the power button until the power LED turns on and then off \(it turns on when you press down and turns off after holding it for ~10 seconds\). Then press the power button again and repeatedly tap F10. If successful, you should see the boot menu, where you can proceed to select the boot device. If unsuccessful, try pressing Ctrl+Alt+Del and then repeatedly tap F10 again. If still unsuccessful, try the whole thing again. If after several attempts it still doesn't boot, you need to open the case and remove the BIOS Security Jumper \(see [section 2.2.3.4](https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC8i7HVK_TechProdSpec.pdf)\).
+
 ## Troubleshooting
 
 Before asking for help, make sure you try all the following troubleshooting advice first.

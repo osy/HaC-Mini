@@ -11,7 +11,6 @@
 ## Post-Installation
 
 * [Replacing Wifi Card](post-installation/wifi.md)
-* [Workarounds](post-installation/workarounds.md)
 * [Support](post-installation/support.md)
 
 ## Legacy Guide \(Clover\)

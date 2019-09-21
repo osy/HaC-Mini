@@ -10,7 +10,39 @@ We see that a [WMI device](https://github.com/torvalds/linux/blob/master/drivers
 
 On OSX, it's not as easy because the PCI drivers does not play well with a non-hotplug device that can power on independent of the device's PCI power management functions. If you try to write a device driver for the WMI device and manage to power on the controller, it still will not work 100% of the time because there is a race with the PCI drivers which enumerates the PCI devices. It seems that having PCI verbose logging is the only way to trigger the TB force power mechanism consistently.
 
-A better solution is to write a custom Clover driver that powers on the TB3 controller _before_ XNU boot and [thanks to al3x](https://github.com/osy86/ThunderboltPkg), that solves the race issue with trying to do force power during XNU boot. We also do the force power during sleep resume by using the device's `_PS0` ACPI function. XNU calls it during wakeup.
+A better solution is to write a custom Clover driver that powers on the TB3 controller _before_ XNU boot and [thanks to al3x](https://github.com/osy86/ThunderboltPkg), that solves the race issue with trying to do force power during XNU boot.
+
+Since we cannot modify the UEFI S3 resume script, we rely on the ACPI methods to restore force power on resume. The OSX PCI driver will execute the `_PS0` method before restoring the device. The first attempt was to add the following:
+
+```text
+    Scope (\_SB.PCI0.RP05)
+    {
+        Method (_PS0, 0, Serialized)  // _PS0: Power State 0
+        {
+            \_SB.TBFP (One)
+        }
+    }
+```
+
+Unfortunally this did not work because the Thunderbolt controller takes an non-insignificant amount of time to start up. This leads to another race condition where if OSX probes the device before the controller starts up, it will panic. Even worse, if the panic happens in middle of the controller firmware init, it would make the controller stop responding until a full power reset. Instead we modify script to wait for the controller to fully init.
+
+```text
+    Scope (\_SB.PCI0.RP05)
+    {
+        Method (_PS0, 0, Serialized)  // _PS0: Power State 0
+        {
+            \_SB.TBFP (One)
+            Local0 = 10000 // 10 seconds
+            While (Local0 > 0 && \_SB.PCI0.RP05.PXSX.AVND == 0xFFFFFFFF)
+            {
+                Sleep (1)
+                Local0--
+            }
+        }
+    }
+```
+
+This waits up to 10 seconds for the controller to start up after a force power event. It's also important to wait on the `PXSX` device \(the Thunderbolt NHI\). Originally the code waited on just `RP05` to start up and that worked 50% of the time because `PXSX` takes a little bit longer to settle and we only made the race closer.
 
 ### Hotplug Event
 
@@ -97,12 +129,6 @@ Once again, we cannot update existing code so we have to get creative to hook th
         })
     }
 ```
-
-### USB Companion Device
-
-We might notice that a USB 2.0 device plugged into an adapter doesn't work with hotplugging. This is because the TB3 XHCI controller does not handle USB HS/LS and instead passes it along to the system's other XHCI controller. OSX calls these "companion" controllers and if we reproduce what the 2016 MBP does, we can see how the companion controllers find each other. On the NUC, the processor `XHC` bus hosts the HS USB companion ports \(we boot up with the USB 2.0 device attached and see that `HS12` and `HS13` are the right ports\). We make sure that the USB Injector knows this and injects the proper properties. We also make sure to inject the companion properties as well.
-
-Finally, there is an annoying quirk in the NUC's SDST tables. The TB3 XHC device is also called `XHC` and since the companion port matching is by name, we can't have both XHC devices have the same name. The fix is to rename the TB3 device to `XHC2` and we can do that with Clover.
 
 
 

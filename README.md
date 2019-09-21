@@ -1,6 +1,6 @@
 # Welcome
 
-The goal of this guide is to create the perfect Mac mini alternative using the Intel NUC **Ha**des **C**anyon \(NUC8i7HNK/NUC8i7HVK\) and **macOS Mojave**. This guide is not for setting up a Hackintosh for any other configuration \(although many of the steps are the same across most configurations\). For a general Hackintosh guide, the [Vanilla Hackintosh Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) is highly recommended and is the main source of inspiration for this guide.
+The goal of this guide is to create the perfect Mac mini alternative using the Intel NUC **Ha**des **C**anyon \(NUC8i7HNK/NUC8i7HVK\) and **macOS**. This guide is not for setting up a Hackintosh for any other configuration \(although many of the steps are the same across most configurations\). For a general Hackintosh guide, the [Vanilla Hackintosh Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) is highly recommended and is the main source of inspiration for this guide.
 
 ### Overview
 
