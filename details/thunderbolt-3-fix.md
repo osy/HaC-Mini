@@ -10,7 +10,7 @@ We see that a [WMI device](https://github.com/torvalds/linux/blob/master/drivers
 
 On OSX, it's not as easy because the PCI drivers does not play well with a non-hotplug device that can power on independent of the device's PCI power management functions. If you try to write a device driver for the WMI device and manage to power on the controller, it still will not work 100% of the time because there is a race with the PCI drivers which enumerates the PCI devices. It seems that having PCI verbose logging is the only way to trigger the TB force power mechanism consistently.
 
-A better solution is to write a custom Clover driver that powers on the TB3 controller _before_ XNU boot and [thanks to al3x](https://github.com/osy86/ThunderboltPkg), that solves the race issue with trying to do force power during XNU boot.
+A better solution is to write a custom Clover driver that powers on the TB3 controller _before_ XNU boot and [thanks to al3x](https://github.com/al3xtjames/ThunderboltPkg), that solves the race issue with trying to do force power during XNU boot.
 
 Since we cannot modify the UEFI S3 resume script, we rely on the ACPI methods to restore force power on resume. The OSX PCI driver will execute the `_PS0` method before restoring the device. The first attempt was to add the following:
 
