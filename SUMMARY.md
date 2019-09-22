@@ -17,12 +17,13 @@
 
 * [Getting Started](legacy-guide-clover/legacy-getting-started.md)
 * [Installation](legacy-guide-clover/legacy-installing-osx.md)
+* [Clover Settings Annotated](legacy-guide-clover/clover-settings-annotated.md)
 
 ## Technical Details <a id="details"></a>
 
 * [Metal Driver Fix](details/metal-driver-fix.md)
-* [Clover Settings Annotated](details/clover-settings-annotated.md)
 * [Thunderbolt 3 Fix](details/thunderbolt-3-fix.md)
 * [HDA Fix](details/hda-fix.md)
 * [USB Fix](details/usb-fix.md)
+* [Secure Boot](details/secure-boot.md)
 

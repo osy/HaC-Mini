@@ -50,7 +50,7 @@ Note all data on the USB drive **will be erased**.
 Now we will move Clover from the installation USB to your boot drive so you can boot without having the USB inserted.
 
 {% hint style="warning" %}
-If you have an existing Clover installation, it will be replaced. Please back up anything you need. Note that most KEXTs and patches blindly recommended by most guides are actually not needed for our setup. Details of the Clover configuration [can be found here](../details/clover-settings-annotated.md).
+If you have an existing Clover installation, it will be replaced. Please back up anything you need. Note that most KEXTs and patches blindly recommended by most guides are actually not needed for our setup. Details of the Clover configuration [can be found here](clover-settings-annotated.md).
 {% endhint %}
 
 1. Download and install [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) \([alternative download link](https://www.macupdate.com/app/mac/61090/clover-configurator)\).
