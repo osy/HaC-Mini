@@ -13,6 +13,8 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
     External (\_SB.PCI0.RP05.PXSX.TBDU, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.HS01, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.HS02, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.SS01, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.SS02, DeviceObj)
 
@@ -335,6 +337,22 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
                     Scope (RHUB)
                     {
+                        Scope (HS01) // not used
+                        {
+                            Method (_STA, 0, NotSerialized)  // _STA: Status
+                            {
+                                Return (Zero)
+                            }
+                        }
+
+                        Scope (HS02) // not used
+                        {
+                            Method (_STA, 0, NotSerialized)  // _STA: Status
+                            {
+                                Return (Zero)
+                            }
+                        }
+
                         Scope (SS01)
                         {
                             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
