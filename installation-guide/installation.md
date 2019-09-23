@@ -29,7 +29,7 @@ Note all data on the USB drive **will be erased**.
 1. On another OSX machine \(or another Hackintosh\), download **macOS Mojave** or higher from the [App Store](https://apps.apple.com/us/app/macos-mojave/id1398502828).
 2. Insert your USB drive and open up Terminal.
 3. Open up Disk Utility to format your USB drive:
-   1. Find your USB drive in the left sidebar under External \(if there are multiple sub-drives under your USB drive, select the top-most one\).
+   1. Find your USB drive in the left sidebar under External \(if there are multiple sub-drives under your USB drive, select the top-most one\). You may need to choose **View** -&gt; **Show All Devices** in order to see the full disk.
    2. Press the "Erase" button on the top toolbar.
    3. Give the name **Installer** and make sure to select **GUID Partition Map** as the Scheme.
    4. Press Erase, wait until it completes, and quit Disk Utility.
@@ -63,17 +63,9 @@ We will be doing a clean installation. That means the SSD will be wiped and **an
 3. Reboot and you should boot into the OSX installer
    1. If not, you need to [get into the boot picker](../post-installation/support.md#getting-into-boot-picker-menu) menu and select the installer.
 4. The OSX installer should load.
-   1. Partition your SSD using **Disk Utility**. You should wipe the entire drive and format it as APFS with GUID Partition Map. This will also create the EFI and Recovery partitions.
+   1. Partition your SSD using **Disk Utility**. You may need to choose **View** -&gt; **Show All Devices** in order to find your drive. You should wipe the entire drive and format it as APFS with GUID Partition Map. This will also create the EFI and Recovery partitions.
    2. Installation will reboot a few times. Because USB has first boot priority, you do not have to touch anything.
 5. After installation completes, you can remove the USB and boot from your SSD. You can revert the boot priority changes if desired.
-
-### Installing other OS
-
-After you install OSX, you can optionally install other operating systems. Directions are outside the scope of this guide. The recommended order of installation is: OSX, Windows, Linux. After you install everything, OpenCore will get overwritten by Windows. You need to restore it with the following command \(run as Administrator in Windows PowerShell\). You need to trigger the [boot picker menu](../post-installation/support.md#getting-into-boot-picker-menu) to boot into Windows.
-
-```text
-bcdedit /set '{bootmgr}' path \EFI\OC\OpenCore.efi
-```
 
 ## Update Existing Install
 
@@ -85,5 +77,5 @@ You should never use MultiBeast or similar OSX "distributions" as they include b
 
 1. Download the installer and run **HaCMini.pkg**
 2. Run the installer to completion \(that's it\)
-3. If you're updating from an OpenCore release \(v2.0+\) then your previous serial/UUID will be preserved by default. If you're updating from a Clover release \(v1.x\), then a new serial/UUID will be generated. If you wish to use your old values, you need to manually edit `EFI/OC/config.plist` and copy the values over from `EFI/Clover/config.plist`.
+3. If you're updating from an OpenCore release \(v2.0+\) then your previous serial will be preserved by default. If you're updating from a Clover release \(v1.x\), then a new serial will be generated. If you wish to use your old values, you need to manually edit `EFI/OC/config.plist` and copy the values over from `EFI/Clover/config.plist`.
 

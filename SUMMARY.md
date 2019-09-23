@@ -7,6 +7,7 @@
 
 * [BIOS Settings](installation-guide/bios-settings.md)
 * [Installation](installation-guide/installation.md)
+* [Boot Camp](installation-guide/boot-camp.md)
 
 ## Post-Installation
 
