@@ -1,4 +1,4 @@
-# Thunderbolt 3 Fix
+# Thunderbolt 3 Fix \(Part 1\)
 
 Getting Thunderbolt 3 working completely in Hackintoshes require patches to the ACPI tables. There are quite a few issues to resolve so we fix them up one at a time.
 

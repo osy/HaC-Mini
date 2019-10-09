@@ -23,7 +23,8 @@
 ## Technical Details <a id="details"></a>
 
 * [Metal Driver Fix](details/metal-driver-fix.md)
-* [Thunderbolt 3 Fix](details/thunderbolt-3-fix.md)
+* [Thunderbolt 3 Fix \(Part 1\)](details/thunderbolt-3-fix.md)
+* [Thunderbolt 3 Fix \(Part 2\)](details/thunderbolt-3-fix-part-2.md)
 * [HDA Fix](details/hda-fix.md)
 * [USB Fix](details/usb-fix.md)
 * [Secure Boot](details/secure-boot.md)
