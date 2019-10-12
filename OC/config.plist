@@ -8,6 +8,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Detect OSX for other patches</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-OsxDetect.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable power management</string>
 				<key>Enabled</key>
 				<true/>

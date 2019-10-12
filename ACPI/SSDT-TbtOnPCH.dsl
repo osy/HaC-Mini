@@ -3,6 +3,8 @@
  */
 DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 {
+    External (DTGP, MethodObj)    // 5 Arguments
+    External (OSDW, MethodObj)    // 0 Arguments
     External (\_SB.PCI0.RP05, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX, DeviceObj)
     External (XWAK, MethodObj) // renamed in Clover patch
@@ -42,7 +44,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
         // use NUC's own hot plug detection
         Method (NTFY, 1, Serialized)
         {
-            If (\_SB.PCI0.RP05.OSDW () && Arg0 == 0x05)
+            If (OSDW () && Arg0 == 0x05)
             {
                 Notify (\_SB.PCI0.RP05.PXSX.DSB0.NHI0, Zero) // TB3 controller
             }
@@ -55,47 +57,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
     Scope (\_SB.PCI0.RP05)
     {
-        Method (DTGP, 5, NotSerialized)
-        {
-            If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
-            {
-                If ((Arg1 == One))
-                {
-                    If ((Arg2 == Zero))
-                    {
-                        Arg4 = Buffer (One)
-                            {
-                                 0x03                                             // .
-                            }
-                        Return (One)
-                    }
-
-                    If ((Arg2 == One))
-                    {
-                        Return (One)
-                    }
-                }
-            }
-
-            Arg4 = Buffer (One)
-                {
-                     0x00                                             // .
-                }
-            Return (Zero)
-        }
-
-        Method (OSDW, 0, NotSerialized)
-        {
-            If (CondRefOf (\_OSI, Local0))
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (One) // Is OSX
-                }
-            }
-            Return (Zero)
-        }
-
         Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
         {
             Return (Zero)

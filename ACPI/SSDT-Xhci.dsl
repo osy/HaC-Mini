@@ -3,6 +3,8 @@
  */
 DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 {
+    External (DTGP, MethodObj)    // 5 Arguments
+    External (OSDW, MethodObj)    // 0 Arguments
     External (\_SB.PCI0.XHC, DeviceObj)
     External (\_SB.PCHV, MethodObj)
     External (\_SB.SPTH, IntObj)
@@ -35,48 +37,36 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
     External (\_SB.PCI0.XHC.RHUB.USR1, DeviceObj)    // (from opcode)
     External (\_SB.PCI0.XHC.RHUB.USR2, DeviceObj)    // (from opcode)
     External (\_SB.PCI0.XHC._PRW, MethodObj)
+    External (\_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU, MethodObj)
 
     Scope (\_SB.PCI0.XHC)
     {
-        Method (DTGP, 5, NotSerialized)
+        Method (RTPC, 1, Serialized)
         {
-            If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
-            {
-                If ((Arg1 == One))
-                {
-                    If ((Arg2 == Zero))
-                    {
-                        Arg4 = Buffer (One)
-                            {
-                                 0x03                                             // .
-                            }
-                        Return (One)
-                    }
-
-                    If ((Arg2 == One))
-                    {
-                        Return (One)
-                    }
-                }
-            }
-
-            Arg4 = Buffer (One)
-                {
-                     0x00                                             // .
-                }
             Return (Zero)
         }
 
-        Method (OSDW, 0, NotSerialized)
+        Method (MODU, 0, Serialized)
         {
-            If (CondRefOf (\_OSI, Local0))
+            If (CondRefOf (\_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU, Local0))
             {
-                If (_OSI ("Darwin"))
-                {
-                    Return (One) // Is OSX
-                }
+                Local0 = \_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU ()
             }
-            Return (Zero)
+            Local1 = Zero
+            If ((Local0 == One) || (Local1 == One))
+            {
+                Local0 = One
+            }
+            ElseIf ((Local0 == 0xFF) || (Local1 == 0xFF))
+            {
+                Local0 = 0xFF
+            }
+            Else
+            {
+                Local0 = Zero
+            }
+
+            Return (Local0)
         }
 
         Scope (RHUB)
@@ -272,6 +262,43 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 
                 Scope (HS12) // TB3 USB-C HS/LS
                 {
+                    Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                    {
+                        0xFF, 
+                        0x09, 
+                        Zero, 
+                        Zero
+                    })
+                    Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
+                    {
+                        ToPLD (
+                            PLD_Revision           = 0x1,
+                            PLD_IgnoreColor        = 0x1,
+                            PLD_Red                = 0x0,
+                            PLD_Green              = 0x0,
+                            PLD_Blue               = 0x0,
+                            PLD_Width              = 0x0,
+                            PLD_Height             = 0x0,
+                            PLD_UserVisible        = 0x1,
+                            PLD_Dock               = 0x0,
+                            PLD_Lid                = 0x0,
+                            PLD_Panel              = "UNKNOWN",
+                            PLD_VerticalPosition   = "UPPER",
+                            PLD_HorizontalPosition = "LEFT",
+                            PLD_Shape              = "UNKNOWN",
+                            PLD_GroupOrientation   = 0x0,
+                            PLD_GroupToken         = 0x0,
+                            PLD_GroupPosition      = 0x0,
+                            PLD_Bay                = 0x0,
+                            PLD_Ejectable          = 0x0,
+                            PLD_EjectRequired      = 0x0,
+                            PLD_CabinetNumber      = 0x0,
+                            PLD_CardCageNumber     = 0x0,
+                            PLD_Reference          = 0x0,
+                            PLD_Rotation           = 0x0,
+                            PLD_Order              = 0x0)
+
+                    })
                     Name (SSP, Package (0x02)
                     {
                         "XHC2", 
@@ -297,6 +324,43 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 
                 Scope (HS13) // TB3 USB-C HS/LS
                 {
+                    Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                    {
+                        0xFF, 
+                        0x09, 
+                        Zero, 
+                        Zero
+                    })
+                    Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
+                    {
+                        ToPLD (
+                            PLD_Revision           = 0x1,
+                            PLD_IgnoreColor        = 0x1,
+                            PLD_Red                = 0x0,
+                            PLD_Green              = 0x0,
+                            PLD_Blue               = 0x0,
+                            PLD_Width              = 0x0,
+                            PLD_Height             = 0x0,
+                            PLD_UserVisible        = 0x1,
+                            PLD_Dock               = 0x0,
+                            PLD_Lid                = 0x0,
+                            PLD_Panel              = "UNKNOWN",
+                            PLD_VerticalPosition   = "UPPER",
+                            PLD_HorizontalPosition = "LEFT",
+                            PLD_Shape              = "UNKNOWN",
+                            PLD_GroupOrientation   = 0x0,
+                            PLD_GroupToken         = 0x0,
+                            PLD_GroupPosition      = 0x0,
+                            PLD_Bay                = 0x0,
+                            PLD_Ejectable          = 0x0,
+                            PLD_EjectRequired      = 0x0,
+                            PLD_CabinetNumber      = 0x0,
+                            PLD_CardCageNumber     = 0x0,
+                            PLD_Reference          = 0x0,
+                            PLD_Rotation           = 0x0,
+                            PLD_Order              = 0x0)
+
+                    })
                     Name (SSP, Package (0x02)
                     {
                         "XHC2", 
@@ -369,14 +433,14 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
     }
 
     // These ACPI fixes only apply to OSX
-    If (\_SB.PCI0.XHC.OSDW ())
+    If (OSDW ())
     {
         Device (\_SB.USBX)
         {
             Name(_ADR, 0)
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
-                If (\_SB.PCI0.XHC.OSDW ())
+                If (OSDW ())
                 {
                     If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
                     {
@@ -387,7 +451,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                                 "kUSBWakePortCurrentLimit", 1500,
                                 "kUSBWakePowerSupply", 9600,
                             }
-                        \_SB.PCI0.XHC.DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                        DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                         Return (Local0)
                     }
                 }
