@@ -204,9 +204,22 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwASWQ==
-				</data>
+				<data>AwASWQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)/Pci(0x2,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>AA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x0,0x14)</key>
+			<dict>
+				<key>built-in</key>
+				<data>AA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>AA==</data>
 			</dict>
 		</dict>
 	</dict>
