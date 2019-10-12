@@ -10,8 +10,8 @@ else
     DEST_VOL="$3"
 fi
 
-DEST_TMP="${DEST_VOL}"/tmp
-EFI_ROOT_DIR="${DEST_TMP}"/EFIROOTDIR
+DEST_TMP="${DEST_VOL}/private/tmp"
+EFI_ROOT_DIR="${DEST_TMP}/EFIROOTDIR"
 OLD_CONFIG="$INSTALLER_TEMP/config.old.plist"
 NEW_CONFIG="$EFI_ROOT_DIR/EFI/OC/config.plist"
 PLIST_BUDDY="/usr/libexec/PlistBuddy"
