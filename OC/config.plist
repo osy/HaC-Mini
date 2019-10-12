@@ -65,76 +65,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change NTFY to XTFY</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				TlRGWQk=
-				</data>
-				<key>Replace</key>
-				<data>
-				WFRGWQk=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change RWAK to XWAK</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				UldBSwk=
-				</data>
-				<key>Replace</key>
-				<data>
-				WFdBSwk=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change XHC to XHC2 on TBDU</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				WEhDXwhfQURSAA==
-				</data>
-				<key>Replace</key>
-				<data>
-				WEhDMghfQURSAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change TBDU.XHC to TBDU.XHC2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				VEJEVVhIQ18=
-				</data>
-				<key>Replace</key>
-				<data>
-				VEJEVVhIQzI=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change PNP0C09 to PNPFFFF</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				QdAMCQ==
-				</data>
-				<key>Replace</key>
-				<data>
-				QdD//w==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>change HS09._UPC to HS09.XUPC</string>
 				<key>Enabled</key>
 				<true/>
@@ -145,6 +75,34 @@
 				<key>Replace</key>
 				<data>
 				SFMwORQMWFVQQw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change HS12._UPC to HS12.XUPC</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				SFMxMhQtX1VQQw==
+				</data>
+				<key>Replace</key>
+				<data>
+				SFMxMhQtWFVQQw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change HS13._UPC to HS13.XUPC</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				SFMxMxQtX1VQQw==
+				</data>
+				<key>Replace</key>
+				<data>
+				SFMxMxQtWFVQQw==
 				</data>
 			</dict>
 			<dict>
@@ -187,6 +145,34 @@
 				<key>Replace</key>
 				<data>
 				SU1FSQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change RP05._INI to RP05.XINI</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				UlAwNQhMVFJaAAhPQkZaAAhMTVNMAAhMTlNMABQqX0lOSQ==
+				</data>
+				<key>Replace</key>
+				<data>
+				UlAwNQhMVFJaAAhPQkZaAAhMTVNMAAhMTlNMABQqWElOSQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change _E20 to XE20</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X0UyMA==
+				</data>
+				<key>Replace</key>
+				<data>
+				WEUyMA==
 				</data>
 			</dict>
 		</array>
@@ -472,7 +458,6 @@
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
 			<string>VirtualSmc.efi</string>
-			<string>TbtForcePower.efi</string>
 		</array>
 		<key>Protocols</key>
 		<dict>
