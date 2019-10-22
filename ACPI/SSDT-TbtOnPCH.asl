@@ -2,6 +2,8 @@
  * Thunderbolt For Alpine Ridge
  * Large parts (link training and enumeration) 
  * taken from decompiled Mac AML.
+ * Note: USB/CIO RTD3 power management largly 
+ * missing due to lack of GPIO pins.
  * 
  * Copyright (c) 2019 osy86
  */
@@ -19,26 +21,52 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
     External (\_SB.PCI0.RP05, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU, DeviceObj)
-    External (\_SB.PCI0.XHC, UnknownObj)
-    /* For hotplug */
-    External (\_GPE.XTBT, MethodObj)                  // native hotplug support
-    External (CPGN, FieldUnitObj)                     // CIO Hotplug GPIO
-    External (TBSE, FieldUnitObj)                     // TB root port number
-
-    Mutex (TCFG, 0x00)
+    External (\_SB.PCI0.XHC, DeviceObj)
 
     Scope (\_GPE)
     {
         Method (TBT_HOTPLUG_GPE, 0, NotSerialized)  // _Exx: Edge-Triggered GPE
         {
             \_SB.PCI0.RP05.DBG1 ("_E20")
-            \_GPE.XTBT (TBSE, CPGN)
-            If (OSDW ())
+            If (!OSDW ())
             {
-                Acquire (TCFG, 0xFFFF) // wait for configure
-                \_SB.PCI0.RP05.DBG1 ("_E20 acquired")
+                If (\_SB.PCI0.RP05.POC0 == One)
+                {
+                    Return
+                }
+
+                Sleep (400)
+                If (\_SB.PCI0.RP05.WTLT () == One)
+                {
+                    \_SB.PCI0.RP05.ICMS ()
+                }
+                Else // force power off
+                {
+                    //\_SB.SGOV (0x01070004, Zero)
+                    //\_SB.SGDO (0x01070004)
+                }
+
+                If (\_SB.PCI0.RP05.UPMB)
+                {
+                    \_SB.PCI0.RP05.UPMB = Zero
+                    Sleep (One)
+                }
+
+                \_SB.PCI0.RP05.CMPE ()
+            }
+            /*
+            ElseIf (\_SB.GGII (0x01070015) == One)
+            {
+                \_SB.SGII (0x01070015, Zero)
+            }
+            Else
+            {
+                \_SB.SGII (0x01070015, One)
+            }
+            */
+            Else
+            {
                 \_SB.PCI0.RP05.UPSB.AMPE ()
-                Release (TCFG)
             }
             \_SB.PCI0.RP05.DBG1 ("End-of-_E20")
         }
@@ -75,7 +103,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
             }
         }
 
-#include "SSDT-TbtOnPCH-Power.asl"
 #include "SSDT-TbtOnPCH-Boot.asl"
 
         Name (IIP3, Zero)
@@ -160,6 +187,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
          */
         Method (CTBT, 0, Serialized)
         {
+            //If ((GGDV (0x01070004) == One) && (\_SB.PCI0.RP05.UPSB.AVND != 0xFFFFFFFF))
             If (\_SB.PCI0.RP05.UPSB.AVND != 0xFFFFFFFF)
             {
                 Local2 = \_SB.PCI0.RP05.UPSB.CRMW (0x3C, Zero, 0x02, 0x04000000, 0x04000000)
@@ -171,24 +199,15 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
         }
 
         /**
-         * Set once we do a force power
-         * Then when NHI comes up we do a ICM reset. We have to wait for 
-         * NHI because we have to use it to send the ICM reset.
-         */
-        Name (IRST, Zero)
-
-        /**
          * Toggle controller power
          * Power controllers either up or down depending on the request.
          * On Macs, there's two GPIO signals for controlling TB and XHC 
-         * separately. If we only have a single force-power GPIO, we 
-         * use it for both.
+         * separately. If such signals exist, we need to find it. Otherwise 
+         * we lose the power saving capabilities.
          * Returns if controller is powered up
          */
         Method (UGIO, 0, Serialized)
         {
-            Acquire (TCFG, 0xFFFF) // TB config lock
-
             // Which controller is requested to be on?
             Local0 = (\_SB.PCI0.RP05.GNHI || \_SB.PCI0.RP05.RTBT) // TBT
             Local1 = (\_SB.PCI0.RP05.GXCI || \_SB.PCI0.RP05.RUSB) // USB
@@ -205,51 +224,80 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
             }
 
             Local2 = Zero
-            If (Local0 != Zero || Local1 != Zero)
+
+            /**
+             * Force power to CIO
+             */
+            If (Local0 != Zero)
             {
-                Local2 = TBON () // power on TB controller
-                If (Local2)
+                // TODO: check if CIO power is forced
+                //If (GGDV (0x01070004) == Zero)
+                If (Zero)
                 {
+                    // TODO: force CIO power
+                    //SGDI (0x01070004)
+                    Local2 = One
                     \_SB.PCI0.RP05.CTPD = Zero
                 }
             }
 
-            /*
-            // since we only have one knob, we always power up 
-            // both controllers. If we have a separate USB force 
-            // power GPIO, then we would use that here.
+            /**
+             * Force power to USB
+             */
             If (Local1 != Zero)
             {
-                Local2 = One
+                // TODO: check if USB power is forced
+                //If (GGDV (0x01070007) == Zero)
+                If (Zero)
+                {
+                    // TODO: force USB power
+                    //SGDI (0x01070007)
+                    Local2 = One
+                }
             }
-            */
 
             // if we did power on
             If (Local2 != Zero)
             {
-                IRST = One // reset ICM once NHI is up
                 Sleep (500)
             }
 
             Local3 = Zero
-            If (Local0 == Zero && Local1 == Zero)
+
+            /**
+             * Disable force power to CIO
+             */
+            If (Local0 == Zero)
             {
-                \_SB.PCI0.RP05.CTBT () // send power down msg to controller
-                If (\_SB.PCI0.RP05.CTPD != Zero) // need ACK
+                // TODO: check if CIO power is off
+                //If (GGDV (0x01070004) == One)
+                If (Zero)
                 {
-                    TBOF ()
-                    Local3 = One
+                    \_SB.PCI0.RP05.CTBT ()
+                    If (\_SB.PCI0.RP05.CTPD != Zero)
+                    {
+                        // TODO: force power off CIO
+                        //SGOV (0x01070004, Zero)
+                        //SGDO (0x01070004)
+                        Local3 = One
+                    }
                 }
             }
 
-            /*
-            // now if we have a separate USB power knob, we would handle it here
-            // but since we don't...
+            /**
+             * Disable force power to USB
+             */
             If (Local1 == Zero)
             {
-                Local3 = One
+                //If (GGDV (0x01070007) == One)
+                If (Zero)
+                {
+                    // TODO: force power off USB
+                    //SGOV (0x01070007, Zero)
+                    //SGDO (0x01070007)
+                    Local3 = One
+                }
             }
-            */
 
             // if we did power down, wait for things to settle
             If (Local3 != Zero)
@@ -257,8 +305,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                 Sleep (100)
             }
             DBG3 ("UGIO finish", Local2, Local3)
-
-            Release (TCFG) // release config lock
 
             Return (Local2)
         }
@@ -281,6 +327,74 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                 }
 
                 PCDA ()
+            }
+        }
+
+        Method (UTLK, 2, Serialized)
+        {
+            Local0 = Zero
+            // if CIO force power is zero
+            //If ((GGOV (0x01070004) == Zero) && (GGDV (0x01070004) == Zero))
+            If (Zero)
+            {
+                \_SB.PCI0.RP05.PSTA = Zero
+                While (One)
+                {
+                    If (\_SB.PCI0.RP05.LDXX == One)
+                    {
+                        \_SB.PCI0.RP05.LDXX = Zero
+                    }
+
+                    // here, we force CIO power on
+                    //SGDI (0x01070004)
+                    Local1 = Zero
+                    Local2 = (Timer + 10000000)
+                    While (Timer <= Local2)
+                    {
+                        If (\_SB.PCI0.RP05.LACR == Zero)
+                        {
+                            If (\_SB.PCI0.RP05.LTRN != One)
+                            {
+                                Break
+                            }
+                        }
+                        ElseIf ((\_SB.PCI0.RP05.LTRN != One) && (\_SB.PCI0.RP05.LACT == One))
+                        {
+                            Break
+                        }
+
+                        Sleep (10)
+                    }
+
+                    Sleep (Arg1)
+                    While (Timer <= Local2)
+                    {
+                        If (\_SB.PCI0.RP05.UPSB.AVND != 0xFFFFFFFF)
+                        {
+                            Local1 = One
+                            Break
+                        }
+
+                        Sleep (10)
+                    }
+
+                    If (Local1 == One)
+                    {
+                        \_SB.PCI0.RP05.MABT = One
+                        Break
+                    }
+
+                    If (Local0 == 0x04)
+                    {
+                        Break
+                    }
+
+                    Local0++
+                    // CIO force power back to 0
+                    //SGOV (0x01070004, Zero)
+                    //SGDO (0x01070004)
+                    Sleep (1000)
+                }
             }
         }
 
@@ -351,20 +465,13 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
         }
 
         /**
-         * PXSX replaced by UPSB on OSX
+         * PXSX replaced by UPSB
          */
         Scope (PXSX)
         {
             Method (_STA, 0, NotSerialized)
             {
-                If (OSDW ())
-                {
-                    Return (Zero) // hidden for OSX
-                }
-                Else
-                {
-                    Return (0x0F) // visible for others
-                }
+                Return (Zero) // hidden
             }
         }
 
@@ -431,14 +538,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If (OSDW ())
-                {
-                    Return (0xF) // visible for OSX
-                }
-                Else
-                {
-                    Return (Zero) // hidden for others
-                }
+                Return (0x0F) // visible for everyone
             }
 
             Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
@@ -633,6 +733,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
              */
             Method (MUST, 1, Serialized)
             {
+                DBG2 ("MUST", Arg0)
                 If (OSDW ())
                 {
                     If (MDUV != Arg0)
@@ -658,6 +759,15 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
 
             Method (_PS3, 0, Serialized)  // _PS3: Power State 3
             {
+                If (!OSDW ())
+                {
+                    If (\_SB.PCI0.RP05.UPCK () == Zero)
+                    {
+                        \_SB.PCI0.RP05.UTLK (One, 1000)
+                    }
+
+                    \_SB.PCI0.RP05.TBTC (0x05)
+                }
             }
 
             OperationRegion (H548, PCI_Config, 0x0548, 0x20)
@@ -776,6 +886,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
             Method (CRMW, 5, Serialized)
             {
                 Local1 = One
+                //If (((GGDV (0x01070004) == One) || (GGDV (0x01070007) == One)) && 
                 If (\_SB.PCI0.RP05.UPSB.AVND != 0xFFFFFFFF)
                 {
                     Local3 = Zero
@@ -1050,71 +1161,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Thunderbolt"))  // _STR: Description String
 
-                    Name (SCMD, Zero) // saved Cmd field
-                    Name (SBAR, Zero) // saved BAR field
-
-                    /**
-                     * ThunderboltICMReset
-                     * Assumes controller is up and enumerated. Resets the 
-                     * ICM firmware.
-                     *   Arg0 = enable ICM CPU
-                     */
-                    Method (ICMR, 1, Serialized)
-                    {
-                        DBG2 ("NHI BAR", \_SB.PCI0.RP05.UPSB.DSB0.NHI0.BAR1)
-                        OperationRegion (RSTR, SystemMemory, \_SB.PCI0.RP05.UPSB.DSB0.NHI0.BAR1 + 0x39854, 0x0100)
-                        Field (RSTR, DWordAcc, NoLock, Preserve)
-                        {
-                            CIOR,   32, 
-                            Offset (0xB8), 
-                            ISTA,   32, 
-                            Offset (0xF0), 
-                            ICME,   32
-                        }
-
-                        If ((Arg0 && ICME == 0x800001a1) || (!Arg0 && ICME == 0x1a3))
-                        {
-                            DBG2 ("ICME already right value", ICME)
-                            Return
-                        }
-
-                        DBG2 ("ICME", ICME)
-
-                        If (Arg0) // enable firmware
-                        {
-                            ICME = 0x110
-                        }
-                        Else
-                        {
-                            ICME = 0x102
-                        }
-                        DBG2 ("ICME", ICME)
-
-                        // Wait until the re-start is done
-                        Local1 = 10
-                        While (Local1 > 0)
-                        {
-                            Local0 = ICME
-                            If (Arg0) // enable firmware
-                            {
-                                If (Local0 != 0xFFFFFFFF && (Local0 & 0x80000000) != Zero)
-                                {
-                                    Break
-                                }
-                            }
-                            Else // not enable firmware
-                            {
-                                If (Local0 != 0xFFFFFFFF && (Local0 & 1) != Zero)
-                                {
-                                    Break
-                                }
-                            }
-                            Sleep (300)
-                            Local1--
-                        }
-                        DBG3 ("ICME", Local0, Local1)
-                    }
-
                     /**
                      * Enable downstream link
                      */
@@ -1225,37 +1271,11 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                         {
                             PCED ()
                             \_SB.PCI0.RP05.CTBT ()
-
-                            Acquire (TCFG, 0xFFFF) // configure lock
-
-                            // Reset request from UGIO power up
-                            If (\_SB.PCI0.RP05.IRST)
-                            {
-                                Local0 = BMIE
-                                Local1 = SBAR
-                                DBG3 ("IRST Orig vals", BMIE, SBAR)
-                                BMIE = SCMD
-                                BAR1 = SBAR
-
-                                ICMR (Zero)
-
-                                BMIE = Local0
-                                SBAR = Local1
-
-                                \_SB.PCI0.RP05.IRST = Zero
-                            }
-
-                            Release (TCFG)
                         }
                     }
 
                     Method (_PS3, 0, Serialized)  // _PS3: Power State 3
                     {
-                        If (OSDW ())
-                        {
-                            SCMD = BMIE
-                            SBAR = BAR1
-                        }
                     }
 
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -1289,10 +1309,14 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtOnPCH", 0x00001000)
                         DBG2 ("SXFP", Arg0)
                         If (Arg0 == Zero)
                         {
-                            \_SB.PCI0.RP05.TBON ()
-                            ICMR (One)
-                            DBG1 ("Sending GO2SX")
-                            \_SB.PCI0.RP05.SCMD (0x02, 0) // PCIE2TBT_GO2SX
+                            //If (GGDV (0x01070007) == One)
+                            //{
+                            //    SGOV (0x01070007, Zero)
+                            //    SGDO (0x01070007)
+                            //    Sleep (0x64)
+                            //}
+                            //SGOV (0x01070004, Zero)
+                            //SGDO (0x01070004)
                         }
                     }
                 }

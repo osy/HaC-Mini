@@ -9,6 +9,7 @@
 // {
         External (MMRP, MethodObj)                        // Memory mapped root port
         External (MMTB, MethodObj)                        // Memory mapped TB port
+        External (TBSE, FieldUnitObj)                     // TB root port number
         External (\_SB.PCI0.GPCB, MethodObj)              // get PCI MMIO base
         External (\_SB.PCI0.RP05.XINI, MethodObj)         // original _INI patched by OC
 
@@ -119,7 +120,7 @@
         }
 
         // DSB0 configuration base
-        OperationRegion (DNSM, SystemMemory, MMIO (RP19 + 1, 0, 0), 0xD4)
+        OperationRegion (DNSM, SystemMemory, MMIO (UP19, 0, 0), 0xD4)
         Field (DNSM, DWordAcc, NoLock, Preserve)
         {
             DPVD,   32, 
@@ -140,7 +141,7 @@
         }
 
         // DSB1 configuration base
-        OperationRegion (DS3M, SystemMemory, MMIO (RP19 + 1, 1, 0), 0x40)
+        OperationRegion (DS3M, SystemMemory, MMIO (UP19, 1, 0), 0x40)
         Field (DS3M, DWordAcc, NoLock, Preserve)
         {
             D3VD,   32, 
@@ -157,7 +158,7 @@
         }
 
         // DSB2 configuration base
-        OperationRegion (DS4M, SystemMemory, MMIO (RP19 + 1, 2, 0), 0x0568)
+        OperationRegion (DS4M, SystemMemory, MMIO (UP19, 2, 0), 0x0568)
         Field (DS4M, DWordAcc, NoLock, Preserve)
         {
             D4VD,   32, 
@@ -176,7 +177,7 @@
         }
 
         // DSB4 configuration base
-        OperationRegion (DS5M, SystemMemory, MMIO (RP19 + 1, 4, 0), 0x40)
+        OperationRegion (DS5M, SystemMemory, MMIO (UP19, 4, 0), 0x40)
         Field (DS5M, DWordAcc, NoLock, Preserve)
         {
             D5VD,   32, 
@@ -192,7 +193,7 @@
             D524,   32
         }
 
-        OperationRegion (NHIM, SystemMemory, MMIO (RP19 + 2, 0, 0), 0x40)
+        OperationRegion (NHIM, SystemMemory, MMIO (DP19, 0, 0), 0x40)
         Field (NHIM, DWordAcc, NoLock, Preserve)
         {
             NH00,   32, 
@@ -202,17 +203,17 @@
             NH14,   32
         }
 
-        OperationRegion (RSTR, SystemMemory, ((R_20 & 0xFFFC) << 16 & 0xFFF00000) + 0x39854, 0x0100)
+        OperationRegion (RSTR, SystemMemory, NH10 + 0x39858, 0x0100)
         Field (RSTR, DWordAcc, NoLock, Preserve)
         {
             CIOR,   32, 
             Offset (0xB8), 
             ISTA,   32, 
-            Offset (0xF0), 
+            Offset (0xEC), 
             ICME,   32
         }
 
-        OperationRegion (XHCM, SystemMemory, MMIO (RP19 + 4, 0, 0), 0x40)
+        OperationRegion (XHCM, SystemMemory, MMIO (D519, 0, 0), 0x40)
         Field (XHCM, DWordAcc, NoLock, Preserve)
         {
             XH00,   32, 
@@ -224,59 +225,46 @@
 
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
-            If (OSDW ())
+            If (!OSDW ())
             {
-                Acquire (TCFG, 0xFFFF)
                 DBG3 ("RP", RPVD, R_20)
-                R020 = R_20 // RP base/limit from UEFI
-                R024 = R_24 // RP prefetch base/limit from UEFI
-                R118 = RP19 // UPSB Pri Bus = RP Sec Bus (UEFI)
-                R119 = RP19 + 1 // UPSB Sec Bus = RP Sec Bus + 1
-                R11A = RP1A // UPSB Sub Bus = RP Sub Bus (UEFI)
-                R11C = RP1C // UPSB IO base/limit = RP IO base/limit (UEFI)
-                R120 = R_20 // UPSB mem base/limit = RP mem base/limit (UEFI)
-                R124 = R_24 // UPSB pre base/limit = RP pre base/limit (UEFI)
-                R218 = R119 // DSB0 Pri Bus = UPSB Sec Bus
-                R219 = R119 + 1 // DSB0 Sec Bus = UPSB Sec Bus + 1
-                R21A = R11A // DSB0 Sub Bus = UPSB Sub Bus
-                R21C = R11C // DSB0 IO base/limit = UPSB IO base/limit
-                R220 = R120 // DSB0 mem base/limit = UPSB mem base/limit
-                R224 = R124 // DSB0 pre base/limit = UPSB pre base/limit
-                R318 = R119 // DSB1 Pri Bus = UPSB Sec Bus
-                R319 = R119 + 2 // DSB1 Sec Bus = UPSB Sec Bus + 2
-                R31A = R119 + 2 // DSB1 Sub Bus = no children
-                R31C = Zero // DSB1 disable IO
-                R320 = Zero // DSB1 disable mem
-                R324 = Zero // DSB1 disable prefetch
-                R418 = R119 // DSB2 Pri Bus = UPSB Sec Bus
-                R419 = R119 + 3 // DSB2 Sec Bus = UPSB Sec Bus + 3
-                R41A = R119 + 3 // DSB2 Sub Bus = no children
-                R41C = Zero // DSB2 disable IO
-                R420 = Zero // DSB2 disable mem
-                R424 = Zero // DSB2 disable prefetch
-                RVES = Zero // DSB2 offset 0x564, unknown
-                R518 = R119 // DSB4 Pri Bus = UPSB Sec Bus
-                R519 = R119 + 4 // DSB4 Sec Bus = UPSB Sec Bus + 4
-                R51A = R119 + 4 // DSB4 Sub Bus = no children
-                R51C = Zero // DSB4 disable IO
-                R520 = Zero // DSB4 disable mem
-                R524 = Zero // DSB4 disable prefetch
-                R618 = Zero
-                R619 = Zero
-                R61A = Zero
-                R61C = Zero
-                R620 = Zero
-                R624 = Zero
-                RH10 = (R220 & 0xFFFC) << 16 // NHI0 BAR0 = DSB0 mem base
-                RH14 = Zero // NHI0 BAR1 unused
+                R020 = R_20 /* \_SB_.PCI0.RP05.R_20 */
+                R024 = R_24 /* \_SB_.PCI0.RP05.R_24 */
+                R118 = UP18 /* \_SB_.PCI0.RP05.UP18 */
+                R119 = UP19 /* \_SB_.PCI0.RP05.UP19 */
+                R11A = UP1A /* \_SB_.PCI0.RP05.UP1A */
+                R11C = UP1C /* \_SB_.PCI0.RP05.UP1C */
+                R120 = UP20 /* \_SB_.PCI0.RP05.UP20 */
+                R124 = UP24 /* \_SB_.PCI0.RP05.UP24 */
+                R218 = DP18 /* \_SB_.PCI0.RP05.DP18 */
+                R219 = DP19 /* \_SB_.PCI0.RP05.DP19 */
+                R21A = DP1A /* \_SB_.PCI0.RP05.DP1A */
+                R21C = DP1C /* \_SB_.PCI0.RP05.DP1C */
+                R220 = DP20 /* \_SB_.PCI0.RP05.DP20 */
+                R224 = DP24 /* \_SB_.PCI0.RP05.DP24 */
+                R318 = D318 /* \_SB_.PCI0.RP05.D318 */
+                R319 = D319 /* \_SB_.PCI0.RP05.D319 */
+                R31A = D31A /* \_SB_.PCI0.RP05.D31A */
+                R31C = D31C /* \_SB_.PCI0.RP05.D31C */
+                R320 = D320 /* \_SB_.PCI0.RP05.D320 */
+                R324 = D324 /* \_SB_.PCI0.RP05.D324 */
+                R418 = D418 /* \_SB_.PCI0.RP05.D418 */
+                R419 = D419 /* \_SB_.PCI0.RP05.D419 */
+                R41A = D41A /* \_SB_.PCI0.RP05.D41A */
+                R41C = D41C /* \_SB_.PCI0.RP05.D41C */
+                R420 = D420 /* \_SB_.PCI0.RP05.D420 */
+                R424 = D424 /* \_SB_.PCI0.RP05.D424 */
+                RVES = DVES /* \_SB_.PCI0.RP05.DVES */
+                R518 = D518 /* \_SB_.PCI0.RP05.D518 */
+                R519 = D519 /* \_SB_.PCI0.RP05.D519 */
+                R51A = D51A /* \_SB_.PCI0.RP05.D51A */
+                R51C = D51C /* \_SB_.PCI0.RP05.D51C */
+                R520 = D520 /* \_SB_.PCI0.RP05.D520 */
+                R524 = D524 /* \_SB_.PCI0.RP05.D524 */
+                RH10 = NH10 /* \_SB_.PCI0.RP05.NH10 */
+                RH14 = NH14 /* \_SB_.PCI0.RP05.NH14 */
                 Sleep (One)
-                TBON ()
                 ICMS ()
-                Release (TCFG)
-            }
-            Else
-            {
-                XINI () // original _INI ()
             }
         }
 
@@ -284,20 +272,21 @@
         {
             \_SB.PCI0.RP05.POC0 = One
             DBG2 ("ICME", \_SB.PCI0.RP05.ICME)
-            If (\_SB.PCI0.RP05.ICME != 0x800001A3)
+            If (\_SB.PCI0.RP05.ICME != 0x800001A6 && \_SB.PCI0.RP05.ICME != 0x800000A6)
             {
                 If (\_SB.PCI0.RP05.CNHI ())
                 {
                     DBG2 ("ICME", \_SB.PCI0.RP05.ICME)
                     If (\_SB.PCI0.RP05.ICME != 0xFFFFFFFF)
                     {
+                        //SGDI (0x01070004)
                         \_SB.PCI0.RP05.WTLT ()
                         DBG2 ("ICME", \_SB.PCI0.RP05.ICME)
-                        If (Local0 = (\_SB.PCI0.RP05.ICME & 0x80000000)) // NVM started means we need reset
+                        If (!Local0 = (\_SB.PCI0.RP05.ICME & 0x80000000)) // NVM started means we need reset
                         {
-                            \_SB.PCI0.RP05.ICME = 0x102 // REG_FW_STS_ICM_EN_INVERT
+                            \_SB.PCI0.RP05.ICME |= 0x06 // invert EN | enable CPU
                             Local0 = 1000
-                            While ((Local1 = (\_SB.PCI0.RP05.ICME & 0x1)) == Zero)
+                            While ((Local1 = (\_SB.PCI0.RP05.ICME & 0x80000000)) == Zero)
                             {
                                 Local0--
                                 If (Local0 == Zero)
@@ -308,14 +297,54 @@
                                 Sleep (One)
                             }
                             DBG2 ("ICME", \_SB.PCI0.RP05.ICME)
-
-                            Sleep (1000)
+                            //\_SB.SGOV (0x01070004, Zero)
+                            //\_SB.SGDO (0x01070004)
                         }
                     }
                 }
             }
 
             \_SB.PCI0.RP05.POC0 = Zero
+
+            // disable USB force power
+            //SGOV (0x01070007, Zero)
+            //SGDO (0x01070007)
+        }
+
+        /**
+         * Send TBT command
+         */
+        Method (TBTC, 1, Serialized)
+        {
+            P2TR = Arg0
+            Local0 = 100
+            Local1 = T2PR /* \_SB_.PCI0.RP05.T2PR */
+            While ((Local2 = (Local1 & One)) == Zero)
+            {
+                If (Local1 == 0xFFFFFFFF)
+                {
+                    Return
+                }
+
+                Local0--
+                If (Local0 == Zero)
+                {
+                    Break
+                }
+
+                Local1 = T2PR /* \_SB_.PCI0.RP05.T2PR */
+                Sleep (50)
+            }
+
+            P2TR = Zero
+        }
+
+        /**
+         * Plug detection for Windows
+         */
+        Method (CMPE, 0, Serialized)
+        {
+            Notify (\_SB.PCI0.RP05, Zero) // Bus Check
         }
 
         /**
