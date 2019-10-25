@@ -46,6 +46,14 @@
 				<key>Path</key>
 				<string>SSDT-Xhci.aml</string>
 			</dict>
+            <dict>
+                <key>Comment</key>
+                <string>TI PD I2C Controller</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-Hpm.aml</string>
+            </dict>
 		</array>
         <key>Patch</key>
         <array>
@@ -221,6 +229,16 @@
 				<key>built-in</key>
 				<data>AA==</data>
 			</dict>
+            <key>PciRoot(0x0)/Pci(0x15,0x1)</key>
+            <dict>
+                <key>i2c-channel-number</key>
+                <integer>1</integer>
+            </dict>
+            <key>PciRoot(0x0)/Pci(0x15,0x2)</key>
+            <dict>
+                <key>i2c-channel-number</key>
+                <integer>2</integer>
+            </dict>
 		</dict>
 	</dict>
 	<key>Kernel</key>
