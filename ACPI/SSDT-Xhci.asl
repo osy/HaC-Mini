@@ -150,37 +150,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     Zero, 
                     Zero
                 })
-
-                Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
-                {
-                    ToPLD (
-                        PLD_Revision           = 0x1,
-                        PLD_IgnoreColor        = 0x1,
-                        PLD_Red                = 0x0,
-                        PLD_Green              = 0x0,
-                        PLD_Blue               = 0x0,
-                        PLD_Width              = 0x0,
-                        PLD_Height             = 0x0,
-                        PLD_UserVisible        = 0x0,
-                        PLD_Dock               = 0x0,
-                        PLD_Lid                = 0x0,
-                        PLD_Panel              = "UNKNOWN",
-                        PLD_VerticalPosition   = "UPPER",
-                        PLD_HorizontalPosition = "LEFT",
-                        PLD_Shape              = "UNKNOWN",
-                        PLD_GroupOrientation   = 0x0,
-                        PLD_GroupToken         = 0x0,
-                        PLD_GroupPosition      = 0x0,
-                        PLD_Bay                = 0x0,
-                        PLD_Ejectable          = 0x0,
-                        PLD_EjectRequired      = 0x0,
-                        PLD_CabinetNumber      = 0x0,
-                        PLD_CardCageNumber     = 0x0,
-                        PLD_Reference          = 0x0,
-                        PLD_Rotation           = 0x0,
-                        PLD_Order              = 0x0)
-
-                })
                 
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
@@ -269,36 +238,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                         Zero, 
                         Zero
                     })
-                    Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
-                    {
-                        ToPLD (
-                            PLD_Revision           = 0x1,
-                            PLD_IgnoreColor        = 0x1,
-                            PLD_Red                = 0x0,
-                            PLD_Green              = 0x0,
-                            PLD_Blue               = 0x0,
-                            PLD_Width              = 0x0,
-                            PLD_Height             = 0x0,
-                            PLD_UserVisible        = 0x1,
-                            PLD_Dock               = 0x0,
-                            PLD_Lid                = 0x0,
-                            PLD_Panel              = "UNKNOWN",
-                            PLD_VerticalPosition   = "UPPER",
-                            PLD_HorizontalPosition = "LEFT",
-                            PLD_Shape              = "UNKNOWN",
-                            PLD_GroupOrientation   = 0x0,
-                            PLD_GroupToken         = 0x0,
-                            PLD_GroupPosition      = 0x0,
-                            PLD_Bay                = 0x0,
-                            PLD_Ejectable          = 0x0,
-                            PLD_EjectRequired      = 0x0,
-                            PLD_CabinetNumber      = 0x0,
-                            PLD_CardCageNumber     = 0x0,
-                            PLD_Reference          = 0x0,
-                            PLD_Rotation           = 0x0,
-                            PLD_Order              = 0x0)
-
-                    })
                     Name (SSP, Package (0x02)
                     {
                         "XHC2", 
@@ -330,36 +269,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                         0x09, 
                         Zero, 
                         Zero
-                    })
-                    Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
-                    {
-                        ToPLD (
-                            PLD_Revision           = 0x1,
-                            PLD_IgnoreColor        = 0x1,
-                            PLD_Red                = 0x0,
-                            PLD_Green              = 0x0,
-                            PLD_Blue               = 0x0,
-                            PLD_Width              = 0x0,
-                            PLD_Height             = 0x0,
-                            PLD_UserVisible        = 0x1,
-                            PLD_Dock               = 0x0,
-                            PLD_Lid                = 0x0,
-                            PLD_Panel              = "UNKNOWN",
-                            PLD_VerticalPosition   = "UPPER",
-                            PLD_HorizontalPosition = "LEFT",
-                            PLD_Shape              = "UNKNOWN",
-                            PLD_GroupOrientation   = 0x0,
-                            PLD_GroupToken         = 0x0,
-                            PLD_GroupPosition      = 0x0,
-                            PLD_Bay                = 0x0,
-                            PLD_Ejectable          = 0x0,
-                            PLD_EjectRequired      = 0x0,
-                            PLD_CabinetNumber      = 0x0,
-                            PLD_CardCageNumber     = 0x0,
-                            PLD_Reference          = 0x0,
-                            PLD_Rotation           = 0x0,
-                            PLD_Order              = 0x0)
-
                     })
                     Name (SSP, Package (0x02)
                     {
