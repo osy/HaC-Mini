@@ -48,6 +48,14 @@
 			</dict>
             <dict>
                 <key>Comment</key>
+                <string>TB USB2 companion for RTD3 power savings</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-TbtCompanion.aml</string>
+            </dict>
+            <dict>
+                <key>Comment</key>
                 <string>TI PD I2C Controller</string>
                 <key>Enabled</key>
                 <true/>

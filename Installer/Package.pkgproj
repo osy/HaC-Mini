@@ -5992,7 +5992,7 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Use Thunderbolt as a PCIE bridge. Supports hotplug. Fully compatible with Windows. Does not support OSX native Thunderbolt features and limited support for Apple Thunderbolt devices.</string>
+												<string>Use Thunderbolt as a PCIE bridge. Supports hotplug. Fully compatible with Windows. Does not support OSX native Thunderbolt features and limited support for Apple Thunderbolt devices. Sometimes causes panic on OSX when nothing is plugged in.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
