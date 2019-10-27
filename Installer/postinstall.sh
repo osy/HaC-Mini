@@ -37,6 +37,28 @@ if [ -d "$INSTALLER_TEMP/Old" ]; then
     fi
 fi
 
+# Optional installs
+if [ -f "$INSTALLER_TEMP/verboseboot" ]; then
+    echo "Enabling verbose boot"
+    bootargs=`$PLIST_BUDDY -c "Print :NVRAM:Add:7C436110-AB2A-4BBB-A880-FE41995C9F82:boot-args" "$NEW_CONFIG"`
+    bootargs="$bootargs -v"
+    $PLIST_BUDDY -c "Set :NVRAM:Add:7C436110-AB2A-4BBB-A880-FE41995C9F82:boot-args $bootargs" "$NEW_CONFIG"
+fi
+
+if [ -f "$INSTALLER_TEMP/showpicker" ]; then
+    echo "Enabling picker menu"
+    $PLIST_BUDDY -c "Add :Misc:Boot:ShowPicker bool true" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Misc:Boot:Timeout integer 5" "$NEW_CONFIG"
+fi
+
+# Add files to config
+echo "Installing drivers"
+./install_drivers.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/Drivers"
+echo "Installing ACPI"
+./install_acpi.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/ACPI"
+echo "Installing kexts"
+./install_acpi.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/Kexts"
+
 echo "Setting up unique identifiers..."
 ./copy_serial.sh "$OLD_CONFIG" "$NEW_CONFIG"
 
