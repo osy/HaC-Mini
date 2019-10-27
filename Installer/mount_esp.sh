@@ -66,7 +66,7 @@ fi
 # Check if the disk is a GPT disk
 disk_partition_scheme=$("$partutil" --show-partitionscheme "$DiskDevice")
 
-if [[ "$disk_partition_scheme" = "GUID_partition_scheme" ]]; then
+if [[ "$disk_partition_scheme" == "GUID_partition_scheme" ]]; then
 
     plistbuddy='/usr/libexec/PlistBuddy'
 
@@ -120,9 +120,9 @@ if [[ "$disk_partition_scheme" = "GUID_partition_scheme" ]]; then
         ln -sf "$ESPMountPoint" "$EFI_ROOT_DIR"
     fi
 else
-    # Disk is not GPT use the DEST_VOL as EFI_ROOT_DIR
-    ln -sf "${DEST_VOL}" "$EFI_ROOT_DIR"
-    exitcode=0
+    # error if not GPT
+    echo "Partition is ${disk_partition_scheme}, not GUID_partition_scheme!"
+    exitcode=1
 fi
 
 exit $exitcode
