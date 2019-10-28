@@ -13,15 +13,18 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtLeg", 0x00001000)
 
     /* Patching existing devices */
     External (\_SB.PCI0.XHC, DeviceObj)
+    External (\_SB.PCI0.XHC.RHUB, DeviceObj)    // (from opcode)
+    External (\_SB.PCI0.XHC.RHUB.HS12, DeviceObj)    // (from opcode)
+    External (\_SB.PCI0.XHC.RHUB.HS13, DeviceObj)    // (from opcode)
     External (\_SB.PCI0.RP05, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX, DeviceObj)
     External (\_SB.PCI0.RP05.PXSX.TBDU, DeviceObj)
-    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2, DeviceObj)
-    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB, DeviceObj)
-    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.HS01, DeviceObj)
-    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.HS02, DeviceObj)
-    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.SS01, DeviceObj)
-    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC2.RHUB.SS02, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC.RHUB, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC.RHUB.HS01, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC.RHUB.HS02, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC.RHUB.SS01, DeviceObj)
+    External (\_SB.PCI0.RP05.PXSX.TBDU.XHC.RHUB.SS02, DeviceObj)
 
     /* For hotplug */
     External (\_GPE.XTBT, MethodObj)                  // native hotplug support
@@ -34,12 +37,6 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtLeg", 0x00001000)
         {
             \_SB.PCI0.RP05.DBG1 ("_E20")
             \_GPE.XTBT (TBSE, CPGN)
-            If (OSDW ())
-            {
-                Notify (\_SB.PCI0.RP05.PXSX.DSB0.NHI0, Zero)
-                Notify (\_SB.PCI0.RP05.PXSX.TBDU.XHC2, Zero)
-                Notify (\_SB.PCI0.XHC, Zero)
-            }
             \_SB.PCI0.RP05.DBG1 ("End-of-_E20")
         }
     }
@@ -279,7 +276,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "TbtLeg", 0x00001000)
                     Return (Zero)
                 }
 
-                Scope (XHC2)
+                Scope (XHC)
                 {
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {

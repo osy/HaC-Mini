@@ -48,25 +48,14 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 
         Method (MODU, 0, Serialized)
         {
-            If (CondRefOf (\_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU, Local0))
+            If (CondRefOf (\_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU))
             {
-                Local0 = \_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU ()
-            }
-            Local1 = Zero
-            If ((Local0 == One) || (Local1 == One))
-            {
-                Local0 = One
-            }
-            ElseIf ((Local0 == 0xFF) || (Local1 == 0xFF))
-            {
-                Local0 = 0xFF
+                Return (\_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU ())
             }
             Else
             {
-                Local0 = Zero
+                Return (One)
             }
-
-            Return (Local0)
         }
 
         Scope (RHUB)
@@ -229,7 +218,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     }
                 }
 
-                Scope (HS12) // TB3 USB-C HS/LS
+                Scope (HS12) // TB3 USB-C HS/LS, see SSDT-TbtCompanion.asl
                 {
                     Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                     {
@@ -240,7 +229,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     })
                 }
 
-                Scope (HS13) // TB3 USB-C HS/LS
+                Scope (HS13) // TB3 USB-C HS/LS, see SSDT-TbtCompanion.asl
                 {
                     Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                     {
