@@ -32,8 +32,8 @@ mdutil -i off "$EFI_ROOT_DIR" # make sure index doesn't mess with unmount later
 
 # Backup
 if [ -d "$EFI_ROOT_DIR/EFI/OC" ]; then
-	cp -pR "$EFI_ROOT_DIR/EFI" "$INSTALLER_TEMP/Old"
-	rm -rf "$EFI_ROOT_DIR/EFI/OC" # make sure we get a clean install
+    cp -pR "$EFI_ROOT_DIR/EFI" "$INSTALLER_TEMP/Old"
+    rm -rf "$EFI_ROOT_DIR/EFI/OC" # make sure we get a clean install
 else
-	echo "No existing OC installation found."
+    echo "No existing OC installation found."
 fi
