@@ -536,6 +536,54 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
+						<string>install_acpi.sh</string>
+						<key>PATH_TYPE</key>
+						<integer>1</integer>
+						<key>PERMISSIONS</key>
+						<integer>493</integer>
+						<key>TYPE</key>
+						<integer>3</integer>
+						<key>UID</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>CHILDREN</key>
+						<array/>
+						<key>GID</key>
+						<integer>0</integer>
+						<key>PATH</key>
+						<string>install_drivers.sh</string>
+						<key>PATH_TYPE</key>
+						<integer>1</integer>
+						<key>PERMISSIONS</key>
+						<integer>493</integer>
+						<key>TYPE</key>
+						<integer>3</integer>
+						<key>UID</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>CHILDREN</key>
+						<array/>
+						<key>GID</key>
+						<integer>0</integer>
+						<key>PATH</key>
+						<string>install_kexts.sh</string>
+						<key>PATH_TYPE</key>
+						<integer>1</integer>
+						<key>PERMISSIONS</key>
+						<integer>493</integer>
+						<key>TYPE</key>
+						<integer>3</integer>
+						<key>UID</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>CHILDREN</key>
+						<array/>
+						<key>GID</key>
+						<integer>0</integer>
+						<key>PATH</key>
 						<string>macserial</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
@@ -5707,7 +5755,7 @@
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>Only available if target is an OSX installer. This will patch the installer to install HaC mini on the target after OSX is installed. The installer should only be used on NUC Hades Canyon.</string>
+										<string>Only available if target is an OSX installer. This will patch the installer to install HaC mini on the target after OSX is installed. The installer should only be used on NUC Hades Canyon. Note that any custom install options selected here only applies to the installer. If you wish to use custom options in your installation, please run this on the target machine after OSX is installed.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>

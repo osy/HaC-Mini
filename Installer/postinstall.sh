@@ -57,7 +57,7 @@ echo "Installing drivers"
 echo "Installing ACPI"
 ./install_acpi.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/ACPI"
 echo "Installing kexts"
-./install_acpi.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/Kexts"
+./install_kexts.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/Kexts"
 
 echo "Setting up unique identifiers..."
 ./copy_serial.sh "$OLD_CONFIG" "$NEW_CONFIG"
