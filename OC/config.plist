@@ -325,13 +325,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>IntelMausiEthernet.kext</string>
+				<string>IntelMausi.kext</string>
 				<key>Comment</key>
 				<string>Ethernet port 1</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IntelMausiEthernet</string>
+				<string>Contents/MacOS/IntelMausi</string>
 				<key>MatchKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -492,11 +492,11 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>AppleGenericInput.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
 			<string>VirtualSmc.efi</string>
+            <string>UsbKbDxe.efi</string>
 		</array>
 		<key>Protocols</key>
 		<dict>

@@ -68,6 +68,7 @@ if [ -f "$INSTALLER_TEMP/security" ]; then
     $PLIST_BUDDY -c "Set :Misc:Security:RequireVault true" "$NEW_CONFIG"
 	echo "Generating secure vault..."
 	./sign_oc.sh "$EFI_ROOT_DIR/EFI/OC"
+    rm -rf "$EFI_ROOT_DIR/EFI/OC/Keys" # make sure to delete the private keys
 else
 	echo "Skipping secure vault generation."
 fi
