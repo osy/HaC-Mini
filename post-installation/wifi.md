@@ -14,6 +14,10 @@ You also need a **M.2 NGFF adapter** to connect it to the NUC. You can find this
 
 ![](../.gitbook/assets/adapter.jpg)
 
+Optionally, you may want to get **M3x4 mm countersunk screws**. They will help you secure the adapter card to the system. Search for them on eBay.
+
+![Different height countersunk screws. Boxed in orange is M3x4 mm.](../.gitbook/assets/m3_screws.jpg)
+
 ### Case Mod
 
 Because the adapter is much taller than the Intel Wifi card, you need to modify the metal frame to support it. Once you remove the metal frame and flip it over you will see that a tab indents into the space that is now taken up by the adapter card. If you are unsure of where it is, just install the adapter and try to put the top frame back on \(softly\) and you should see that one of the corner will not fit on.
@@ -34,5 +38,5 @@ The top part comes off easily with a pair of priers. Just jiggle it a little wit
 
 ![](../.gitbook/assets/card_installed.jpg)
 
-The adapter card is much taller than a typical M.2 Wifi card so you'll lose access to the left M.2 NVMe slot. To remove the screw holding the Wifi card in place, you need a small wrench or a 5mm nut driver. Then put the Apple Wifi card into the adapter and screw it on with the provided screw. Finally, attach both Wifi antannas. You can keep the card in place by the tension of the antannas and the pressure of the top lid.
+The adapter card is much taller than a typical M.2 Wifi card so you'll lose access to the left M.2 NVMe slot. To remove the screw holding the Wifi card in place, you need a small wrench or a 5mm nut driver. If you have a M3x4 screw, use it to secure the adapter to the motherboard. Then put the Apple Wifi card into the adapter and screw it on with the provided screw. Finally, attach both Wifi antannas. You can keep the card in place by the tension of the antannas and the pressure of the top lid.
 

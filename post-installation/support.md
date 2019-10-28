@@ -16,17 +16,17 @@ Outstanding issues are tracked and worked on in the [Github issues](https://gith
 
 This is a hardware issue and cannot be worked around without Intel support or extensive kernel patching. If you require a USB device to not be disconnected \(an external HDD for example\), you can use the blue USB 3.0 Type A port on the front of the NUC. This port is connected to the CPU directly \(does not go through the buggy PCH\) and does not exhibit the same wakeup issue. However, it does experience a separate issue where if you have the device connected before powering on, then it will get disconnected after the first sleep. You should either plug in the device after OSX boots or suffer a single disconnect before the issue goes away. 
 
-### Thunderbolt 3 ports not working
+### Only boot entry is "Windows Boot Manager"
 
-If a firmware bug/crash happens the TB3 controller does not automatically reset when the computer restarts. You need to either do a full power reset \(power down, unplug, wait a minute, re-plug\) or restart with a TB3 or USB-C device plugged into a TB3 port to trigger a controller reset.
+Windows sometimes modifies the NVRAM variables for force the BIOS to only show Windows as a boot option. If you have an external media with OpenCore installed, you can use it to [reset the NVRAM](support.md#reset-nvram). If you do not have access to an external media with OC installed, you need to open the case and remove the BIOS Security Jumper \(see [section 2.2.3.4](https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC8i7HVK_TechProdSpec.pdf)\) to reset all BIOS settings.
 
-### [Audio issues](https://github.com/osy86/HaC-Mini/issues/4)
+### Black screen powering up with TB DP display or TB port not working
 
-The front HP jack is not working yet, use the back audio out with your headphones. The headphone mic will not work. Digital out does not work either.
+If the Ridge controller crashes, you won't get DP output \(or anything else\) from the TB ports. Perform a hard reset by unplugging the power cord and plugging it back in. Then press the power button and wait until your keyboard shows up. Then press Ctrl+Alt+Del to soft-reset and you should see the display working again.
 
-### Black screen on reboot
+### Black screen after POST when booting up or after selecting boot drive
 
-If you have Windows installed, make sure fast boot is disabled in both BIOS and in Windows settings. Sometimes even with fast boot disabled, the NUC will still try to fast-boot into Windows. As a result you will see the display power on and your USB devices power on but nothing shows up on screen. If you get into this situation, you need to power off the NUC then hold the power button until the power LED turns on and then off \(it turns on when you press down and turns off after holding it for ~10 seconds\). Then press the power button again and repeatedly tap F10. If successful, you should see the boot menu, where you can proceed to select the boot device. If unsuccessful, try pressing Ctrl+Alt+Del and then repeatedly tap F10 again. If still unsuccessful, try the whole thing again. If after several attempts it still doesn't boot, you need to open the case and remove the BIOS Security Jumper \(see [section 2.2.3.4](https://www.intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC8i7HVK_TechProdSpec.pdf)\).
+First get into the [boot picker menu](support.md#getting-into-boot-picker-menu), and boot into OSX. Then, you need to make sure the right startup device is selected in System Preferences -&gt; Startup Disk. Select your OSX installation you wish to boot into and press Restart. This should fix the issue for future boots.
 
 ## Troubleshooting
 
