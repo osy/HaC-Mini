@@ -28,6 +28,7 @@ fi
 
 echo "Mounting ESP to $EFI_ROOT_DIR"
 ./mount_esp.sh "$DEST_VOL" "$EFI_ROOT_DIR"
+mdutil -i off "$EFI_ROOT_DIR" # make sure index doesn't mess with unmount later
 
 # Backup
 if [ -d "$EFI_ROOT_DIR/EFI/OC" ]; then
