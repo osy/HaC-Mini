@@ -2859,14 +2859,43 @@
 			<key>PACKAGE_FILES</key>
 			<dict>
 				<key>DEFAULT_INSTALL_LOCATION</key>
-				<string>/tmp/EFIROOTDIR</string>
+				<string>/</string>
 				<key>HIERARCHY</key>
 				<dict>
 					<key>CHILDREN</key>
 					<array>
 						<dict>
 							<key>CHILDREN</key>
-							<array/>
+							<array>
+								<dict>
+									<key>BUNDLE_CAN_DOWNGRADE</key>
+									<false/>
+									<key>BUNDLE_POSTINSTALL_PATH</key>
+									<dict>
+										<key>PATH_TYPE</key>
+										<integer>1</integer>
+									</dict>
+									<key>BUNDLE_PREINSTALL_PATH</key>
+									<dict>
+										<key>PATH_TYPE</key>
+										<integer>1</integer>
+									</dict>
+									<key>CHILDREN</key>
+									<array/>
+									<key>GID</key>
+									<integer>80</integer>
+									<key>PATH</key>
+									<string>drivers/Thunderbolt Patcher.app</string>
+									<key>PATH_TYPE</key>
+									<integer>1</integer>
+									<key>PERMISSIONS</key>
+									<integer>493</integer>
+									<key>TYPE</key>
+									<integer>3</integer>
+									<key>UID</key>
+									<integer>0</integer>
+								</dict>
+							</array>
 							<key>GID</key>
 							<integer>80</integer>
 							<key>PATH</key>
@@ -3232,6 +3261,22 @@
 														<dict>
 															<key>CHILDREN</key>
 															<array>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>drivers/SSDT-TbtCompanion.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
 																<dict>
 																	<key>CHILDREN</key>
 																	<array/>
@@ -6075,7 +6120,7 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Full Thunderbolt support with Apple native drivers. Requires patching NVM firmware (tool will be installed to /Applications). Windows compatibility is limited (USB works, no Thunderbolt hotplug in Windows).</string>
+												<string>Full Thunderbolt support with Apple native drivers. Requires patching NVM firmware (tool will be installed to /Applications/Thunderbolt Patcher.app) after reboot. Windows compatibility is limited (USB works, no Thunderbolt hotplug in Windows).</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
