@@ -76,6 +76,7 @@ You should never use MultiBeast or similar OSX "distributions" as they include b
 {% endhint %}
 
 1. Download the installer and run **HaCMini.pkg**
-2. Run the installer to completion \(that's it\)
-3. If you're updating from an OpenCore release \(v2.0+\) then your previous serial will be preserved by default. If you're updating from a Clover release \(v1.x\), then a new serial will be generated. If you wish to use your old values, you need to manually edit `EFI/OC/config.plist` and copy the values over from `EFI/Clover/config.plist`.
+2. Run the installer to completion
+3. If you've selected to install _Native Thunderbolt_ support, run **Thunderbolt Patcher** from Applications after rebooting and patch your Thunderbolt controller.
+4. If you're updating from an OpenCore release \(v2.0+\) then your previous serial will be preserved by default. If you're updating from a Clover release \(v1.x\), then a new serial will be generated. If you wish to use your old values, you need to manually edit `EFI/OC/config.plist` and copy the values over from `EFI/Clover/config.plist`.
 
