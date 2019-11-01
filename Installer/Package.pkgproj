@@ -6482,9 +6482,9 @@
 										<key>OPTIONS</key>
 										<dict>
 											<key>HIDDEN</key>
-											<false/>
+											<true/>
 											<key>STATE</key>
-											<integer>2</integer>
+											<integer>1</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>BFCFFAA6-7582-4F56-9B0E-EA302BB69085</string>
@@ -6733,9 +6733,9 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>/Users/chenyuhong/Documents/GitHub/HaC-Mini/Installer/Lang/zh-cn/readme.rtf</string>
+							<string>Lang/zh-cn/readme.rtf</string>
 							<key>PATH_TYPE</key>
-							<integer>0</integer>
+							<integer>1</integer>
 						</dict>
 					</dict>
 				</array>
