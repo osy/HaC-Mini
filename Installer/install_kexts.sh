@@ -19,10 +19,7 @@ do
         # we need Lilu to be first on the list
         # or the computer can't boot
         i=0
-    else
-        i=$at
-    fi
-    if [ $kext == "VirtualSMC.kext" -a $at -gt 0 ]; then
+    elif [ $kext == "VirtualSMC.kext" -a $at -gt 0 ]; then
         # VirtualSMC has to be second, or VSMC plugins
         # will not work
         i=1
