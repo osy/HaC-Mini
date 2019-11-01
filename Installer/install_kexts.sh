@@ -22,6 +22,13 @@ do
     else
         i=$at
     fi
+    if [ $kext == "VirtualSMC.kext" -a $at -gt 0 ]; then
+        # VirtualSMC has to be second, or VSMC plugins
+        # will not work
+        i=1
+    else
+        i=$at
+    fi
     $PLIST_BUDDY -c "Add :Kernel:Add:$i dict" "$CONFIG"
     echo "BundlePath:     $kext"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:BundlePath string $kext" "$CONFIG"
