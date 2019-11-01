@@ -5767,6 +5767,12 @@
 										<key>VALUE</key>
 										<string>OpenCore loader with drivers, patches, and configurations for NUC Hades Canyon.</string>
 									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>OpenCore引导程序和为NUC冥王峡谷定制的驱动、补丁和配置。</string>
+									</dict>
 								</array>
 								<key>OPTIONS</key>
 								<dict>
@@ -5801,6 +5807,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Only available if target is an OSX installer. This will patch the installer to install HaC mini on the target after OSX is installed. The installer should only be used on NUC Hades Canyon. Note that any custom install options selected here only applies to the installer. If you wish to use custom options in your installation, please run this on the target machine after OSX is installed.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>只在为macOS安装器打补丁时可用。该补丁会使macOS安装器在安装完成之后自动安装HaC Mini。该程序包不应用于除NUC冥王峡谷之外的设备。请注意当这个选项被选中后，所有的自定义安装选项都只会应用于macOS安装器。如果你希望在安装完成的macOS系统中使用这些自定义选项，请在macOS安装完成后再次运行此程序包。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -5858,6 +5870,12 @@
 										<key>VALUE</key>
 										<string>Patch OSX installer</string>
 									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>为macOS安装器安装补丁</string>
+									</dict>
 								</array>
 								<key>TYPE</key>
 								<integer>0</integer>
@@ -5874,6 +5892,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>If checked, existing installation will be copied to /Library/EFI-Backups. Otherwise, existing EFI/OC will be deleted including all configurations, patches, drivers, etc.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>如果该选项被选中，本地原有的OpenCore EFI将会被复制到/Library/EFI-Backups钟。否则，原有的/EFI/OC和所有的配置、补丁、驱动等将会被删除。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -5893,6 +5917,12 @@
 										<key>VALUE</key>
 										<string>Backup existing OC EFI</string>
 									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>备份原有OpenCore EFI</string>
+									</dict>
 								</array>
 								<key>TYPE</key>
 								<integer>0</integer>
@@ -5909,6 +5939,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Unique identifiers are required for Apple services. By default, identifiers are copied from an existing OC installation. Otherwise, it will be generated. Setting this will ignore any existing data and always re-generate.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>Apple服务需要使用唯一标示码。默认情况下，标示码将会继承本地原有OpenCore配置中的值。如果该选项被选中，将忽略原有的唯一标示码，并重新生成唯一标示码。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -5927,6 +5963,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Regenerate unique identifiers</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>重新生成唯一标示码</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -5948,6 +5990,12 @@
 												<key>VALUE</key>
 												<string>Sets up OC signed vault features. If enabled, you must re-generate and re-sign the vault after making any modifications.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>启用OpenCore签名保护功能。一旦启用，你必须在做出任何修改后重新生成并签名保护。</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -5966,6 +6014,12 @@
 												<key>VALUE</key>
 												<string>Enable boot security</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>启用引导安全选项</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -5982,6 +6036,12 @@
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Show boot messages instead of the Apple logo and progress bar.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>显示详细的启动信息而不是苹果标志和进度条。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -6001,6 +6061,12 @@
 												<key>VALUE</key>
 												<string>Verbose boot</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>详细模式</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6017,6 +6083,12 @@
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Show the boot picker menu for 5 seconds on every startup. This can workaround issues with a black screen on startup.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>在每次启动时都显示5秒的引导菜单。这有时候可以解决启动后黑屏的问题。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -6036,6 +6108,12 @@
 												<key>VALUE</key>
 												<string>Show boot menu</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>显示引导菜单</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6050,6 +6128,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Customize boot-up settings.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>自定义引导设置</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -6066,6 +6150,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Boot Options</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>引导选项</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -6087,6 +6177,12 @@
 												<key>VALUE</key>
 												<string>Use Thunderbolt as a PCIE bridge. Supports hotplug. Fully compatible with Windows. Does not support OSX native Thunderbolt features and limited support for Apple Thunderbolt devices. Sometimes causes panic on OSX when nothing is plugged in.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>将雷雳作为PCIE桥。支持热拔插。与Windows完全兼容。不支持macOS原生雷雳功能，对Apple雷雳设备有限支持。可能会造成在无设备插入时系统内核错误</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -6105,6 +6201,12 @@
 												<key>VALUE</key>
 												<string>Legacy Thunderbolt</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>传统雷雳</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6121,6 +6223,12 @@
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Full Thunderbolt support with Apple native drivers. Requires patching NVM firmware (tool will be installed to /Applications/Thunderbolt Patcher.app) after reboot. Windows compatibility is limited (USB works, no Thunderbolt hotplug in Windows).</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>由苹果原生驱动提供完整雷雳支持。需要在安装完成重新启动之后对NVM固件打补丁（工具将被安装到/Applications/Thunderbolt Patcher.app）。Windows有限兼容性（USB可用，不支持雷雳设备热拔插）。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -6177,6 +6285,12 @@
 												<key>VALUE</key>
 												<string>Native Thunderbolt</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>原生雷雳</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6193,6 +6307,12 @@
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Installs Thunderbolt 3 Unblocker extension to bypass unsupported peripherals (such as the Razer Core). Only appliable to native Thunderbolt.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>安装Thunderbolt 3 Unblocker内核扩展以绕过外设支持限制（如雷蛇战核Razer Core）。只可用于原生雷雳选项。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -6235,6 +6355,12 @@
 												<key>VALUE</key>
 												<string>Unblock unsupported devices</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>解锁不支持的设备</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6249,6 +6375,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Thunderbolt support</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>雷雳支持</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -6265,6 +6397,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Thunderbolt</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>雷雳</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -6286,6 +6424,12 @@
 												<key>VALUE</key>
 												<string>Highly recommended. Various patches for GPU/display. Including: Intel QuickSync support and fixes a kernel panic in verbose boot. However, some users report issues with this driver, so it is possible to disable it to see if it fixes any display issues.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>强烈推荐。包含多个对显示/GPU的补丁。包括：英特尔QuickSync支持，修复一个详细模式下的内核错误。然而，有用户报告此驱动可能导致问题，因此提供此选项以解决一些显示问题。</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -6301,6 +6445,12 @@
 											<dict>
 												<key>LANGUAGE</key>
 												<string>English</string>
+												<key>VALUE</key>
+												<string>WhateverGreen</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>WhateverGreen</string>
 											</dict>
@@ -6321,6 +6471,13 @@
 												<key>VALUE</key>
 												<string>CURRENTLY NOT WORKING. Patches for this 3rd party networking card.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>当前不可用。
+这是一个针对第三方无线网卡的补丁</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -6339,6 +6496,12 @@
 												<key>VALUE</key>
 												<string>Dell DW1820A</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>戴尔 DW1820A</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6355,6 +6518,12 @@
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Driver for this USB keyboard. Only for this specific keyboard, not used for anything else.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>针对此键盘的驱动，不会作用于其他设备。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -6374,6 +6543,12 @@
 												<key>VALUE</key>
 												<string>MSI GK-701</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>微星 GK-701</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -6388,6 +6563,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Additional drivers</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>额外驱动</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -6404,6 +6585,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Drivers</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>驱动程序</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -6493,6 +6680,17 @@
 							<integer>1</integer>
 						</dict>
 					</dict>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>Simplified Chinese</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>Lang/zh-cn/introduction.rtfd</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
 				</array>
 			</dict>
 			<key>LICENSE</key>
@@ -6529,7 +6727,23 @@
 							<integer>1</integer>
 						</dict>
 					</dict>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>Simplified Chinese</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>/Users/chenyuhong/Documents/GitHub/HaC-Mini/Installer/Lang/zh-cn/readme.rtf</string>
+							<key>PATH_TYPE</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
 				</array>
+			</dict>
+			<key>SUMMARY</key>
+			<dict>
+				<key>LOCALIZATIONS</key>
+				<array/>
 			</dict>
 			<key>TITLE</key>
 			<dict>
@@ -6538,6 +6752,12 @@
 					<dict>
 						<key>LANGUAGE</key>
 						<string>English</string>
+						<key>VALUE</key>
+						<string>HaC Mini</string>
+					</dict>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>Simplified Chinese</string>
 						<key>VALUE</key>
 						<string>HaC Mini</string>
 					</dict>
