@@ -5897,7 +5897,7 @@
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>如果该选项被选中，本地原有的OpenCore EFI将会被复制到/Library/EFI-Backups中。否则，原有的/EFI/OC和所有的配置、补丁、驱动等将会被删除。</string>
+										<string>如果该选项被选中，本地原有的OpenCore EFI将会被复制到/Library/EFI-Backups钟。否则，原有的/EFI/OC和所有的配置、补丁、驱动等将会被删除。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -6482,9 +6482,9 @@
 										<key>OPTIONS</key>
 										<dict>
 											<key>HIDDEN</key>
-											<false/>
+											<true/>
 											<key>STATE</key>
-											<integer>2</integer>
+											<integer>1</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>BFCFFAA6-7582-4F56-9B0E-EA302BB69085</string>
