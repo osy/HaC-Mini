@@ -6733,9 +6733,9 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>/Users/chenyuhong/Documents/GitHub/HaC-Mini/Installer/Lang/zh-cn/readme.rtf</string>
+							<string>Lang/zh-cn/readme.rtf</string>
 							<key>PATH_TYPE</key>
-							<integer>0</integer>
+							<integer>1</integer>
 						</dict>
 					</dict>
 				</array>
