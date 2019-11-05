@@ -40,6 +40,10 @@ Reboot and when you see the boot logo, you need to hold or repeatedly tap the Al
 
 Sometimes incorrect settings and boot-args will cause issues. You need to [get into boot picker](support.md#getting-into-boot-picker-menu) and then select the NVRAM reset option.
 
+### Reset BIOS
+
+Make sure you are on the [latest BIOS version](https://downloadcenter.intel.com/product/126143). Also try resetting BIOS to factory settings and then re-do the [needed changes](../installation-guide/bios-settings.md).
+
 ### Reinstall HaC Mini
 
 Follow the [existing install](../installation-guide/installation.md#update-existing-install) directions to update/reinstall the latest version of HaC Mini. This will replace your OpenCore settings but by default a backup will be created in /EFI-backups/OC. If you made changes to the configuration and a reinstall worked, you can try adding the changes back one at a time to see what is the cause of the issue.
