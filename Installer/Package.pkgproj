@@ -6675,7 +6675,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>introduction.rtfd</string>
+							<string>Lang/en-us/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -6703,7 +6703,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>license.rtf</string>
+							<string>Lang/en-us/license.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -6722,7 +6722,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>readme.rtf</string>
+							<string>Lang/en-us/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
