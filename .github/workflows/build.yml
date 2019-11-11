@@ -21,6 +21,7 @@ jobs:
         run: |
           hdiutil attach dmgs/Packages.dmg
           sudo installer -pkg /Volumes/Packages*/packages/Packages.pkg -target /
+          hdiutil detach /Volumes/Packages*
       - uses: actions/checkout@v1
       - name: Build Package
         run: Installer/build.sh
