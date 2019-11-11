@@ -57,7 +57,7 @@ cp "$THUNDERBOLT/NUC_Hades_Canyon_Apple_Mode.plist" "$TBPATCHAPP/Resources/"
 
 echo "Building package..."
 
-$PACKAGES_BUILD -v Package.pkgproj
+$PACKAGES_BUILD -v "$BASEDIR/Package.pkgproj"
 
 echo "Fixing up package..."
 

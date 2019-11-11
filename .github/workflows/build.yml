@@ -6,10 +6,20 @@ jobs:
     name: Build
     runs-on: macos-latest
     steps:
+      - name: Cache DMGs
+        id: cache-dmgs
+        uses: actions/cache@v1
+        with:
+          path: dmgs
+          key: packages-dmg
+      - name: Download Packages
+        if: steps.cache-dmgs.outputs.cache-hit != 'true'
+        run: |
+          mkdir dmgs
+          curl -L -O dmgs/Packages.dmg http://s.sudre.free.fr/Software/files/Packages.dmg
       - name: Install Packages
         run: |
-          curl -L -O http://s.sudre.free.fr/Software/files/Packages.dmg
-          hdiutil attach Packages.dmg
+          hdiutil attach dmgs/Packages.dmg
           sudo installer -pkg /Volumes/Packages*/packages/Packages.pkg -target /
       - uses: actions/checkout@v1
       - name: Build Package
@@ -17,4 +27,4 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: Installer
-          path: Installer/build
+          path: build
