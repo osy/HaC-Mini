@@ -3,8 +3,8 @@
 set -e
 
 BASEDIR=`dirname "$0"`
-ACPI="$BASEDIR/ACPI"
-THUNDERBOLT="$BASEDIR/Thunderbolt"
+ACPI="$BASEDIR/../ACPI"
+THUNDERBOLT="$BASEDIR/../Thunderbolt"
 PACKAGES_BUILD=/usr/local/bin/packagesbuild
 DATA="$BASEDIR/data"
 IASL="$DATA/ACPI/iasl"
