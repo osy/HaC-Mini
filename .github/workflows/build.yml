@@ -1,5 +1,14 @@
 name: Installer Build
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'ACPI/**'
+      - 'Installer/**'
+      - 'OC/**'
+      - 'Thunderbolt/**'
+  pull_request:
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -29,3 +38,14 @@ jobs:
         with:
           name: Installer
           path: Installer/build
+      - name: Upload Release Asset
+        id: upload-release-asset
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: Installer/build/HaCMini.pkg
+          asset_name: HaCMini.pkg
+          asset_content_type: application/octet-stream
