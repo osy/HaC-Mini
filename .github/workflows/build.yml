@@ -16,7 +16,7 @@ jobs:
         if: steps.cache-dmgs.outputs.cache-hit != 'true'
         run: |
           mkdir dmgs
-          curl -L -O dmgs/Packages.dmg http://s.sudre.free.fr/Software/files/Packages.dmg
+          curl -L -o dmgs/Packages.dmg http://s.sudre.free.fr/Software/files/Packages.dmg
       - name: Install Packages
         run: |
           hdiutil attach dmgs/Packages.dmg
