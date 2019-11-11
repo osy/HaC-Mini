@@ -2,10 +2,11 @@
 
 set -e
 
-ACPI=../ACPI
-THUNDERBOLT=../Thunderbolt
+BASEDIR=`dirname "$0"`
+ACPI="$BASEDIR/../ACPI"
+THUNDERBOLT="$BASEDIR/../Thunderbolt"
 PACKAGES_BUILD=/usr/local/bin/packagesbuild
-DATA=./data
+DATA="$BASEDIR/data"
 IASL="$DATA/ACPI/iasl"
 
 if [ ! -f "$PACKAGES_BUILD" ]; then
@@ -56,14 +57,14 @@ cp "$THUNDERBOLT/NUC_Hades_Canyon_Apple_Mode.plist" "$TBPATCHAPP/Resources/"
 
 echo "Building package..."
 
-$PACKAGES_BUILD -v Package.pkgproj
+$PACKAGES_BUILD -v "$BASEDIR/Package.pkgproj"
 
 echo "Fixing up package..."
 
 # patch up dst selection screen
-rm -rf "build/HaCMini"
-pkgutil --expand "build/HaCMini.pkg" "build/HaCMini"
-sed 's/enable_currentUserHome="false"//g;s/enable_localSystem="false"//g' "build/HaCMini/Distribution" > "build/HaCMini/Distribution.new"
-mv "build/HaCMini/Distribution.new" "build/HaCMini/Distribution"
-pkgutil --flatten "build/HaCMini" "build/HaCMini.pkg"
-rm -rf "build/HaCMini"
+rm -rf "$BASEDIR/build/HaCMini"
+pkgutil --expand "$BASEDIR/build/HaCMini.pkg" "$BASEDIR/build/HaCMini"
+sed 's/enable_currentUserHome="false"//g;s/enable_localSystem="false"//g' "$BASEDIR/build/HaCMini/Distribution" > "$BASEDIR/build/HaCMini/Distribution.new"
+mv "$BASEDIR/build/HaCMini/Distribution.new" "$BASEDIR/build/HaCMini/Distribution"
+pkgutil --flatten "$BASEDIR/build/HaCMini" "$BASEDIR/build/HaCMini.pkg"
+rm -rf "$BASEDIR/build/HaCMini"

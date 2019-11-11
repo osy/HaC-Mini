@@ -1,20 +1,64 @@
 name: Installer Build
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - '.github/workflows/**'
+      - 'ACPI/**'
+      - 'Installer/**'
+      - 'OC/**'
+      - 'Thunderbolt/**'
+    tags-ignore: # prevent double action on releases
+      - 'v**'
+  pull_request:
+  release:
+    types: [created]
 
 jobs:
   build:
     name: Build
     runs-on: macos-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cache DMGs
+        id: cache-dmgs
+        uses: actions/cache@v1
+        with:
+          path: dmgs
+          key: packages-dmg
+      - name: Download Packages
+        if: steps.cache-dmgs.outputs.cache-hit != 'true'
+        run: |
+          mkdir dmgs
+          curl -L -o dmgs/Packages.dmg http://s.sudre.free.fr/Software/files/Packages.dmg
       - name: Install Packages
         run: |
-          curl -L -O http://s.sudre.free.fr/Software/files/Packages.dmg
-          hdiutil attach Packages.dmg
+          hdiutil attach dmgs/Packages.dmg
           sudo installer -pkg /Volumes/Packages*/packages/Packages.pkg -target /
-      - uses: actions/checkout@v1
+          hdiutil detach /Volumes/Packages*
       - name: Build Package
         run: Installer/build.sh
-      - uses: actions/upload-artifact@v1
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
         with:
           name: Installer
           path: Installer/build
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'release'
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: Installer
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: Installer/HaCMini.pkg
+          asset_name: HaCMini.pkg
+          asset_content_type: application/octet-stream
