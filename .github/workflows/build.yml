@@ -1,0 +1,20 @@
+name: Installer Build
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+    steps:
+      - name: Install Packages
+        run: |
+          curl -L -O http://s.sudre.free.fr/Software/files/Packages.dmg
+          hdiutil attach Packages.dmg
+          sudo installer -pkg /Volumes/Packages*/packages/Packages.pkg -target /
+      - uses: actions/checkout@v1
+      - name: Build Package
+        run: Installer/build.sh
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Installer
+          path: Installer/build
