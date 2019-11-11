@@ -5567,7 +5567,120 @@
 													<array>
 														<dict>
 															<key>CHILDREN</key>
-															<array/>
+															<array>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AirportBrcmFixup/AirportBrcmFixup.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/BrcmPatchRAM/BrcmBluetoothInjector.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/BrcmPatchRAM/BrcmFirmwareData.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/BrcmPatchRAM/BrcmPatchRAM3.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
@@ -7074,22 +7187,21 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>CURRENTLY NOT WORKING. Patches for this 3rd party networking card.</string>
+												<string>Patches for this 3rd party networking card. Make sure PCIE ASPM is disabled in BIOS. Models supported: CN-08PKF4.</string>
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
-												<string>当前不可用。
-这是一个针对第三方无线网卡的补丁</string>
+												<string>这是一个针对第三方无线网卡的补丁</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
 											<key>HIDDEN</key>
-											<true/>
+											<false/>
 											<key>STATE</key>
-											<integer>1</integer>
+											<integer>2</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>BFCFFAA6-7582-4F56-9B0E-EA302BB69085</string>

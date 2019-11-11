@@ -1,0 +1,2 @@
+https://github.com/acidanthera/AirportBrcmFixup/releases/download/2.0.4/AirportBrcmFixup-2.0.4-RELEASE.zip
+023e6603f5473ead5a85eb2bf2c1f74c4c2fa7ce10f2531b2543f71035f4e20a
