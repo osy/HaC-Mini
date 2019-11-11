@@ -7280,7 +7280,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/en-us/introduction.rtfd</string>
+							<string>languages/en-us/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -7291,7 +7291,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/zh-cn/introduction.rtfd</string>
+							<string>languages/zh-cn/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -7308,7 +7308,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/en-us/license.rtf</string>
+							<string>languages/en-us/license.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -7327,7 +7327,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/en-us/readme.rtf</string>
+							<string>languages/en-us/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -7338,7 +7338,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/zh-cn/readme.rtf</string>
+							<string>languages/zh-cn/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
