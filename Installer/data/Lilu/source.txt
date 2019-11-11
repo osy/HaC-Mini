@@ -1,0 +1,2 @@
+https://github.com/acidanthera/Lilu/releases/download/1.3.9/Lilu-1.3.9-RELEASE.zip
+61b838a92118c5f70f59d65fbeefd5536c84cf74b4c85606907cfb2943f76086

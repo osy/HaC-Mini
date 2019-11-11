@@ -1,0 +1,9 @@
+.DS_Store
+*.zip
+*.kext
+*.app
+*.dsl
+*.aml
+*.efi
+*.dSYM
+build/

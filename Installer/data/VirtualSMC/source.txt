@@ -1,0 +1,2 @@
+https://github.com/acidanthera/VirtualSMC/releases/download/1.0.9/VirtualSMC-1.0.9-RELEASE.zip
+ba368c4be95cada8491760bb4dfddc6832dc0f7bae6f9a611ffd5862236341f9

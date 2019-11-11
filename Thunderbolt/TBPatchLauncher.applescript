@@ -1,0 +1,2 @@
+set self to quoted form of POSIX path of (path to me)
+do shell script self & "/Applications/TBPatch.app/Contents/MacOS/TBPatch AppleHPMDevice@70 " & self & "/Resources/NUC_Hades_Canyon_Apple_Mode.plist" with administrator privileges

@@ -2,9 +2,63 @@
 
 set -e
 
+ACPI=../ACPI
+THUNDERBOLT=../Thunderbolt
 PACKAGES_BUILD=/usr/local/bin/packagesbuild
+DATA=./data
+IASL="$DATA/ACPI/iasl"
+
+if [ ! -f "$PACKAGES_BUILD" ]; then
+    echo "Please install http://s.sudre.free.fr/Software/Packages/about.html"
+    exit 1
+fi
+
+echo "Downloading and extracting required files..."
+
+find "$DATA" -name 'source.txt' -type f | \
+while read line
+do
+    output=`dirname "$line"`
+    url=`head -1 "$line" | xargs echo -n`
+    file=`basename "$url"`
+    hash=`tail -1 "$line" | xargs echo -n`
+    if [ ! -f "$file" ]; then
+        echo "Downloading $url"
+        curl -L "$url" -o "$file"
+    fi
+    check=`shasum -a 256 "$file" | cut -d ' ' -f 1`
+    echo "Hash: $check"
+    if [ "$check" != "$hash" ]; then
+        echo "Hash check failed, expected $hash"
+        echo "Please delete $file to redownload"
+        exit 1
+    fi
+    echo "Extracting $file to $output"
+    unzip -o "$file" -d "$output"
+done
+
+echo "Compiling ASL..."
+if [ ! -f "$IASL" ]; then
+    echo "iasl not found"
+    exit 1
+fi
+find "$ACPI" -name '*.asl' -depth 1 -exec "$IASL" \{\} \;
+find "$ACPI" -name '*.aml' -depth 1 -exec mv \{\} "$DATA/ACPI" \;
+
+echo "Compiling Thunderbolt patcher..."
+TBPATCHAPP="$DATA/ThunderboltNative/Thunderbolt Patcher.app"
+rm -rf "$TBPATCHAPP"
+osacompile -o "$TBPATCHAPP" -x "$THUNDERBOLT/TBPatchLauncher.applescript"
+mkdir "$TBPATCHAPP/Applications"
+mv "$DATA/ThunderboltNative/TBPatch.app" "$TBPATCHAPP/Applications/"
+mkdir "$TBPATCHAPP/Resources"
+cp "$THUNDERBOLT/NUC_Hades_Canyon_Apple_Mode.plist" "$TBPATCHAPP/Resources/"
+
+echo "Building package..."
 
 $PACKAGES_BUILD -v Package.pkgproj
+
+echo "Fixing up package..."
 
 # patch up dst selection screen
 rm -rf "build/HaCMini"
