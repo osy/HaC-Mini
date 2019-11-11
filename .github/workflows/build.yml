@@ -7,10 +7,6 @@ on:
       - 'Installer/**'
       - 'OC/**'
       - 'Thunderbolt/**'
-    tags-ignore:
-      - '**'
-    branches-ignore:
-      - '**'
   pull_request:
   release:
     types: [created]
