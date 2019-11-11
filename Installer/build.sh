@@ -2,10 +2,11 @@
 
 set -e
 
-ACPI=../ACPI
-THUNDERBOLT=../Thunderbolt
+BASEDIR=`dirname "$0"`
+ACPI="$BASEDIR/ACPI"
+THUNDERBOLT="$BASEDIR/Thunderbolt"
 PACKAGES_BUILD=/usr/local/bin/packagesbuild
-DATA=./data
+DATA="$BASEDIR/data"
 IASL="$DATA/ACPI/iasl"
 
 if [ ! -f "$PACKAGES_BUILD" ]; then
