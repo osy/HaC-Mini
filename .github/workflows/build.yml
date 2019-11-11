@@ -2,6 +2,7 @@ name: Installer Build
 on:
   push:
     paths:
+      - '.github/workflows/**'
       - 'ACPI/**'
       - 'Installer/**'
       - 'OC/**'
@@ -15,7 +16,8 @@ jobs:
     name: Build
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Cache DMGs
         id: cache-dmgs
         uses: actions/cache@v1
@@ -34,13 +36,21 @@ jobs:
           hdiutil detach /Volumes/Packages*
       - name: Build Package
         run: Installer/build.sh
-      - uses: actions/upload-artifact@v1
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
         with:
           name: Installer
           path: Installer/build
+  release:
+    name: Release
+    needs: build
+    if: github.event_name == 'release'
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: Installer
       - name: Upload Release Asset
-        id: upload-release-asset
-        if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
