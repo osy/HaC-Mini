@@ -12,6 +12,7 @@
 ## Post-Installation
 
 * [Replacing Wifi Card](post-installation/wifi.md)
+* [DW1820A Wifi](post-installation/dw1820a-wifi.md)
 * [Support](post-installation/support.md)
 
 ## Legacy Guide \(Clover\)
