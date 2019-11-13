@@ -378,17 +378,547 @@
 									<array>
 										<dict>
 											<key>CHILDREN</key>
-											<array/>
+											<array>
+												<dict>
+													<key>CHILDREN</key>
+													<array>
+														<dict>
+															<key>CHILDREN</key>
+															<array/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>data/OpenCore/EFI/BOOT/BOOTx64.efi</string>
+															<key>PATH_TYPE</key>
+															<integer>1</integer>
+															<key>PERMISSIONS</key>
+															<integer>420</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+													</array>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
+													<string>BOOT</string>
+													<key>PATH_TYPE</key>
+													<integer>2</integer>
+													<key>PERMISSIONS</key>
+													<integer>509</integer>
+													<key>TYPE</key>
+													<integer>2</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/ACPI/SSDT-GpuSpoof.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/ACPI/SSDT-Hpm.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/ACPI/SSDT-OsxDetect.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/ACPI/SSDT-PmEnable.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/ACPI/SSDT-Xhci.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>ACPI</string>
+															<key>PATH_TYPE</key>
+															<integer>2</integer>
+															<key>PERMISSIONS</key>
+															<integer>509</integer>
+															<key>TYPE</key>
+															<integer>2</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>../OC/config.plist</string>
+															<key>PATH_TYPE</key>
+															<integer>1</integer>
+															<key>PERMISSIONS</key>
+															<integer>493</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AppleSupport/Drivers/ApfsDriverLoader.efi</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AppleSupport/Drivers/FwRuntimeServices.efi</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AppleSupport/Drivers/VBoxHfs.efi</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/VirtualSMC/Drivers/VirtualSmc.efi</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>Drivers</string>
+															<key>PATH_TYPE</key>
+															<integer>2</integer>
+															<key>PERMISSIONS</key>
+															<integer>509</integer>
+															<key>TYPE</key>
+															<integer>2</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AppleALC/AppleALC.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/IntelMausi/IntelMausi.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/Lilu/Lilu.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/HaCMiniSupport/OldRadeonX4000HWLibs.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>511</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/Polaris22Fixup/Polaris22MetalFixup.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>511</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/HaCMiniSupport/SmallTreeIntel82576.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>511</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/VirtualSMC/Kexts/SMCProcessor.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/USBWakeFixup/USBWakeFixup.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/VirtualSMC/Kexts/VirtualSMC.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>Kexts</string>
+															<key>PATH_TYPE</key>
+															<integer>2</integer>
+															<key>PERMISSIONS</key>
+															<integer>509</integer>
+															<key>TYPE</key>
+															<integer>2</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>data/OpenCore/EFI/OC/OpenCore.efi</string>
+															<key>PATH_TYPE</key>
+															<integer>1</integer>
+															<key>PERMISSIONS</key>
+															<integer>420</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+													</array>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
+													<string>OC</string>
+													<key>PATH_TYPE</key>
+													<integer>2</integer>
+													<key>PERMISSIONS</key>
+													<integer>509</integer>
+													<key>TYPE</key>
+													<integer>2</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+											</array>
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>data/EFI</string>
+											<string>EFI</string>
 											<key>PATH_TYPE</key>
-											<integer>1</integer>
+											<integer>2</integer>
 											<key>PERMISSIONS</key>
-											<integer>493</integer>
+											<integer>509</integer>
 											<key>TYPE</key>
-											<integer>3</integer>
+											<integer>2</integer>
 											<key>UID</key>
 											<integer>0</integer>
 										</dict>
@@ -485,14 +1015,14 @@
 				<key>POSTINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>postinstall.sh</string>
+					<string>scripts/postinstall.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>preinstall.sh</string>
+					<string>scripts/preinstall.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -504,7 +1034,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>copy_serial.sh</string>
+						<string>scripts/copy_serial.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -520,7 +1050,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>create_vault.sh</string>
+						<string>data/OpenCore/Utilities/CreateVault/create_vault.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -536,7 +1066,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>install_acpi.sh</string>
+						<string>scripts/install_acpi.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -552,7 +1082,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>install_drivers.sh</string>
+						<string>scripts/install_drivers.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -568,7 +1098,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>install_kexts.sh</string>
+						<string>scripts/install_kexts.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -584,7 +1114,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>macserial</string>
+						<string>data/MacInfo/macserial</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -600,7 +1130,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>mount_esp.sh</string>
+						<string>scripts/mount_esp.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -616,7 +1146,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>partutil</string>
+						<string>scripts/partutil</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -632,7 +1162,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>RsaTool</string>
+						<string>data/OpenCore/Utilities/CreateVault/RsaTool</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -648,7 +1178,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>sign_oc.sh</string>
+						<string>scripts/sign_oc.sh</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
@@ -1128,7 +1658,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>set_backup.sh</string>
+					<string>scripts/set_backup.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -1182,7 +1712,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>set_security.sh</string>
+					<string>scripts/set_security.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -1236,7 +1766,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>set_regenserial.sh</string>
+					<string>scripts/set_regenserial.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -1719,7 +2249,7 @@
 				<key>POSTINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>patch_installer.sh</string>
+					<string>scripts/patch_installer.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -2199,7 +2729,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>set_verbose.sh</string>
+					<string>scripts/set_verbose.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -2253,7 +2783,7 @@
 				<key>PREINSTALL_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>set_picker.sh</string>
+					<string>scripts/set_picker.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -2679,7 +3209,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>drivers/SSDT-TbtLegacy.aml</string>
+																	<string>data/ACPI/SSDT-TbtLegacy.aml</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -2819,6 +3349,21 @@
 				<key>VERSION</key>
 				<integer>5</integer>
 			</dict>
+			<key>PACKAGE_SCRIPTS</key>
+			<dict>
+				<key>POSTINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>PREINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>RESOURCES</key>
+				<array/>
+			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
 				<key>AUTHENTICATION</key>
@@ -2885,7 +3430,7 @@
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>drivers/Thunderbolt Patcher.app</string>
+									<string>data/ThunderboltNative/Thunderbolt Patcher.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -3267,7 +3812,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>drivers/SSDT-TbtCompanion.aml</string>
+																	<string>data/ACPI/SSDT-TbtCompanion.aml</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -3283,7 +3828,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>drivers/SSDT-TbtOnPCH.aml</string>
+																	<string>data/ACPI/SSDT-TbtOnPCH.aml</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -3422,6 +3967,21 @@
 				<false/>
 				<key>VERSION</key>
 				<integer>5</integer>
+			</dict>
+			<key>PACKAGE_SCRIPTS</key>
+			<dict>
+				<key>POSTINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>PREINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>RESOURCES</key>
+				<array/>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -3854,7 +4414,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>drivers/Thunderbolt3Unblocker.kext</string>
+																	<string>data/Thunderbolt3Unblocker/Thunderbolt3Unblocker.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -3993,6 +4553,21 @@
 				<false/>
 				<key>VERSION</key>
 				<integer>5</integer>
+			</dict>
+			<key>PACKAGE_SCRIPTS</key>
+			<dict>
+				<key>POSTINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>PREINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>RESOURCES</key>
+				<array/>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -4425,7 +5000,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>drivers/WhateverGreen.kext</string>
+																	<string>data/WhateverGreen/WhateverGreen.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -4992,7 +5567,120 @@
 													<array>
 														<dict>
 															<key>CHILDREN</key>
-															<array/>
+															<array>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AirportBrcmFixup/AirportBrcmFixup.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/BrcmPatchRAM/BrcmBluetoothInjector.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/BrcmPatchRAM/BrcmFirmwareData.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/BrcmPatchRAM/BrcmPatchRAM3.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
@@ -5121,6 +5809,21 @@
 				<false/>
 				<key>VERSION</key>
 				<integer>5</integer>
+			</dict>
+			<key>PACKAGE_SCRIPTS</key>
+			<dict>
+				<key>POSTINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>PREINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>RESOURCES</key>
+				<array/>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -5553,7 +6256,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>drivers/GK701HIDDevice.kext</string>
+																	<string>data/GK701HIDDevice/GK701HIDDevice.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -5692,6 +6395,21 @@
 				<false/>
 				<key>VERSION</key>
 				<integer>5</integer>
+			</dict>
+			<key>PACKAGE_SCRIPTS</key>
+			<dict>
+				<key>POSTINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>PREINSTALL_PATH</key>
+				<dict>
+					<key>PATH_TYPE</key>
+					<integer>1</integer>
+				</dict>
+				<key>RESOURCES</key>
+				<array/>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -6469,22 +7187,21 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>CURRENTLY NOT WORKING. Patches for this 3rd party networking card.</string>
+												<string>Patches for this 3rd party networking card. Make sure PCIE ASPM is disabled in BIOS. Models supported: CN-08PKF4.</string>
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
-												<string>当前不可用。
-这是一个针对第三方无线网卡的补丁</string>
+												<string>这是一个针对第三方无线网卡的补丁</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
 											<key>HIDDEN</key>
-											<true/>
+											<false/>
 											<key>STATE</key>
-											<integer>1</integer>
+											<integer>2</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>BFCFFAA6-7582-4F56-9B0E-EA302BB69085</string>
@@ -6675,7 +7392,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>introduction.rtfd</string>
+							<string>languages/en-us/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -6686,7 +7403,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/zh-cn/introduction.rtfd</string>
+							<string>languages/zh-cn/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -6703,7 +7420,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>license.rtf</string>
+							<string>languages/en-us/license.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -6722,7 +7439,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>readme.rtf</string>
+							<string>languages/en-us/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -6733,7 +7450,7 @@
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>Lang/zh-cn/readme.rtf</string>
+							<string>languages/zh-cn/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Messages</key>
+	<dict>
+		<key>Welcome</key>
+		<string>These patches are only designed for NUC8i7HNK/NUC8i7HVK! It has been tested with v33 firmware.
+
+Please note after patching your Thunderbolt NVM, Windows will no longer work with Thunderbolt! You must uninstall these patches if you wish to use Thunderbolt with Windows. Updating the firmware uninstalls the patches. You can also use this tool again.
+
+If you update/reinstall your Thunderbolt firmware, you must reapply the patches.
+
+Lastly, remember this tool and patch-set are provided AS-IS WITHOUT ANY WARRENTY. If used improperly, with the wrong patches, with bad patches, or due to a bug in the software, your TB controller can be bricked and would require recovery with an external SPI flasher.</string>
+		<key>Complete</key>
+		<string>You must perform a hard power reset for the changes to take place. Note that it is recommended you use custom ACPI tables for maximum stability. For some Windows support, you must use a custom ACPI table. Full Windows support is not possible at this time (no TB hotplug).
+
+Shut down your computer, and then unplug the device. After a few seconds, plug it back in and power it up again.</string>
+	</dict>
+	<key>Patches</key>
+	<array>
+		<dict>
+			<key>Offset</key>
+			<integer>0</integer>
+			<key>Original</key>
+			<data>OwE=</data>
+			<key>Replace</key>
+			<data>OwE=</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>53</integer>
+			<key>Original</key>
+			<data>Jyc=</data>
+			<key>Replace</key>
+			<data>Nzc=</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>67</integer>
+			<key>Original</key>
+			<data>rQ==</data>
+			<key>Replace</key>
+			<data>bQ==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>124</integer>
+			<key>Original</key>
+			<data>uw==</data>
+			<key>Replace</key>
+			<data>+w==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>129</integer>
+			<key>Original</key>
+			<data>oA==</data>
+			<key>Replace</key>
+			<data>IA==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>195</integer>
+			<key>Original</key>
+			<data>EAo=</data>
+			<key>Replace</key>
+			<data>EAo=</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>235</integer>
+			<key>Original</key>
+			<data>Ag==</data>
+			<key>Replace</key>
+			<data>Aw==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>258</integer>
+			<key>Original</key>
+			<data>AQ==</data>
+			<key>Replace</key>
+			<data>AA==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>314</integer>
+			<key>Original</key>
+			<data>AA==</data>
+			<key>Replace</key>
+			<data>AQ==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>2866</integer>
+			<key>Original</key>
+			<data>BQ==</data>
+			<key>Replace</key>
+			<data>Aw==</data>
+		</dict>
+		<dict>
+			<key>Offset</key>
+			<integer>2976</integer>
+			<key>Original</key>
+			<data>/////w==</data>
+			<key>Replace</key>
+			<data>hoDTFQ==</data>
+		</dict>
+	</array>
+</dict>
+</plist>

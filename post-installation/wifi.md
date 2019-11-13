@@ -4,6 +4,8 @@ A problem shared by most Hackintosh builds is that OSX's Wifi/BT drivers are lim
 
 With the Wifi card replaced, you can get continuity/handoff features \(and Apple Watch unlocking\) without any unstable software hacks.
 
+For an easier \(but less perfect\) solution that will not block the second M.2 NVMe slot, check out the [DW1820A](dw1820a-wifi.md).
+
 ### Requirements
 
 You need the **BCM94360CS2** Wifi/BT module. It comes from the 2013 MacBook Air line and supports BT4.0 and 802.11a/g/n/ac \(2.4GHz/5GHz\). You can find it pretty cheap on eBay for &lt; $10 USD.

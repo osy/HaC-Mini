@@ -1,0 +1,2 @@
+https://github.com/osy86/GK701HIDDevice/releases/download/v1.0/GK701HIDDevice.kext.zip
+d6569dd5e98f58ea82fefe4a49b35bc345bbfe99b243449bc783fdf88fe58536

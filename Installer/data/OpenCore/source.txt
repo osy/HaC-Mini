@@ -1,0 +1,2 @@
+https://github.com/acidanthera/OpenCorePkg/releases/download/0.5.2/OpenCore-0.5.2-RELEASE.zip
+413d0bba6ef8e85461283cce77b9d8fc5826aaa7de9787497077fd9bc1bf1d4a

@@ -1,0 +1,2 @@
+https://github.com/acidanthera/AppleALC/releases/download/1.4.3/AppleALC-1.4.3-RELEASE.zip
+e544141e3408082765c8cce17f941a4d7f4a3a815375c01f49ff47ec2f81adfb
