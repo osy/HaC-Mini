@@ -7193,7 +7193,8 @@
 												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
-												<string>这是一个针对第三方无线网卡的补丁</string>
+												<string>这是一个针对第三方无线网卡的补丁。请保证在BIOS设置中"PCI-E ASPM"已被禁用。
+支持的型号：CN-08PKF4</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
