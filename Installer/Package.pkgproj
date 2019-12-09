@@ -1178,7 +1178,7 @@
 						<key>GID</key>
 						<integer>0</integer>
 						<key>PATH</key>
-						<string>scripts/sign_oc.sh</string>
+						<string>data/OpenCore/Utilities/CreateVault/sign.command</string>
 						<key>PATH_TYPE</key>
 						<integer>1</integer>
 						<key>PERMISSIONS</key>
