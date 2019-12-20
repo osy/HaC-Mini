@@ -503,6 +503,17 @@
 			<string>HFSPlus.efi</string>
 			<string>VirtualSmc.efi</string>
 		</array>
+		<key>Input</key>
+		<dict>
+			<key>KeyForgetThreshold</key>
+			<integer>5</integer>
+			<key>KeyMergeThreshold</key>
+			<integer>2</integer>
+			<key>KeySupport</key>
+			<true/>
+			<key>KeySupportMode</key>
+			<string>Auto</string>
+		</dict>
 		<key>Protocols</key>
 		<dict>
 			<key>ConsoleControl</key>
@@ -517,17 +528,6 @@
 			<key>RequestBootVarRouting</key>
 			<true/>
 		</dict>
-        <key>Input</key>
-        <dict>
-            <key>KeyForgetThreshold</key>
-            <integer>5</integer>
-            <key>KeyMergeThreshold</key>
-            <integer>2</integer>
-            <key>KeySupport</key>
-            <true/>
-            <key>KeySupportMode</key>
-            <string>Auto</string>
-        </dict>
 	</dict>
 </dict>
 </plist>
