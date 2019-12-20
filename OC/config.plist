@@ -193,6 +193,20 @@
 				WEUyMA==
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>patch XHC.RHUB.GUPC to show ports as external</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				R1VQQwkIUENLRxIHBAAK/w==
+				</data>
+				<key>Replace</key>
+				<data>
+				R1VQQwkIUENLRxIHBAAKAw==
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>Booter</key>
