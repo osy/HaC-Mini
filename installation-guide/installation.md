@@ -13,7 +13,7 @@ A brand new clean install is the recommended way. Existing installations may hav
 ### Prerequisites
 
 * A Mac or another Hackintosh to prepare the installer
-* macOS 10.14.5+ installer
+* macOS 10.14.5+ installer \(lower versions _not_ supported\)
 * USB flash drive with at least 16GB of storage
 
 {% hint style="info" %}

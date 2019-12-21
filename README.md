@@ -14,8 +14,10 @@ This guide is in two parts. The installation guide are for those who just want t
 
 * [x] GPU acceleration
 * [x] Multiple displays \(six 4K displays max\)
+* [x] 5K display
 * [x] Ethernet \(both ports\)
-* [x] Analog Audio \(back port only\)
+* [x] Analog Audio \(both ports, no headsets\)
+* [x] Digital Audio
 * [x] Microphone \(both stereo mics\)
 * [x] HDMI/DP audio
 * [x] USB A ports

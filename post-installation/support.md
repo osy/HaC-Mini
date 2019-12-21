@@ -44,6 +44,10 @@ Sometimes incorrect settings and boot-args will cause issues. You need to [get i
 
 Make sure you are on the [latest BIOS version](https://downloadcenter.intel.com/product/126143). Also try resetting BIOS to factory settings and then re-do the [needed changes](../installation-guide/bios-settings.md).
 
+### Remove Wifi Card
+
+There are known compatibility issues with the [DW1820A](dw1820a-wifi.md). If you cannot boot, remove the card and try again.
+
 ### Reinstall HaC Mini
 
 Follow the [existing install](../installation-guide/installation.md#update-existing-install) directions to update/reinstall the latest version of HaC Mini. This will replace your OpenCore settings but by default a backup will be created in /EFI-backups/OC. If you made changes to the configuration and a reinstall worked, you can try adding the changes back one at a time to see what is the cause of the issue.
