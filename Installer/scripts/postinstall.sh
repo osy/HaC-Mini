@@ -73,6 +73,9 @@ else
     echo "Skipping secure vault generation."
 fi
 
+echo "Resetting boot-args..."
+nvram -d boot-args || true
+
 echo "Unmounting ESP..."
 diskutil unmount "$EFI_ROOT_DIR"
 rm -f "$EFI_ROOT_DIR"

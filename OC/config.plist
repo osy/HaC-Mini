@@ -483,6 +483,8 @@
 				<string>alcid=11 shikigva=32 shiki-id=Mac-BE088AF8C5EB4FA2 -disablegfxfirmware brcmfx-country=#a</string>
 			</dict>
 		</dict>
+		<key>WriteFlash</key>
+		<true/>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
