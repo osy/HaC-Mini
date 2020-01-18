@@ -215,11 +215,11 @@
 		<dict>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
+			<key>DevirtualiseMmio</key>
+			<true/>
 			<key>EnableWriteUnprotector</key>
 			<true/>
 			<key>ProvideCustomSlide</key>
-			<true/>
-			<key>DevirtualiseMmio</key>
 			<true/>
 		</dict>
 	</dict>
