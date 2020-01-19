@@ -37,13 +37,12 @@ if [ -d "$INSTALLER_TEMP/Old" ]; then
     fi
 fi
 
-# Optional installs
-if [ -f "$INSTALLER_TEMP/verboseboot" ]; then
-    echo "Enabling verbose boot"
-    bootargs=`$PLIST_BUDDY -c "Print :NVRAM:Add:7C436110-AB2A-4BBB-A880-FE41995C9F82:boot-args" "$NEW_CONFIG"`
-    bootargs="$bootargs -v"
-    $PLIST_BUDDY -c "Set :NVRAM:Add:7C436110-AB2A-4BBB-A880-FE41995C9F82:boot-args $bootargs" "$NEW_CONFIG"
-fi
+# Install boot-args
+bootargs=`$PLIST_BUDDY -c "Print :NVRAM:Add:7C436110-AB2A-4BBB-A880-FE41995C9F82:boot-args" "$NEW_CONFIG"`
+addargs=`find "$INSTALLER_TEMP" -name 'boot-args-*.txt' -type f -depth 1 -exec cat \{\} \;`
+bootargs="$bootargs $addargs"
+echo "Setting default boot-args=$bootargs"
+$PLIST_BUDDY -c "Set :NVRAM:Add:7C436110-AB2A-4BBB-A880-FE41995C9F82:boot-args $bootargs" "$NEW_CONFIG"
 
 if [ -f "$INSTALLER_TEMP/showpicker" ]; then
     echo "Enabling picker menu"

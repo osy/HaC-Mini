@@ -494,7 +494,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>alcid=11 shikigva=32 shiki-id=Mac-BE088AF8C5EB4FA2 -disablegfxfirmware brcmfx-country=#a</string>
+				<string>alcid=11 -disablegfxfirmware</string>
 			</dict>
 		</dict>
 		<key>WriteFlash</key>
