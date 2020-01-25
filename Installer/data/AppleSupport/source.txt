@@ -1,2 +1,2 @@
-https://github.com/acidanthera/AppleSupportPkg/releases/download/2.1.4/AppleSupport-2.1.4-RELEASE.zip
-18748f5d3897bd2bed186674f8aa4107a1ea12b2037a86b66d6ceebe7667123f
+https://github.com/acidanthera/AppleSupportPkg/releases/download/2.1.5/AppleSupport-2.1.5-RELEASE.zip
+22e7bd632473f86bbaab272c08e5b544b50a6e2a95cb81883e2c1b7c18fb87ff
