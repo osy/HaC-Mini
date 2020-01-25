@@ -479,6 +479,10 @@
 		<dict>
 			<key>AllowNvramReset</key>
 			<true/>
+			<key>AllowSetDefault</key>
+			<true/>
+			<key>AuthRestart</key>
+			<true/>
 			<key>RequireSignature</key>
 			<false/>
 			<key>RequireVault</key>
