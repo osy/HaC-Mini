@@ -9189,15 +9189,38 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Select this to erase existing boot-args. Only required if you have modified boot-args manually in the past. Upon next reboot, boot-args will be overwritten with the default in config.plist (set to above options). May require SIP to be disabled (install may fail otherwise).</string>
+												<string>Select this to erase existing boot-args. Only required if you have modified boot-args manually in the past. Upon next reboot, boot-args will be overwritten with the default in config.plist (set to above options). May require SIP to be disabled (install may fail otherwise). Clearing NVRAM from OpenCore achieves the same purpose.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
+											<key>DEPENDENCY</key>
+											<dict>
+												<key>ENABLED_DEPENDENCY</key>
+												<dict>
+													<key>COMPARATOR</key>
+													<integer>1</integer>
+													<key>OBJECT</key>
+													<integer>1</integer>
+													<key>UUID</key>
+													<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+												</dict>
+												<key>ENABLED_MODE</key>
+												<integer>2</integer>
+												<key>SELECTED_DEPENDENCY</key>
+												<dict>
+													<key>COMPARATOR</key>
+													<integer>0</integer>
+													<key>OBJECT</key>
+													<integer>0</integer>
+													<key>UUID</key>
+													<string>E919B062-B908-4C54-A038-64BF79C90231</string>
+												</dict>
+											</dict>
 											<key>HIDDEN</key>
 											<false/>
 											<key>STATE</key>
-											<integer>2</integer>
+											<integer>3</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>1DFE3B84-42CB-4D5A-9C7D-852BB8936177</string>
@@ -9222,7 +9245,7 @@
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>Customize boot-up settings.</string>
+										<string>Customize boot-up settings. May require clearing NVRAM for changes to apply.</string>
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
@@ -9833,7 +9856,7 @@
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>Select which hardware video decoder/encoder to use. WhateverGreen required.</string>
+										<string>Select which hardware video decoder/encoder to use. WhateverGreen required. May require clearing NVRAM for changes to apply.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
