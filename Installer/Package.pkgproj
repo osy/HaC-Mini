@@ -9019,7 +9019,7 @@
 												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
-												<string>启用OpenCore签名保护功能。一旦启用，你必须在做出任何修改后重新生成并签名保护。</string>
+												<string>启用OpenCore签名保护功能。一旦启用，你必须在做出任何修改后重新生成并签名才可引导。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -9109,6 +9109,12 @@
 												<key>VALUE</key>
 												<string>Turns off automatic reboot on panic, enables symbols in panic log, adds additional debug logging.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>防止内核崩溃时系统自动重新启动，添加了详细日志引导标识符以记录详细调试日志。</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -9126,6 +9132,12 @@
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Debug mode</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>调试模式</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -9189,7 +9201,13 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Select this to erase existing boot-args. Only required if you have modified boot-args manually in the past. Upon next reboot, boot-args will be overwritten with the default in config.plist (set to above options). May require SIP to be disabled (install may fail otherwise). Clearing NVRAM from OpenCore achieves the same purpose.</string>
+												<string>Select this to erase existing boot-args. Only required if you have modified boot-args manually in the past. Upon next reboot, boot-args will be overwritten with the default in config.plist (set to above options). May require SIP to be disabled (install may fail otherwise). Clearing NVRAM from OpenCore Boot Menu achieves the same purpose.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>选中该选项以重置引导参数（boot-args）。只有在你手动调整过引导参数时需要使用。选中后，在下一次重新启动时，config.plist中的引导参数将被你现在所选的参数覆盖，反之则会保留。这可能需要禁用系统完整性保护（SIP），否则可能会导致安装失败。在OpenCore引导菜单中重置NVRAM也可以达到同样的效果。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -9232,6 +9250,12 @@
 												<key>VALUE</key>
 												<string>Reset boot-args</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>重置引导参数（boot-args）</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -9251,7 +9275,7 @@
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>自定义引导设置</string>
+										<string>自定义引导设置。这可能需要重置NVRAM来生效。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -9484,7 +9508,9 @@
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>雷雳支持</string>
+										<string>雷雳支持。
+该选项需要更多的支持信息，请确保你阅读并理解以下内容： 
+https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#comparison</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -9716,6 +9742,12 @@
 												<key>VALUE</key>
 												<string>Use AMD UVD/VCE for hardware video codec features.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>使用AMD UVD/VCE作为硬件视频编解码器。</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -9802,6 +9834,13 @@
 												<key>VALUE</key>
 												<string>Recommended. Requires Intel IGPU to be enabled in BIOS. Use Intel QuickSync for hardware video codec features.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>推荐此选项。使用Intel QuickSync进行硬件编解码。
+需要在BIOS中启用Intel IGPU。</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -9858,6 +9897,12 @@
 										<key>VALUE</key>
 										<string>Select which hardware video decoder/encoder to use. WhateverGreen required. May require clearing NVRAM for changes to apply.</string>
 									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>选择你要使用哪个设备进行视频硬件编码/解码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
+									</dict>
 								</array>
 								<key>OPTIONS</key>
 								<dict>
@@ -9873,6 +9918,12 @@
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Hardware Video Codec</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>硬件视频编解码器选择</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
