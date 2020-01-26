@@ -1,18 +1,21 @@
 # Welcome
 
-The goal of this guide is to create the perfect Mac mini alternative using the Intel NUC **Ha**des **C**anyon \(NUC8i7HNK/NUC8i7HVK\) and **macOS**. This guide is not for setting up a Hackintosh for any other configuration \(although many of the steps are the same across most configurations\). For a general Hackintosh guide, the [Vanilla Hackintosh Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) is highly recommended and is the main source of inspiration for this guide.
+The goal of this guide is to create the perfect Mac mini alternative using the Intel NUC **Ha**des **C**anyon \(NUC8i7HNK/NUC8i7HVK\) and **macOS**. This guide is not for setting up a Hackintosh for any other machine. For a general Hackintosh guide, the [Vanilla Hackintosh Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) is highly recommended and is the main source of inspiration for this guide.
 
 ### Overview
 
-This guide is in two parts. The installation guide are for those who just want to get everything working. The details section goes into more technical details about the inner workings of the various patches and pieces glued together to make it all work. The recommended audience for the second part are for those with technical knowledge and interest in how things work.
+Installation is simple and requires no prior knowledge or experience with Hackintoshes. All you need to do is make some BIOS changes, build an OSX installer flash drive from another Mac \(with some patches\), and run that installer on the NUC. The guide will explain all of this in detail.
 
 [Get started with the build!](installation-guide/bios-settings.md)
 
 ### Status
 
+This project aims to be the most complete Hackintosh build with no details overlooked. We have developed custom drivers, patches, and configurations specifically for the NUC Hades Canyon. We also follow Apple's lead in packaging all this in a user-friendly solution that does not require editing config files or understanding a list of jargon.
+
 #### Working Hardware
 
 * [x] GPU acceleration
+* [x] Video encoder/decoder hardware
 * [x] Multiple displays \(six 4K displays max\)
 * [x] 5K display
 * [x] Ethernet \(both ports\)
@@ -22,7 +25,9 @@ This guide is in two parts. The installation guide are for those who just want t
 * [x] HDMI/DP audio
 * [x] USB A ports
 * [x] USB C ports
-* [x] TB3 ports \(including hotplug\)
+* [x] Thunderbolt 3 ports \(including hotplug\)
+* [x] Thunderbolt IP \(XDomain, internet sharing\)
+* [x] eGPU \(with hotplug\)
 * [x] SD card slot
 * [x] NVMe/SATA SSD
 * [x] CPU power management
@@ -31,12 +36,13 @@ This guide is in two parts. The installation guide are for those who just want t
 
 **Working Software**
 
-* [x] Installation, updates, App Store
+* [x] Installer, App Store, app updates, OS updates
 * [x] iMessage, iCloud, Siri, iTunes, other services
 * [x] FileVault2, APFS, Time Machine, SSD TRIM
-* [x] Metal, GPU accelerated applications
+* [x] Metal, GPU accelerated applications, hardware video encoder/decoder
 * [x] Parallels/VMWare, other VM software
 * [x] Handoff, Continuity, Universal Clipboard, Apple Watch unlock \(using Apple Wifi card\)
+* [x] SIP, Gate Keeper, all OSX security features
 
 #### Not Working/Issues
 

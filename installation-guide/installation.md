@@ -12,7 +12,7 @@ A brand new clean install is the recommended way. Existing installations may hav
 
 ### Prerequisites
 
-* A Mac or another Hackintosh to prepare the installer
+* A Mac or another Hackintosh to prepare the installer \(running at least macOS 10.14\)
 * macOS 10.14.5+ installer \(lower versions _not_ supported\)
 * USB flash drive with at least 16GB of storage
 
@@ -26,7 +26,7 @@ Please note that OSX software license prohibits running it on non-Apple hardware
 Note all data on the USB drive **will be erased**.
 {% endhint %}
 
-1. On another OSX machine \(or another Hackintosh\), download **macOS Mojave** or higher from the [App Store](https://apps.apple.com/us/app/macos-mojave/id1398502828).
+1. On another OSX machine \(or another Hackintosh\), download **macOS Catalina** or higher from the [App Store](https://apps.apple.com/us/app/macos-mojave/id1398502828).
 2. Insert your USB drive and open up Terminal.
 3. Open up Disk Utility to format your USB drive:
    1. Find your USB drive in the left sidebar under External \(if there are multiple sub-drives under your USB drive, select the top-most one\). You may need to choose **View** -&gt; **Show All Devices** in order to see the full disk.
@@ -34,7 +34,7 @@ Note all data on the USB drive **will be erased**.
    3. Give the name **Installer** and make sure to select **GUID Partition Map** as the Scheme.
    4. Press Erase, wait until it completes, and quit Disk Utility.
 4. Open up Terminal and create the installer
-   1. Run the following command `sudo "/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmedia" --volume /Volumes/Installer` and type in your password when prompted.
+   1. Run the following command `sudo "/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia" --volume /Volumes/Installer` and type in your password when prompted.
    2. Wait for the process to complete. This can take around 30 minutes to an hour.
 
 ### Patching OSX Installer
@@ -66,17 +66,17 @@ We will be doing a clean installation. That means the SSD will be wiped and **an
    1. Partition your SSD using **Disk Utility**. You may need to choose **View** -&gt; **Show All Devices** in order to find your drive. You should wipe the entire drive and format it as APFS with GUID Partition Map. This will also create the EFI and Recovery partitions.
    2. Installation will reboot a few times. Because USB has first boot priority, you do not have to touch anything.
 5. After installation completes, you can remove the USB and boot from your SSD. You can revert the boot priority changes if desired.
+6. Optional: If you wish to use the [native Thunderbolt patches](../details/thunderbolt-3-fix-part-3.md), follow the [update instructions](installation.md#update-existing-install).
 
 ## Update Existing Install
 
 If you have an existing working Hackintosh installed on your NUC Hades Canyon, you can upgrade to HaC Mini with OpenCore for a more stable experience. You should also follow these steps when a new release of HaC Mini comes out. You do not need to follow these steps if you already done a clean install with the steps above.
 
 {% hint style="danger" %}
-You should never use MultiBeast or similar OSX "distributions" as they include broken and outdated patches and are not customized for your specific system. If you use a distribution, it is recommended that you back up your system then follow the "clean install" instructions above and then restore your files.
+You should never use MultiBeast or similar OSX "distributions" \(ever. on any system.\) as they include broken and outdated patches and are not customized for your specific system. If you use a distribution, it is recommended that you back up your system then follow the "clean install" instructions above and then restore your files.
 {% endhint %}
 
 1. Download the installer and run **HaCMini.pkg**
 2. Run the installer to completion
 3. If you've selected to install _Native Thunderbolt_ support, run **Thunderbolt Patcher** from Applications after rebooting and patch your Thunderbolt controller.
-4. If you're updating from an OpenCore release \(v2.0+\) then your previous serial will be preserved by default. If you're updating from a Clover release \(v1.x\), then a new serial will be generated. If you wish to use your old values, you need to manually edit `EFI/OC/config.plist` and copy the values over from `EFI/Clover/config.plist`.
 

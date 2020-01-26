@@ -1,10 +1,6 @@
 # Support
 
-Support are provided in the following ways:
-
-* [Github issue tracker](https://github.com/osy86/HaC-Mini/issues)
-* [InsanelyMac](https://www.insanelymac.com/forum/topic/339291-guide-hac-mini-osx-mojave-on-intel-hades-canyon-nuc8i7hvknuc8i7hnk/)
-* [/r/Hackintosh Discord](http://discord.io/hackintosh)
+Support is provided in the [Github issue tracker](https://github.com/osy86/HaC-Mini/issues). **Please search before posting.** If there is no existing ticket, it is important that you follow the instructions in the template for a new ticket and provide all the requested information! Issues without the requested information may be rejected.
 
 Do **not** ask for help in tonymacx86 \(better yet, stop going to tonymacx86!\). They do not permit discussion of anything except for their own "approved" installation methods--which are all pretty problematic. We tried to provide help there in the past but was banned for linking to a non-tonymac approved guide.
 
@@ -58,5 +54,5 @@ You can try booting into safe mode by holding Win+S \(Cmd+S on Apple keyboards\)
 
 ### Enable verbose boot
 
-Modify `EFI/OC/config.plist` from the EFI partition and in `boot-args` add `-v keepsyms=1 debug=0x100` which will enable verbose boot, show debugging symbols, and disable restart on panic. If there is a panic, take a picture and include it in your support request.
+Rerun the HaC Mini installer and select the following options: Verbose Boot, Debug mode, Reset boot-args. If this fails, try it without "Reset boot-args" and then [reset NVRAM](support.md#reset-nvram). If there is a panic, take a picture and include it in your support request.
 
