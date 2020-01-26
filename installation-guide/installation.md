@@ -26,7 +26,7 @@ Please note that OSX software license prohibits running it on non-Apple hardware
 Note all data on the USB drive **will be erased**.
 {% endhint %}
 
-1. On another OSX machine \(or another Hackintosh\), download **macOS Catalina** or higher from the [App Store](https://apps.apple.com/us/app/macos-mojave/id1398502828).
+1. On another OSX machine \(or another Hackintosh\), download **macOS Catalina** or higher from the [App Store](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12).
 2. Insert your USB drive and open up Terminal.
 3. Open up Disk Utility to format your USB drive:
    1. Find your USB drive in the left sidebar under External \(if there are multiple sub-drives under your USB drive, select the top-most one\). You may need to choose **View** -&gt; **Show All Devices** in order to see the full disk.
