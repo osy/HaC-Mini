@@ -137,16 +137,16 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change H_EC to EC for USB power</string>
+				<string>patch PNP0C09 to PNPFFFF for boot issue workaround</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				SF9FQw==
+				QdAMCQ==
 				</data>
 				<key>Replace</key>
 				<data>
-				RUNfXw==
+				QdD//w==
 				</data>
 			</dict>
 			<dict>
