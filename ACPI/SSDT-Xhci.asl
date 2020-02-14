@@ -307,6 +307,11 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
             }
         }
 
+        Device(\_SB.EC) // fake EC for AppleBusPowerController matching
+        {
+            Name(_HID, "EC000000")  // _HID: Hardware ID
+        }
+
         Device (\_SB.USBW)
         {
             Name (_HID, "PNP0D10")  // _HID: Hardware ID
