@@ -1,2 +1,2 @@
-https://github.com/acidanthera/MacInfoPkg/releases/download/2.1.0/macinfo-2.1.0-mac.zip
-413768dbea1e17f3ac5ac9509f2a886f7b234b4810e5c95c0d4f01563593f8ac
+https://github.com/acidanthera/MacInfoPkg/releases/download/2.1.1/macinfo-2.1.1-mac.zip
+0c8bc7ccf2bcf0769d5cbd85ecec630424855336f1b40dbde7a2e9b3655356ee
