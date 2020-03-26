@@ -472,8 +472,6 @@
 		<dict>
 			<key>HibernateMode</key>
 			<string>None</string>
-			<key>UsePicker</key>
-			<true/>
 		</dict>
 		<key>Security</key>
 		<dict>
@@ -483,12 +481,10 @@
 			<true/>
 			<key>AuthRestart</key>
 			<true/>
-			<key>RequireSignature</key>
-			<false/>
-			<key>RequireVault</key>
-			<false/>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
+			<key>Vault</key>
+			<string>Optional</string>
 		</dict>
 	</dict>
 	<key>NVRAM</key>
@@ -551,19 +547,20 @@
 			<key>KeySupportMode</key>
 			<string>Auto</string>
 		</dict>
+		<key>Output</key>
+		<dict>
+			<key>ProvideConsoleGop</key>
+			<true/>
+			<key>Resolution</key>
+			<string>Max</string>
+		</dict>
 		<key>Protocols</key>
 		<dict>
 			<key>AppleSmcIo</key>
 			<true/>
-			<key>ConsoleControl</key>
-			<true/>
 		</dict>
 		<key>Quirks</key>
 		<dict>
-			<key>IgnoreTextInGraphics</key>
-			<true/>
-			<key>ProvideConsoleGop</key>
-			<true/>
 			<key>RequestBootVarRouting</key>
 			<true/>
 		</dict>
