@@ -539,7 +539,6 @@
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>VirtualSmc.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -554,6 +553,8 @@
 		</dict>
 		<key>Protocols</key>
 		<dict>
+			<key>AppleSmcIo</key>
+			<true/>
 			<key>ConsoleControl</key>
 			<true/>
 		</dict>
