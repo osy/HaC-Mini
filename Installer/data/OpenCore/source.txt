@@ -1,2 +1,2 @@
-https://github.com/acidanthera/OpenCorePkg/releases/download/0.5.6/OpenCore-0.5.6-RELEASE.zip
-aefc2a120fa8a6265c88780c54bfb8ef68b741438f5dc27921ecb85cc800d760
+https://github.com/acidanthera/OpenCorePkg/releases/download/0.5.7/OpenCore-0.5.7-RELEASE.zip
+2f1426b871cfeac39edd525bfb6e098bd1c62f9c4010eeead7d1282979b9f75e
