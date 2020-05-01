@@ -10244,41 +10244,6 @@
 							</dict>
 							<dict>
 								<key>CHILDREN</key>
-								<array/>
-								<key>DESCRIPTION</key>
-								<array>
-									<dict>
-										<key>LANGUAGE</key>
-										<string>English</string>
-										<key>VALUE</key>
-										<string>Only select if you have issues with screen flickering. Once installed, when the screen starts flickering, you should sleep and wake the display. This workaround will increase CPU and power usage and may slow down your computer.</string>
-									</dict>
-								</array>
-								<key>OPTIONS</key>
-								<dict>
-									<key>HIDDEN</key>
-									<false/>
-									<key>STATE</key>
-									<integer>2</integer>
-								</dict>
-								<key>PACKAGE_UUID</key>
-								<string>80358A2D-4176-4F56-9C31-D15001239B1B</string>
-								<key>TITLE</key>
-								<array>
-									<dict>
-										<key>LANGUAGE</key>
-										<string>English</string>
-										<key>VALUE</key>
-										<string>Reduce screen flickering</string>
-									</dict>
-								</array>
-								<key>TYPE</key>
-								<integer>0</integer>
-								<key>UUID</key>
-								<string>D82DDE68-D57E-4717-AAA7-D012910CC4C9</string>
-							</dict>
-							<dict>
-								<key>CHILDREN</key>
 								<array>
 									<dict>
 										<key>CHILDREN</key>
@@ -11209,14 +11174,85 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 							</dict>
 							<dict>
 								<key>CHILDREN</key>
-								<array/>
+								<array>
+									<dict>
+										<key>CHILDREN</key>
+										<array/>
+										<key>DESCRIPTION</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>Only select if you have issues with screen flickering. Once installed, when the screen starts flickering, you should sleep and wake the display. This workaround will increase CPU and power usage and may slow down your computer.</string>
+											</dict>
+										</array>
+										<key>OPTIONS</key>
+										<dict>
+											<key>HIDDEN</key>
+											<false/>
+											<key>STATE</key>
+											<integer>2</integer>
+										</dict>
+										<key>PACKAGE_UUID</key>
+										<string>80358A2D-4176-4F56-9C31-D15001239B1B</string>
+										<key>TITLE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>Reduce screen flickering</string>
+											</dict>
+										</array>
+										<key>TYPE</key>
+										<integer>0</integer>
+										<key>UUID</key>
+										<string>D82DDE68-D57E-4717-AAA7-D012910CC4C9</string>
+									</dict>
+									<dict>
+										<key>CHILDREN</key>
+										<array/>
+										<key>DESCRIPTION</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>Some NVMe devices will panic at random (Samsung PM981 for example). This is only needed if you are experiencing crashes due to NVMe.</string>
+											</dict>
+										</array>
+										<key>OPTIONS</key>
+										<dict>
+											<key>HIDDEN</key>
+											<false/>
+											<key>STATE</key>
+											<integer>2</integer>
+										</dict>
+										<key>PACKAGE_UUID</key>
+										<string>B2496A6B-0356-4CD5-B9CD-AB2F840BA48D</string>
+										<key>TITLE</key>
+										<array>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>English</string>
+												<key>VALUE</key>
+												<string>NVMe Panic Fix</string>
+											</dict>
+										</array>
+										<key>TYPE</key>
+										<integer>0</integer>
+										<key>UUID</key>
+										<string>1549DBBF-1202-4ABD-9E69-9825F5161DCB</string>
+									</dict>
+								</array>
 								<key>DESCRIPTION</key>
 								<array>
 									<dict>
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>Some NVMe devices will panic at random (Samsung PM981 for example). This is only needed if you are experiencing crashes due to NVMe.</string>
+										<string>Optional patches to workaround driver issues. Only install if you are experiencing problems because they can reduce system stability.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -11224,23 +11260,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 									<key>HIDDEN</key>
 									<false/>
 									<key>STATE</key>
-									<integer>2</integer>
+									<integer>4</integer>
 								</dict>
-								<key>PACKAGE_UUID</key>
-								<string>B2496A6B-0356-4CD5-B9CD-AB2F840BA48D</string>
 								<key>TITLE</key>
 								<array>
 									<dict>
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>NVMe Panic Fix</string>
+										<string>Workarounds</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>UUID</key>
-								<string>1549DBBF-1202-4ABD-9E69-9825F5161DCB</string>
+								<string>FF1F5700-8F6B-40DF-B563-2BAC4F1A1FE3</string>
 							</dict>
 						</array>
 						<key>REMOVED</key>
