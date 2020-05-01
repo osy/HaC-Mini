@@ -5974,6 +5974,39 @@
 															<key>CHILDREN</key>
 															<array>
 																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/ACPI/SSDT-BrcmFix.aml</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>ACPI</string>
+															<key>PATH_TYPE</key>
+															<integer>2</integer>
+															<key>PERMISSIONS</key>
+															<integer>509</integer>
+															<key>TYPE</key>
+															<integer>2</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
 																	<key>BUNDLE_CAN_DOWNGRADE</key>
 																	<false/>
 																	<key>BUNDLE_POSTINSTALL_PATH</key>
@@ -6224,8 +6257,6 @@
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
-					<key>PATH</key>
-					<string>scripts/set_brcm.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
