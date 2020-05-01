@@ -6,8 +6,7 @@ Although using a Wifi card from a real Mac is [recommended](wifi.md) due to nati
 
 This card requires additional kernel patches to work and users have reported compatibility issues with dual booting, Handoff, and Continuity. However, it is the same size as the stock Intel card \(which is NOT supported by any drivers\) and installation is fairly straightforward.
 
-### Installation
+## Installation
 
-1. In BIOS, under Power, disable PCIE ASPM
-2. In the HaC Mini installer, make sure to check the option for **Dell DW1820A**.
+In the HaC Mini installer, make sure to check the option for **Dell DW1820A**.
 

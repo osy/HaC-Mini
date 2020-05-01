@@ -4,7 +4,7 @@ A problem shared by most Hackintosh builds is that OSX's Wifi/BT drivers are lim
 
 With the Wifi card replaced, you can get continuity/handoff features \(and Apple Watch unlocking\) without any unstable software hacks.
 
-For an easier \(but less perfect\) solution that will not block the second M.2 NVMe slot, check out the [DW1820A](dw1820a-wifi.md).
+For an easier \(but less perfect\) solution that will not block the second M.2 NVMe slot, check out the [DW1820A](dw1820a-wifi.md). There is also [another adapter](https://github.com/osy86/HaC-Mini/issues/191) for Apple BCM943602CS that will allow you to retain the second M.2 NVMe slot but will require re-wiring the antennas.
 
 ### Requirements
 
