@@ -1,0 +1,2 @@
+https://github.com/zxystd/IntelBluetoothFirmware/releases/download/1.0.3/IntelBluetooth.zip
+5781aa132f94dedbaffa3206ab34ce679aed26f7dccfd2e0583e2caa5992f79a
