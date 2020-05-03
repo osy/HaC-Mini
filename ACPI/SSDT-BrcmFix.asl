@@ -17,7 +17,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "BrcmFix", 0x00001000)
                 {
                     Local0 = Package ()
                         {
-                            "pci-aspm-default", Buffer() { 0x00 },
+                            "pci-aspm-default", Buffer() { 0x00, 0x00 },
                             "brcmfx-country", Buffer() { "#a" },
                         }
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
