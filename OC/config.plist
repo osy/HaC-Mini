@@ -532,6 +532,8 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>HideVerbose</key>
+			<true/>
 			<key>JumpstartHotPlug</key>
 			<true/>
 		</dict>
