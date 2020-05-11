@@ -1,2 +1,2 @@
-https://github.com/osy86/AppleALC/releases/download/1.4.6/AppleALC-1.4.6-RELEASE.zip
-36dcaf1195da0a2993889b7ac8dd02307c143631ff2c83276946ec71f5938b03
+https://github.com/acidanthera/AppleALC/releases/download/1.4.9/AppleALC-1.4.9-RELEASE.zip
+9f88b22680c63ff6dd021414f4a4961b8becd92346d5799e8c5e246fdfa690b8

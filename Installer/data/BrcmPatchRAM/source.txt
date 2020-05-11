@@ -1,2 +1,2 @@
-https://github.com/acidanthera/BrcmPatchRAM/releases/download/2.5.1/BrcmPatchRAM-2.5.1-RELEASE.zip
-628e78da284af830b368b3006e2d5c910d5feb74cb121a8d522b7824654d184c
+https://github.com/acidanthera/BrcmPatchRAM/releases/download/2.5.3/BrcmPatchRAM-2.5.3-RELEASE.zip
+e3385d85fc40a4bc80cb0cabb82d7be8daca7267e1c4fab3e6b07083ced03200
