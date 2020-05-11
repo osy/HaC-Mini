@@ -10,7 +10,7 @@ Outstanding issues are tracked and worked on in the [Github issues](https://gith
 
 ### [USB disconnected on sleep wakeup](https://github.com/osy86/HaC-Mini/issues/8)
 
-This is a hardware issue and cannot be worked around without Intel support or extensive kernel patching. If you require a USB device to not be disconnected \(an external HDD for example\), you can use the blue USB 3.0 Type A port on the front of the NUC. This port is connected to the CPU directly \(does not go through the buggy PCH\) and does not exhibit the same wakeup issue. However, it does experience a separate issue where if you have the device connected before powering on, then it will get disconnected after the first sleep. You should either plug in the device after OSX boots or suffer a single disconnect before the issue goes away. 
+This is a hardware issue and cannot be worked around without Intel support or extensive kernel patching. If you require a USB device to not be disconnected \(an external HDD for example\), you can use the blue USB 3.0 Type A port on the front of the NUC. This port is connected to the CPU directly \(does not go through the buggy PCH\) and does not exhibit the same wakeup issue. However, it does experience a separate issue where if you have the device connected before powering on, then it will get disconnected after the first sleep. You should either plug in the device after OSX boots or suffer a single disconnect before the issue goes away.
 
 ### Only boot entry is "Windows Boot Manager"
 
@@ -23,6 +23,8 @@ If the Ridge controller crashes, you won't get DP output \(or anything else\) fr
 ### Black screen after POST when booting up or after selecting boot drive
 
 First get into the [boot picker menu](support.md#getting-into-boot-picker-menu), and boot into OSX. Then, you need to make sure the right startup device is selected in System Preferences -&gt; Startup Disk. Select your OSX installation you wish to boot into and press Restart. This should fix the issue for future boots.
+
+If this happens during an OSX upgrade, you need to manually select the updater option. After the upgrade is complete, you can configure the Startup Disk.
 
 ## Troubleshooting
 

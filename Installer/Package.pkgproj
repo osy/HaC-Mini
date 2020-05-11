@@ -10821,6 +10821,12 @@
 										<key>VALUE</key>
 										<string>Apple服务需要使用唯一标示码。默认情况下，标示码将会继承本地原有OpenCore配置中的值。如果该选项被选中，将忽略原有的唯一标示码，并重新生成唯一标示码。</string>
 									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>只在你有屏幕闪烁问题时选中此选项。一旦安装此选项，当屏幕开始闪烁时，你应该将屏幕睡眠后重新启动。这个临时方法有可能会降低你的电脑运行速度。</string>
+									</dict>
 								</array>
 								<key>OPTIONS</key>
 								<dict>
@@ -10844,6 +10850,12 @@
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>重新生成唯一标示码</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>减少屏幕闪烁</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -11546,6 +11558,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>Driver for stock Intel Wireless card. Bluetooth only (no WiFi). Supported models: 3165, 3168, 726x, 8265, 926x, 9560, AX200, AX201</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>原机自带的Intel无线模块驱动。该驱动只包含蓝牙（没有Wi-Fi）。支持的型号：3165, 3168, 726x, 8265, 926x, 9560, AX200, AX201</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -11563,6 +11581,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Intel Bluetooth</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>Intel 蓝牙</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -11830,6 +11854,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>Only select if you have issues with screen flickering. Once installed, when the screen starts flickering, you should sleep and wake the display. This workaround will increase CPU and power usage and may slow down your computer.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>只在你有屏幕闪烁问题时选中。安装后，一旦屏幕开始闪烁，你应该关闭后再启动你的显示器。这个补丁会提高CPU占用率，并有可能降低你的电脑运行速度。</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -11848,6 +11878,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>Reduce screen flickering</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>减少屏幕闪烁</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -11864,6 +11900,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Some NVMe devices will panic at random (Samsung PM981 for example). This is only needed if you are experiencing crashes due to NVMe.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>一些NVMe设备会导致随机Panic，如三星PM981。只有你在遇到这种情况的时候才选中这个选项。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -11883,6 +11925,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>NVMe Panic Fix</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>Simplified Chinese</string>
+												<key>VALUE</key>
+												<string>NVMe Panic 修复</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -11897,6 +11945,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Optional patches to workaround driver issues. Only install if you are experiencing problems because they can reduce system stability.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>可选的驱动补丁。只在你遇到特定问题时选中这些选项，因为它们可能会导致系统不稳定。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -11913,6 +11967,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 										<string>English</string>
 										<key>VALUE</key>
 										<string>Workarounds</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>Simplified Chinese</string>
+										<key>VALUE</key>
+										<string>可选补丁</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
