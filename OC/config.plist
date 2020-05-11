@@ -207,6 +207,20 @@
 				R1VQQwkIUENLRxIHBAAKAw==
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>patch FADT from mobile profile to desktop to hide Battery from Energy Saver</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				AAIJALIAAACgoQAAABgAAA==
+				</data>
+				<key>Replace</key>
+				<data>
+				AAEJALIAAACgoQAAABgAAA==
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>Booter</key>
@@ -471,7 +485,7 @@
 		<key>Boot</key>
 		<dict>
 			<key>HibernateMode</key>
-			<string>None</string>
+			<string>Auto</string>
 		</dict>
 		<key>Security</key>
 		<dict>
