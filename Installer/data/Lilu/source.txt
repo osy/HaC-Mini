@@ -1,2 +1,2 @@
-https://github.com/acidanthera/Lilu/releases/download/1.4.4/Lilu-1.4.4-RELEASE.zip
-077aadd0004ac30d859e15fdce224eac8a5500af17cdf04add8e4a71eb3c672e
+https://github.com/acidanthera/Lilu/releases/download/1.4.5/Lilu-1.4.5-RELEASE.zip
+fad11cb66b34041379c60d7146d0a96f1fa8696233df1b4c8fe049c5957a6732
