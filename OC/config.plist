@@ -497,8 +497,6 @@
 			<true/>
 			<key>AuthRestart</key>
 			<true/>
-			<key>BlacklistAppleUpdate</key>
-			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>ScanPolicy</key>
@@ -515,6 +513,8 @@
 			<dict/>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>run-efi-updater</key>
+				<string>No</string>
 				<key>boot-args</key>
 				<string>alcid=11 -disablegfxfirmware</string>
 			</dict>
