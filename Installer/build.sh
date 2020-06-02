@@ -27,12 +27,14 @@ do
         echo "Downloading $url"
         curl -L "$url" -o "$file"
     fi
-    check=`shasum -a 256 "$file" | cut -d ' ' -f 1`
-    echo "Hash: $check"
-    if [ "$check" != "$hash" ]; then
-        echo "Hash check failed, expected $hash"
-        echo "Please delete $file to redownload"
-        exit 1
+    if [ "$hash" != "none" ]; then
+        check=`shasum -a 256 "$file" | cut -d ' ' -f 1`
+        echo "Hash: $check"
+        if [ "$check" != "$hash" ]; then
+            echo "Hash check failed, expected $hash"
+            echo "Please delete $file to redownload"
+            exit 1
+        fi
     fi
     echo "Extracting $file to $output"
     unzip -o "$file" -d "$output"

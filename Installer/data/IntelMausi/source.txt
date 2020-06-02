@@ -1,2 +1,2 @@
-https://github.com/acidanthera/IntelMausi/releases/download/1.0.2/IntelMausi-1.0.2-RELEASE.zip
-3589cf439586b71b283510c2190822e53a8ba7c80da073257d1fd3ccc4affa84
+https://github.com/acidanthera/IntelMausi/releases/download/1.0.3/IntelMausi-1.0.3-RELEASE.zip
+f07cb3229d262e42d21dc7bd1b3029211b1259e00eadcb6ca7330d773f33c58f
