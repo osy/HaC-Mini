@@ -235,6 +235,8 @@
 			<true/>
 			<key>RebuildAppleMemoryMap</key>
 			<true/>
+			<key>SyncRuntimePermissions</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
