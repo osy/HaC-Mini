@@ -478,10 +478,6 @@
 	</dict>
 	<key>Misc</key>
 	<dict>
-		<key>BlessOverride</key>
-		<array>
-			<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
-		</array>
 		<key>Boot</key>
 		<dict>
 			<key>HibernateMode</key>
@@ -498,6 +494,8 @@
 			<key>AllowSetDefault</key>
 			<true/>
 			<key>AuthRestart</key>
+			<true/>
+			<key>BlacklistAppleUpdate</key>
 			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
