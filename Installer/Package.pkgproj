@@ -7636,7 +7636,24 @@
 								</dict>
 								<dict>
 									<key>CHILDREN</key>
-									<array/>
+									<array>
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>0</integer>
+											<key>PATH</key>
+											<string>../AppleGVA/com.apple.AppleGVA.plist</string>
+											<key>PATH_TYPE</key>
+											<integer>1</integer>
+											<key>PERMISSIONS</key>
+											<integer>384</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+									</array>
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
@@ -11635,33 +11652,10 @@
 										</array>
 										<key>OPTIONS</key>
 										<dict>
-											<key>DEPENDENCY</key>
-											<dict>
-												<key>ENABLED_DEPENDENCY</key>
-												<dict>
-													<key>COMPARATOR</key>
-													<integer>1</integer>
-													<key>OBJECT</key>
-													<integer>1</integer>
-													<key>UUID</key>
-													<string>2FD76DCE-899D-4C58-A849-906894019645</string>
-												</dict>
-												<key>ENABLED_MODE</key>
-												<integer>2</integer>
-												<key>SELECTED_DEPENDENCY</key>
-												<dict>
-													<key>COMPARATOR</key>
-													<integer>0</integer>
-													<key>OBJECT</key>
-													<integer>0</integer>
-													<key>UUID</key>
-													<string>E919B062-B908-4C54-A038-64BF79C90231</string>
-												</dict>
-											</dict>
 											<key>HIDDEN</key>
 											<false/>
 											<key>STATE</key>
-											<integer>3</integer>
+											<integer>2</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>1DFE3B84-42CB-4D5A-9C7D-852BB8936177</string>
