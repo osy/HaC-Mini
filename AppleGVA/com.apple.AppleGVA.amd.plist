@@ -4,11 +4,11 @@
 <dict>
 	<key>gvaForceAMDAVCDecode</key>
 	<true/>
-	<key>gvaForceAMDAVCEncode</key>
-	<true/>
 	<key>gvaForceAMDHEVCDecode</key>
 	<true/>
-	<key>gvaForceAMDKE</key>
-	<true/>
+    <key>gvaForceAMDAVCEncode</key>
+    <true/>
+    <key>gvaForceAMDKE</key>
+    <true/>
 </dict>
 </plist>
