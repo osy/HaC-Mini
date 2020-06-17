@@ -3903,7 +3903,7 @@
 									<key>CHILDREN</key>
 									<array/>
 									<key>GID</key>
-									<integer>80</integer>
+									<integer>20</integer>
 									<key>PATH</key>
 									<string>data/ThunderboltNative/Thunderbolt Patcher.app</string>
 									<key>PATH_TYPE</key>
@@ -3913,7 +3913,7 @@
 									<key>TYPE</key>
 									<integer>3</integer>
 									<key>UID</key>
-									<integer>0</integer>
+									<integer>501</integer>
 								</dict>
 							</array>
 							<key>GID</key>
@@ -7649,7 +7649,7 @@
 											<key>PAYLOAD_FILENAME</key>
 											<string>com.apple.AppleGVA.plist</string>
 											<key>PERMISSIONS</key>
-											<integer>384</integer>
+											<integer>420</integer>
 											<key>TYPE</key>
 											<integer>3</integer>
 											<key>UID</key>
@@ -7935,7 +7935,24 @@
 					<array>
 						<dict>
 							<key>CHILDREN</key>
-							<array/>
+							<array>
+								<dict>
+									<key>CHILDREN</key>
+									<array/>
+									<key>GID</key>
+									<integer>20</integer>
+									<key>PATH</key>
+									<string>data/QuickTime Fix.app</string>
+									<key>PATH_TYPE</key>
+									<integer>1</integer>
+									<key>PERMISSIONS</key>
+									<integer>493</integer>
+									<key>TYPE</key>
+									<integer>3</integer>
+									<key>UID</key>
+									<integer>501</integer>
+								</dict>
+							</array>
 							<key>GID</key>
 							<integer>80</integer>
 							<key>PATH</key>
@@ -8143,7 +8160,7 @@
 											<key>PAYLOAD_FILENAME</key>
 											<string>com.apple.AppleGVA.plist</string>
 											<key>PERMISSIONS</key>
-											<integer>384</integer>
+											<integer>420</integer>
 											<key>TYPE</key>
 											<integer>3</integer>
 											<key>UID</key>
@@ -12288,12 +12305,26 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 													<integer>0</integer>
 													<key>TOP</key>
 													<dict>
-														<key>COMPARATOR</key>
+														<key>BOTTOM</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>1</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+														</dict>
+														<key>OPERATOR</key>
 														<integer>0</integer>
-														<key>OBJECT</key>
-														<integer>1</integer>
-														<key>UUID</key>
-														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														<key>TOP</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>0</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														</dict>
 													</dict>
 												</dict>
 												<key>ENABLED_MODE</key>
@@ -12313,12 +12344,26 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 													<integer>0</integer>
 													<key>TOP</key>
 													<dict>
-														<key>COMPARATOR</key>
+														<key>BOTTOM</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>1</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+														</dict>
+														<key>OPERATOR</key>
 														<integer>0</integer>
-														<key>OBJECT</key>
-														<integer>1</integer>
-														<key>UUID</key>
-														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														<key>TOP</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>0</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														</dict>
 													</dict>
 												</dict>
 											</dict>
@@ -12368,23 +12413,51 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											<dict>
 												<key>ENABLED_DEPENDENCY</key>
 												<dict>
-													<key>COMPARATOR</key>
+													<key>BOTTOM</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>1</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+													</dict>
+													<key>OPERATOR</key>
 													<integer>0</integer>
-													<key>OBJECT</key>
-													<integer>1</integer>
-													<key>UUID</key>
-													<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													<key>TOP</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>0</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													</dict>
 												</dict>
 												<key>ENABLED_MODE</key>
 												<integer>2</integer>
 												<key>SELECTED_DEPENDENCY</key>
 												<dict>
-													<key>COMPARATOR</key>
+													<key>BOTTOM</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>1</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+													</dict>
+													<key>OPERATOR</key>
 													<integer>0</integer>
-													<key>OBJECT</key>
-													<integer>1</integer>
-													<key>UUID</key>
-													<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													<key>TOP</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>0</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													</dict>
 												</dict>
 											</dict>
 											<key>HIDDEN</key>
