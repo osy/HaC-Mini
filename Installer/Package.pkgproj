@@ -12494,7 +12494,7 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>选择你要使用哪个设备进行视频硬件解码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
+										<string>选择你要使用哪个设备进行视频硬件编码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
