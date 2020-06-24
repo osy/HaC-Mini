@@ -731,39 +731,11 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/HaCMiniSupport/OldRadeonX4000HWLibs.kext</string>
+																	<string>data/Polaris22Fixup/Polaris22Fixup.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
-																	<integer>511</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>BUNDLE_CAN_DOWNGRADE</key>
-																	<false/>
-																	<key>BUNDLE_POSTINSTALL_PATH</key>
-																	<dict>
-																		<key>PATH_TYPE</key>
-																		<integer>1</integer>
-																	</dict>
-																	<key>BUNDLE_PREINSTALL_PATH</key>
-																	<dict>
-																		<key>PATH_TYPE</key>
-																		<integer>1</integer>
-																	</dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>data/Polaris22Fixup/Polaris22MetalFixup.kext</string>
-																	<key>PATH_TYPE</key>
-																	<integer>1</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>511</integer>
+																	<integer>493</integer>
 																	<key>TYPE</key>
 																	<integer>3</integer>
 																	<key>UID</key>
@@ -3931,7 +3903,7 @@
 									<key>CHILDREN</key>
 									<array/>
 									<key>GID</key>
-									<integer>80</integer>
+									<integer>20</integer>
 									<key>PATH</key>
 									<string>data/ThunderboltNative/Thunderbolt Patcher.app</string>
 									<key>PATH_TYPE</key>
@@ -3941,7 +3913,7 @@
 									<key>TYPE</key>
 									<integer>3</integer>
 									<key>UID</key>
-									<integer>0</integer>
+									<integer>501</integer>
 								</dict>
 							</array>
 							<key>GID</key>
@@ -7664,7 +7636,26 @@
 								</dict>
 								<dict>
 									<key>CHILDREN</key>
-									<array/>
+									<array>
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>0</integer>
+											<key>PATH</key>
+											<string>../AppleGVA/com.apple.AppleGVA.amd.plist</string>
+											<key>PATH_TYPE</key>
+											<integer>1</integer>
+											<key>PAYLOAD_FILENAME</key>
+											<string>com.apple.AppleGVA.plist</string>
+											<key>PERMISSIONS</key>
+											<integer>420</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+									</array>
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
@@ -7944,7 +7935,24 @@
 					<array>
 						<dict>
 							<key>CHILDREN</key>
-							<array/>
+							<array>
+								<dict>
+									<key>CHILDREN</key>
+									<array/>
+									<key>GID</key>
+									<integer>20</integer>
+									<key>PATH</key>
+									<string>data/QuickTime Fix.app</string>
+									<key>PATH_TYPE</key>
+									<integer>1</integer>
+									<key>PERMISSIONS</key>
+									<integer>493</integer>
+									<key>TYPE</key>
+									<integer>3</integer>
+									<key>UID</key>
+									<integer>501</integer>
+								</dict>
+							</array>
 							<key>GID</key>
 							<integer>80</integer>
 							<key>PATH</key>
@@ -8139,7 +8147,26 @@
 								</dict>
 								<dict>
 									<key>CHILDREN</key>
-									<array/>
+									<array>
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>0</integer>
+											<key>PATH</key>
+											<string>../AppleGVA/com.apple.AppleGVA.intel.plist</string>
+											<key>PATH_TYPE</key>
+											<integer>1</integer>
+											<key>PAYLOAD_FILENAME</key>
+											<string>com.apple.AppleGVA.plist</string>
+											<key>PERMISSIONS</key>
+											<integer>420</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+									</array>
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
@@ -11663,33 +11690,10 @@
 										</array>
 										<key>OPTIONS</key>
 										<dict>
-											<key>DEPENDENCY</key>
-											<dict>
-												<key>ENABLED_DEPENDENCY</key>
-												<dict>
-													<key>COMPARATOR</key>
-													<integer>1</integer>
-													<key>OBJECT</key>
-													<integer>1</integer>
-													<key>UUID</key>
-													<string>2FD76DCE-899D-4C58-A849-906894019645</string>
-												</dict>
-												<key>ENABLED_MODE</key>
-												<integer>2</integer>
-												<key>SELECTED_DEPENDENCY</key>
-												<dict>
-													<key>COMPARATOR</key>
-													<integer>0</integer>
-													<key>OBJECT</key>
-													<integer>0</integer>
-													<key>UUID</key>
-													<string>E919B062-B908-4C54-A038-64BF79C90231</string>
-												</dict>
-											</dict>
 											<key>HIDDEN</key>
 											<false/>
 											<key>STATE</key>
-											<integer>3</integer>
+											<integer>2</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
 										<string>1DFE3B84-42CB-4D5A-9C7D-852BB8936177</string>
@@ -12273,13 +12277,13 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Use AMD UVD/VCE for hardware video codec features.</string>
+												<string>Use AMD VCE for hardware video codec features.</string>
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
-												<string>使用AMD UVD/VCE作为硬件视频编解码器。</string>
+												<string>使用AMD VCE作为硬件视频编解码器。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -12301,12 +12305,26 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 													<integer>0</integer>
 													<key>TOP</key>
 													<dict>
-														<key>COMPARATOR</key>
+														<key>BOTTOM</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>1</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+														</dict>
+														<key>OPERATOR</key>
 														<integer>0</integer>
-														<key>OBJECT</key>
-														<integer>1</integer>
-														<key>UUID</key>
-														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														<key>TOP</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>0</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														</dict>
 													</dict>
 												</dict>
 												<key>ENABLED_MODE</key>
@@ -12326,12 +12344,26 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 													<integer>0</integer>
 													<key>TOP</key>
 													<dict>
-														<key>COMPARATOR</key>
+														<key>BOTTOM</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>1</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+														</dict>
+														<key>OPERATOR</key>
 														<integer>0</integer>
-														<key>OBJECT</key>
-														<integer>1</integer>
-														<key>UUID</key>
-														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														<key>TOP</key>
+														<dict>
+															<key>COMPARATOR</key>
+															<integer>0</integer>
+															<key>OBJECT</key>
+															<integer>1</integer>
+															<key>UUID</key>
+															<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+														</dict>
 													</dict>
 												</dict>
 											</dict>
@@ -12381,23 +12413,51 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											<dict>
 												<key>ENABLED_DEPENDENCY</key>
 												<dict>
-													<key>COMPARATOR</key>
+													<key>BOTTOM</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>1</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+													</dict>
+													<key>OPERATOR</key>
 													<integer>0</integer>
-													<key>OBJECT</key>
-													<integer>1</integer>
-													<key>UUID</key>
-													<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													<key>TOP</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>0</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													</dict>
 												</dict>
 												<key>ENABLED_MODE</key>
 												<integer>2</integer>
 												<key>SELECTED_DEPENDENCY</key>
 												<dict>
-													<key>COMPARATOR</key>
+													<key>BOTTOM</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>1</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>2FD76DCE-899D-4C58-A849-906894019645</string>
+													</dict>
+													<key>OPERATOR</key>
 													<integer>0</integer>
-													<key>OBJECT</key>
-													<integer>1</integer>
-													<key>UUID</key>
-													<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													<key>TOP</key>
+													<dict>
+														<key>COMPARATOR</key>
+														<integer>0</integer>
+														<key>OBJECT</key>
+														<integer>1</integer>
+														<key>UUID</key>
+														<string>F1CA55AA-BC5E-4740-8954-15AD1BFA044E</string>
+													</dict>
 												</dict>
 											</dict>
 											<key>HIDDEN</key>
@@ -12428,13 +12488,13 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>Select which hardware video decoder/encoder to use. WhateverGreen required. May require clearing NVRAM for changes to apply.</string>
+										<string>Select which hardware video encoder to use. WhateverGreen required. May require clearing NVRAM for changes to apply.</string>
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>选择你要使用哪个设备进行视频硬件编码/解码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
+										<string>选择你要使用哪个设备进行视频硬件编码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
