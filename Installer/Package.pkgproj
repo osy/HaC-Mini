@@ -7643,11 +7643,9 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>../AppleGVA/com.apple.AppleGVA.amd.plist</string>
+											<string>../AppleGVA/com.apple.AppleGVA.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>1</integer>
-											<key>PAYLOAD_FILENAME</key>
-											<string>com.apple.AppleGVA.plist</string>
 											<key>PERMISSIONS</key>
 											<integer>384</integer>
 											<key>TYPE</key>
@@ -8130,26 +8128,7 @@
 								</dict>
 								<dict>
 									<key>CHILDREN</key>
-									<array>
-										<dict>
-											<key>CHILDREN</key>
-											<array/>
-											<key>GID</key>
-											<integer>0</integer>
-											<key>PATH</key>
-											<string>../AppleGVA/com.apple.AppleGVA.intel.plist</string>
-											<key>PATH_TYPE</key>
-											<integer>1</integer>
-											<key>PAYLOAD_FILENAME</key>
-											<string>com.apple.AppleGVA.plist</string>
-											<key>PERMISSIONS</key>
-											<integer>384</integer>
-											<key>TYPE</key>
-											<integer>3</integer>
-											<key>UID</key>
-											<integer>0</integer>
-										</dict>
-									</array>
+									<array/>
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
@@ -12260,13 +12239,13 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Use AMD VCE for hardware video codec features.</string>
+												<string>Use AMD UVD/VCE for hardware video codec features.</string>
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
-												<string>使用AMD VCE作为硬件视频编解码器。</string>
+												<string>使用AMD UVD/VCE作为硬件视频编解码器。</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -12415,13 +12394,13 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 										<key>LANGUAGE</key>
 										<string>English</string>
 										<key>VALUE</key>
-										<string>Select which hardware video encoder to use. WhateverGreen required. May require clearing NVRAM for changes to apply.</string>
+										<string>Select which hardware video decoder/encoder to use. WhateverGreen required. May require clearing NVRAM for changes to apply.</string>
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>选择你要使用哪个设备进行视频硬件编码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
+										<string>选择你要使用哪个设备进行视频硬件编码/解码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
