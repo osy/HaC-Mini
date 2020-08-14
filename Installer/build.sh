@@ -5,7 +5,6 @@ set -e
 BASEDIR=`dirname "$0"`
 ACPI="$BASEDIR/../ACPI"
 THUNDERBOLT="$BASEDIR/../Thunderbolt"
-APPLEGVA="$BASEDIR/../AppleGVA"
 PACKAGES_BUILD=/usr/local/bin/packagesbuild
 DATA="$BASEDIR/data"
 IASL="$DATA/ACPI/iasl"
@@ -57,11 +56,6 @@ mkdir "$TBPATCHAPP/Applications"
 mv "$DATA/ThunderboltNative/TBPatch.app" "$TBPATCHAPP/Applications/"
 mkdir "$TBPATCHAPP/Resources"
 cp "$THUNDERBOLT/NUC_Hades_Canyon_Apple_Mode.plist" "$TBPATCHAPP/Resources/"
-
-echo "Compiling QuickTime fix..."
-QTFIXAPP="$DATA/QuickTime Fix.app"
-rm -rf "$QTFIXAPP"
-osacompile -o "$QTFIXAPP" -x "$APPLEGVA/QuickTimeFix.applescript"
 
 echo "Building package..."
 
