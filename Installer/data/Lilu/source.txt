@@ -1,2 +1,2 @@
-https://github.com/osy86/Polaris22Fixup/releases/download/v1.2.1/Lilu-1.4.7-RELEASE.zip
+https://github.com/osy86/Polaris22Fixup/releases/download/v1.3.0b1/Lilu-1.4.7-RELEASE.zip
 b2f1d83f2af3a7c127f819e5ec8dd4bf9c3b99321d690591c27c9492e4dec904
