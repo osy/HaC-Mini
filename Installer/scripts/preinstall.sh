@@ -37,3 +37,6 @@ if [ -d "$EFI_ROOT_DIR/EFI/OC" ]; then
 else
     echo "No existing OC installation found."
 fi
+
+# Uninstall previous tweaks
+./uninstall.sh "$DEST_VOL"
