@@ -1,2 +1,2 @@
-https://github.com/acidanthera/Lilu/releases/download/1.4.5/Lilu-1.4.5-RELEASE.zip
-fad11cb66b34041379c60d7146d0a96f1fa8696233df1b4c8fe049c5957a6732
+https://github.com/osy86/Polaris22Fixup/releases/download/v1.3.0b1/Lilu-1.4.7-RELEASE.zip
+b2f1d83f2af3a7c127f819e5ec8dd4bf9c3b99321d690591c27c9492e4dec904

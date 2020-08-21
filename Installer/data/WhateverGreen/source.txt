@@ -1,2 +1,2 @@
-https://github.com/osy86/WhateverGreen/releases/download/v1.4.1/WhateverGreen-1.4.1-RELEASE.zip
-8f3fcc4a8e599c28506f16b6051f3a6ae7cad96e2bfdb432ee242884fff5655a
+https://github.com/acidanthera/WhateverGreen/releases/download/1.4.1/WhateverGreen-1.4.1-RELEASE.zip
+23ce71503e6086d40c08020abb8b503e9d748bc997d915746aa741215d7fa7a9
