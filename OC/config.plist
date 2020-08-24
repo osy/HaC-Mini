@@ -516,7 +516,7 @@
 				<key>run-efi-updater</key>
 				<string>No</string>
 				<key>boot-args</key>
-				<string>alcid=11 -disablegfxfirmware</string>
+				<string>alcid=11 agdpmod=ignore -disablegfxfirmware</string>
 			</dict>
 		</dict>
 		<key>WriteFlash</key>
