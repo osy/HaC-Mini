@@ -231,9 +231,11 @@
 			<true/>
 			<key>DevirtualiseMmio</key>
 			<true/>
-			<key>EnableWriteUnprotector</key>
-			<true/>
 			<key>ProvideCustomSlide</key>
+			<true/>
+			<key>RebuildAppleMemoryMap</key>
+			<true/>
+			<key>SyncRuntimePermissions</key>
 			<true/>
 		</dict>
 	</dict>
@@ -478,14 +480,14 @@
 	</dict>
 	<key>Misc</key>
 	<dict>
-		<key>BlessOverride</key>
-		<array>
-			<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
-		</array>
 		<key>Boot</key>
 		<dict>
 			<key>HibernateMode</key>
 			<string>Auto</string>
+			<key>PickerMode</key>
+			<string>External</string>
+			<key>PickerAttributes</key>
+			<integer>3</integer>
 		</dict>
 		<key>Security</key>
 		<dict>
@@ -495,6 +497,8 @@
 			<true/>
 			<key>AuthRestart</key>
 			<true/>
+			<key>BootProtect</key>
+			<string>Bootstrap</string>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>Vault</key>
@@ -505,10 +509,14 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
+			<dict/>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>run-efi-updater</key>
+				<string>No</string>
 				<key>boot-args</key>
-				<string>alcid=11 -disablegfxfirmware</string>
+				<string>alcid=11 agdpmod=ignore -disablegfxfirmware</string>
 			</dict>
 		</dict>
 		<key>WriteFlash</key>
@@ -542,13 +550,22 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
+		<key>APFS</key>
+		<dict>
+			<key>EnableJumpstart</key>
+			<true/>
+			<key>HideVerbose</key>
+			<true/>
+			<key>JumpstartHotPlug</key>
+			<true/>
+		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>ApfsDriverLoader.efi</string>
-			<string>FwRuntimeServices.efi</string>
-			<string>HFSPlus.efi</string>
+			<string>HfsPlus.efi</string>
+			<string>OpenCanopy.efi</string>
+			<string>OpenRuntime.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -564,13 +581,6 @@
 		<key>Output</key>
 		<dict>
 			<key>ProvideConsoleGop</key>
-			<true/>
-			<key>Resolution</key>
-			<string>Max</string>
-		</dict>
-		<key>Protocols</key>
-		<dict>
-			<key>AppleSmcIo</key>
 			<true/>
 		</dict>
 		<key>Quirks</key>
