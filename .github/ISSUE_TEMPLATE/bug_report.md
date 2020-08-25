@@ -31,6 +31,7 @@ A clear and concise description of what you expected to happen.
 - Display resolution(s) [e.g: 4K, 5K]: 
 - Any TB3 devices: 
 - Any USB devices: 
+- Any Wi-Fi/Bluetooth devices [e.g:DW1820A, BCM94360CS2, Intel 8265]: 
 
 **Modifications**
 List any mods to `config.plist`, any additional kexts, anything installed to `/Library/Extensions` and `/System/Library/Extensions`, any additional patches, etc. Please attach your `config.plist` if you made any modifications.
