@@ -34,8 +34,9 @@ do
     echo "PlistPath:      $info"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:PlistPath string $info" "$CONFIG"
     base=`basename $kext`
-    # Brcm4360_Injector should be blocked in Big Sur
-    if [ $base == "AirPortBrcm4360_Injector.kext" ]; then
+    # Kexts which should be blocked in Big Sur
+    if [ $base == "AirPortBrcm4360_Injector.kext" -o $base == "GK701HIDDevice.kext" ]; then
+        # TODO: better way of doing this
         $PLIST_BUDDY -c "Add :Kernel:Add:$i:MaxKernel string 19.9.9" "$CONFIG"
     fi
     base="${base/.kext/}"
