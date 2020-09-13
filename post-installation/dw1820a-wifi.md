@@ -8,5 +8,6 @@ This card requires additional kernel patches to work and users have reported com
 
 ## Installation
 
-In the HaC Mini installer, make sure to check the option for **Dell DW1820A**.
+1. In BIOS, under Power, disable PCIE ASPM
+2. In the HaC Mini installer, make sure to check the option for **Dell DW1820A**.
 
