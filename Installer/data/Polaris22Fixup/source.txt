@@ -1,2 +1,2 @@
-https://github.com/osy86/Polaris22Fixup/releases/download/v1.3.0/Polaris22Fixup-v1.3.0.zip
-332eac0b8ebec799ac2f2cbcd18a9088b30632d36d1c987c594f6ea50cf70e99
+https://github.com/osy86/Polaris22Fixup/releases/download/v1.3.1/Polaris22Fixup-v1.3.1.zip
+c91e712f25627d3bf7707f6ca8a1cc9428445ab00582ca43016c79ed1caeb3cd
