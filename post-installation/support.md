@@ -34,6 +34,12 @@ Before asking for help, make sure you try all the following troubleshooting advi
 
 Reboot and when you see the boot logo, you need to hold or repeatedly tap the Alt key \(Opt key on Apple keyboards\). Sometimes holding works and sometimes tapping works and sometimes neither works. This is a known issue with OpenCore and you have to keep trying.
 
+### "This copy ... is damaged, and can’t be used to install macOS."
+
+If you get this message while installing, make sure your BIOS clock is set to the correct time and that you are connected to the internet.
+
+If that did not solve the issue, follow the [install instructions](../installation-guide/installation.md) again starting from the top, but this time do not select "Patch OSX Installer" after running the package. Finally, after installation, you have to follow the [upgrade instructions](../installation-guide/installation.md#update-existing-install).
+
 ### Reset NVRAM
 
 Sometimes incorrect settings and boot-args will cause issues. You need to [get into boot picker](support.md#getting-into-boot-picker-menu) and then select the NVRAM reset option.

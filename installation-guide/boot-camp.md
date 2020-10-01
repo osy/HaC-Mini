@@ -10,6 +10,10 @@ With OpenCore, booting Windows is done through Boot Camp, just as with a real Ma
 Note latest versions of macOS no longer have an option to create a USB. Either use macOS 10.14's Boot Camp Assistrant or create an installer USB from Windows on another machine.
 {% endhint %}
 
+{% hint style="info" %}
+macOS does not support Boot Camp if you have two SSDs installed. You must manually install Windows, which is outside the scope of this guide.
+{% endhint %}
+
 1. Launch **Boot Camp Assistant** from Launchpad \(it's in the Other folder on a fresh install\).
 2. Follow the directions in the assistant to partition your SSD and create a Windows 10 installer USB.
 3. After the process is done, _before restarting_, we need to delete some irrelevant drivers that do not apply to the NUC. The list of files to delete from the newly created Windows 10 installer USB is listed below.

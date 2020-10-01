@@ -12,6 +12,8 @@ Installation is simple and requires no prior knowledge or experience with Hackin
 
 This project aims to be the most complete Hackintosh build with no details overlooked. We have developed custom drivers, patches, and configurations specifically for the NUC Hades Canyon. We also follow Apple's lead in packaging all this in a user-friendly solution that does not require editing config files or understanding a list of jargon.
 
+This is the only Hackintosh project developed from scratch to target a specific non-Apple board. We spent hundreds of hours reverse engineering Apple bootloaders, drivers, and NUC BIOS. We designed custom patches and drivers to bring macOS support to NUC Hades Canyon. As such, the level of compatibility is unprecedented.
+
 #### Working Hardware
 
 * [x] GPU acceleration
@@ -33,6 +35,7 @@ This project aims to be the most complete Hackintosh build with no details overl
 * [x] CPU power management
 * [x] Sleep/Resume
 * [x] Wifi/BT \(using Apple Wifi card\)
+* [x] Secure Boot \(with High Security\)
 
 **Working Software**
 

@@ -48,8 +48,9 @@ We will use the HaC Mini installer \(link at top of the page\) to modify the van
    1. Make sure you do **not** select your booted drive or you will install HaC Mini on the computer you're currently using.
    2. If the OSX installer USB cannot be selected, make sure the installer is for OSX 10.14.5 or later.
 5. Press _Continue_ and then _Customize_
-6. Make sure to check _Patch OSX installer_
+6. Check _Patch OSX installer_ if it is not disabled
    1. If the option is disabled, make sure you selected the OSX installer USB as the destination in the previous step.
+   2. If it is still disabled, the macOS installer is not compatible. You can still proceed, however, you must follow the [update section](installation.md#update-existing-install) after installing macOS.
 7. Press _Install_ and finish the installation.
 
 ### Installing macOS
@@ -64,13 +65,19 @@ We will be doing a clean installation. That means the SSD will be wiped and **an
    1. If not, you need to [get into the boot picker](../post-installation/support.md#getting-into-boot-picker-menu) menu and select the installer.
 4. The OSX installer should load.
    1. Partition your SSD using **Disk Utility**. You may need to choose **View** -&gt; **Show All Devices** in order to find your drive. You should wipe the entire drive and format it as APFS with GUID Partition Map. This will also create the EFI and Recovery partitions.
+5. Run the installer to completion.
+   1. If the installer fails with an error message "This copy ... is damaged, and can’t be used to install macOS," check out the [support page](../post-installation/support.md#this-copy-is-damaged-and-cant-be-used-to-install-macos).
    2. Installation will reboot a few times. Because USB has first boot priority, you do not have to touch anything.
-5. After installation completes, you can remove the USB and boot from your SSD. You can revert the boot priority changes if desired.
-6. Optional: If you wish to use the [native Thunderbolt patches](../details/thunderbolt-3-fix-part-3.md), follow the [update instructions](installation.md#update-existing-install).
+   3. If you see the boot picker after rebooting, select "macOS Installer."
+6. After installation completes, you can remove the USB and boot from your SSD. You can revert the boot priority changes if desired.
+
+{% hint style="success" %}
+Your NUC is now a Mac. It is recommended you follow the update steps below to install additional patches \(such as [native Thunderbolt support](../details/thunderbolt-3-fix-part-3.md)\).
+{% endhint %}
 
 ## Update Existing Install
 
-If you have an existing working Hackintosh installed on your NUC Hades Canyon, you can upgrade to HaC Mini with OpenCore for a more stable experience. You should also follow these steps when a new release of HaC Mini comes out. You do not need to follow these steps if you already done a clean install with the steps above.
+When a macOS update is released, you should install it through normal means. Major macOS updates may not work 100% on day one and may have known issues, you should check the [issues page](https://github.com/osy86/HaC-Mini/issues) before a major upgrade. When a [new release](https://github.com/osy86/HaC-Mini/releases/latest) of HaC Mini comes out, you can follow the steps below to update the drivers and patches.
 
 {% hint style="danger" %}
 You should never use MultiBeast or similar OSX "distributions" \(ever. on any system.\) as they include broken and outdated patches and are not customized for your specific system. If you use a distribution, it is recommended that you back up your system then follow the "clean install" instructions above and then restore your files.
@@ -78,5 +85,6 @@ You should never use MultiBeast or similar OSX "distributions" \(ever. on any sy
 
 1. Download the installer and run **HaCMini.pkg**
 2. Run the installer to completion
-3. If you've selected to install _Native Thunderbolt_ support, run **Thunderbolt Patcher** from Applications after rebooting and patch your Thunderbolt controller.
+   1. You may wish to click _Customize_ at the third step to install additional drivers and optional patches.
+3. If you've selected to install _Native Thunderbolt_ support, run **Thunderbolt Patcher** from Applications after rebooting and patch your Thunderbolt controller. \(This only needs to be done once.\)
 
