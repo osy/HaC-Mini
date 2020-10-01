@@ -13,17 +13,17 @@ NEW_SETTINGS="$2"
 
 DEFAULT_MLB="C07823609GUKXPGFB"
 DEFAULT_SERIAL="C07WT1YGJYVX"
-#DEFAULT_UUID="B5E5FF1C-C573-4819-8419-EBF16775B613"
+DEFAULT_ECID="0"
 DEFAULT_MODEL="Macmini8,1"
 
 if [ -f "$PREV_SETTINGS" ]; then
-    SERIAL=`$PLIST_BUDDY -c "Print :PlatformInfo:Generic:SystemSerialNumber" "$PREV_SETTINGS"`
-    MLB=`$PLIST_BUDDY -c "Print :PlatformInfo:Generic:MLB" "$PREV_SETTINGS"`
-    #UUID=`$PLIST_BUDDY -c "Print :PlatformInfo:Generic:SystemUUID" "$PREV_SETTINGS"`
+    SERIAL=`$PLIST_BUDDY -c "Print :PlatformInfo:Generic:SystemSerialNumber" "$PREV_SETTINGS" || echo $DEFAULT_SERIAL`
+    MLB=`$PLIST_BUDDY -c "Print :PlatformInfo:Generic:MLB" "$PREV_SETTINGS" || echo $DEFAULT_MLB`
+    ECID=`$PLIST_BUDDY -c "Print :Misc:Security:ApECID" "$PREV_SETTINGS" || echo $DEFAULT_ECID`
 else
     SERIAL="$DEFAULT_SERIAL"
     MLB="$DEFAULT_MLB"
-    #UUID="$DEFAULT_UUID"
+    ECID="$DEFAULT_ECID"
 fi
 GENERATED=`$MACSERIAL -a | grep "$DEFAULT_MODEL" | head -1`
 
@@ -37,14 +37,16 @@ if [ "$MLB" == "$DEFAULT_MLB" ]; then
     MLB=`echo "$GENERATED" | cut -d '|' -f 3 | xargs`
 fi
 
-#if [ "$UUID" == "$DEFAULT_UUID" ]; then
-#   echo "Generating new UUID..."
-#   UUID=`uuidgen`
-#fi
+if [ "$ECID" == "$DEFAULT_ECID" ]; then
+    echo "Generating new ECID..."
+    # 56-bit random number since PlistBuddy doesn't support unsigned 64 bit values
+    HEX=`dd if=/dev/urandom bs=7 count=1 2> /dev/null | xxd -p -u`
+    ECID=`echo "ibase=16; $HEX" | bc`
+fi
 
 echo "Serial: $SERIAL"
 $PLIST_BUDDY -c "Set :PlatformInfo:Generic:SystemSerialNumber $SERIAL" "$NEW_SETTINGS"
 echo "MLB: $MLB"
 $PLIST_BUDDY -c "Set :PlatformInfo:Generic:MLB $MLB" "$NEW_SETTINGS"
-#echo "UUID: $UUID"
-#$PLIST_BUDDY -c "Set :PlatformInfo:Generic:SystemUUID $UUID" "$NEW_SETTINGS"
+echo "ECID: $ECID"
+$PLIST_BUDDY -c "Set :Misc:Security:ApECID $ECID" "$NEW_SETTINGS"

@@ -11497,7 +11497,7 @@
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Sets up OC signed vault features. If enabled, you must re-generate and re-sign the vault after making any modifications.</string>
+												<string>Sets up OC signed vault features. If enabled, you must re-generate and re-sign the vault after making any modifications. You may also have to re-install macOS from recovery.</string>
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
