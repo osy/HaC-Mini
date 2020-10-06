@@ -1,2 +1,2 @@
-https://github.com/acidanthera/VirtualSMC/releases/download/1.1.6/VirtualSMC-1.1.6-RELEASE.zip
-27e43920e82183e3419e021accd73b7cc30fa5387c687a2269dbb57b022f665e
+https://github.com/acidanthera/VirtualSMC/releases/download/1.1.7/VirtualSMC-1.1.7-RELEASE.zip
+2b6fc24a70bdd966c0c846629e934ebbc4df6c3615d8a1cde1d3ecdf63212e77
