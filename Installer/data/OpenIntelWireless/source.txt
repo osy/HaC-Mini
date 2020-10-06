@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v1.1.0/itlwm_v1.1.0_Stable.kext.zip
+881bcff83f4e147d50e64d1d1235180085ee27d96fd85e702c0e517175dbb123
