@@ -388,7 +388,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>data/OpenCore/EFI/BOOT/BOOTx64.efi</string>
+															<string>data/OpenCore/X64/EFI/BOOT/BOOTx64.efi</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -521,7 +521,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/OpenCore/EFI/OC/Bootstrap/Bootstrap.efi</string>
+																	<string>data/OpenCore/X64/EFI/OC/Bootstrap/Bootstrap.efi</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -586,7 +586,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/OpenCore/EFI/OC/Drivers/OpenCanopy.efi</string>
+																	<string>data/OpenCore/X64/EFI/OC/Drivers/OpenCanopy.efi</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -602,7 +602,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/OpenCore/EFI/OC/Drivers/OpenRuntime.efi</string>
+																	<string>data/OpenCore/X64/EFI/OC/Drivers/OpenRuntime.efi</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -901,7 +901,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>data/OpenCore/EFI/OC/OpenCore.efi</string>
+															<string>data/OpenCore/X64/EFI/OC/OpenCore.efi</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
