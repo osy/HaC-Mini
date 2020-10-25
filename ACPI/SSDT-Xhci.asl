@@ -1,43 +1,59 @@
-/**
- * USB For NUC Hades Canyon
+/*
+ * Intel ACPI Component Architecture
+ * AML/ASL+ Disassembler version 20200528 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
+ * 
+ * Disassembling to symbolic ASL+ operators
+ *
+ * Disassembly of iASLvebm7D.aml, Sat Oct 24 23:19:42 2020
+ *
+ * Original Table Header:
+ *     Signature        "SSDT"
+ *     Length           0x000006C0 (1728)
+ *     Revision         0x02
+ *     Checksum         0x7A
+ *     OEM ID           "OSY86 "
+ *     OEM Table ID     "Xhci"
+ *     OEM Revision     0x00001000 (4096)
+ *     Compiler ID      "INTL"
+ *     Compiler Version 0x20161210 (538317328)
  */
 DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 {
+    External (_SB_.PCHV, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.RP05.UPSB.DSB2.XHC2.MODU, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.XHC_, DeviceObj)
+    External (_SB_.PCI0.XHC_._PRW, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.XHC_.RHUB, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS01, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS02, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS03, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS04, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS05, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS06, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS07, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS08, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS09, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS10, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS11, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS12, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS13, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.HS14, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS01, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS02, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS03, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS04, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS05, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS06, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS07, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS08, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS09, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.SS10, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.USR1, DeviceObj)
+    External (_SB_.PCI0.XHC_.RHUB.USR2, DeviceObj)
+    External (_SB_.SPTH, IntObj)
     External (DTGP, MethodObj)    // 5 Arguments
     External (OSDW, MethodObj)    // 0 Arguments
-    External (\_SB.PCI0.XHC, DeviceObj)
-    External (\_SB.PCHV, MethodObj)
-    External (\_SB.SPTH, IntObj)
-
-    External (\_SB.PCI0.XHC.RHUB, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS01, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS02, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS03, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS04, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS05, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS06, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS07, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS08, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS09, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS10, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS11, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS12, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS13, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.HS14, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS01, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS02, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS03, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS04, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS05, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS06, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS07, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS08, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS09, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.SS10, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.USR1, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC.RHUB.USR2, DeviceObj)    // (from opcode)
-    External (\_SB.PCI0.XHC._PRW, MethodObj)
-    External (\_SB.PCI0.RP05.UPSB.DSB2.XHC2.MODU, MethodObj)
 
     Scope (\_SB.PCI0.XHC)
     {
@@ -60,17 +76,17 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
 
         Scope (RHUB)
         {
-            Scope (HS01) // front charging
+            Scope (HS01)
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Local0 = Package (0x00) {}
+                    Local0 = Package (0x00){}
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                     Return (Local0)
                 }
             }
 
-            Scope (HS02) // not used
+            Scope (HS02)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -78,27 +94,27 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (HS03) // back USB A
+            Scope (HS03)
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Local0 = Package (0x00) {}
+                    Local0 = Package (0x00){}
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                     Return (Local0)
                 }
             }
 
-            Scope (HS04) // back USB A
+            Scope (HS04)
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Local0 = Package (0x00) {}
+                    Local0 = Package (0x00){}
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                     Return (Local0)
                 }
             }
 
-            Scope (HS05) // not used
+            Scope (HS05)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -106,7 +122,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (HS06) // not used
+            Scope (HS06)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -114,23 +130,27 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (HS07) // not used
+            Scope (HS07)
             {
-                Method (_STA, 0, NotSerialized)  // _STA: Status
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Return (Zero)
+                    Local0 = Package (0x00){}
+                    DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                    Return (Local0)
                 }
             }
 
-            Scope (HS08) // not used
+            Scope (HS08)
             {
-                Method (_STA, 0, NotSerialized)  // _STA: Status
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Return (Zero)
+                    Local0 = Package (0x00){}
+                    DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                    Return (Local0)
                 }
             }
 
-            Scope (HS09) // Bluetooth
+            Scope (HS09)
             {
                 Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                 {
@@ -139,26 +159,25 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     Zero, 
                     Zero
                 })
-                
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Local0 = Package (0x00) {}
+                    Local0 = Package (0x00){}
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                     Return (Local0)
                 }
             }
 
-            Scope (HS10) // back USB A
+            Scope (HS10)
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Local0 = Package (0x00) {}
+                    Local0 = Package (0x00){}
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                     Return (Local0)
                 }
             }
 
-            Scope (USR1) // not used
+            Scope (USR1)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -166,7 +185,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (USR2) // not used
+            Scope (USR2)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -174,23 +193,23 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (SS01) // front charging
+            Scope (SS01)
             {
             }
 
-            Scope (SS02) // back USB A
+            Scope (SS02)
             {
             }
 
-            Scope (SS03) // back USB A
+            Scope (SS03)
             {
             }
 
-            Scope (SS04) // back USB A
+            Scope (SS04)
             {
             }
 
-            Scope (SS05) // not used
+            Scope (SS05)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -198,7 +217,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (SS06) // not used
+            Scope (SS06)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -206,19 +225,19 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            If ((PCHV () == SPTH)) // Only for Kabylake-H series
+            If ((PCHV () == SPTH))
             {
-                Scope (HS11) // back USB A
+                Scope (HS11)
                 {
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
-                        Local0 = Package (0x00) {}
+                        Local0 = Package (0x00){}
                         DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                         Return (Local0)
                     }
                 }
 
-                Scope (HS12) // TB3 USB-C HS/LS, see SSDT-TbtCompanion.asl
+                Scope (HS12)
                 {
                     Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                     {
@@ -229,7 +248,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     })
                 }
 
-                Scope (HS13) // TB3 USB-C HS/LS, see SSDT-TbtCompanion.asl
+                Scope (HS13)
                 {
                     Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                     {
@@ -240,7 +259,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     })
                 }
 
-                Scope (HS14) // not used
+                Scope (HS14)
                 {
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
@@ -248,19 +267,11 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     }
                 }
 
-                Scope (SS07) // back USB A
+                Scope (SS07)
                 {
                 }
 
-                Scope (SS08) // not used
-                {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        Return (Zero)
-                    }
-                }
-
-                Scope (SS09) // not used
+                Scope (SS08)
                 {
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
@@ -268,7 +279,15 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                     }
                 }
 
-                Scope (SS10) // not used
+                Scope (SS09)
+                {
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        Return (Zero)
+                    }
+                }
+
+                Scope (SS10)
                 {
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
@@ -279,24 +298,27 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
         }
     }
 
-    // These ACPI fixes only apply to OSX
     If (OSDW ())
     {
         Device (\_SB.USBX)
         {
-            Name(_ADR, 0)
+            Name (_ADR, Zero)  // _ADR: Address
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
                 If (OSDW ())
                 {
                     If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
                     {
-                        Local0 = Package ()
+                        Local0 = Package (0x08)
                             {
-                                "kUSBSleepPortCurrentLimit", 1500,
-                                "kUSBSleepPowerSupply", 9600,
-                                "kUSBWakePortCurrentLimit", 1500,
-                                "kUSBWakePowerSupply", 9600,
+                                "kUSBSleepPortCurrentLimit", 
+                                0x05DC, 
+                                "kUSBSleepPowerSupply", 
+                                0x2580, 
+                                "kUSBWakePortCurrentLimit", 
+                                0x05DC, 
+                                "kUSBWakePowerSupply", 
+                                0x2580
                             }
                         DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                         Return (Local0)
@@ -307,16 +329,15 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
             }
         }
 
-        Device(\_SB.EC) // fake EC for AppleBusPowerController matching
+        Device (\_SB.EC)
         {
-            Name(_HID, "EC000000")  // _HID: Hardware ID
+            Name (_HID, "EC000000")  // _HID: Hardware ID
         }
 
         Device (\_SB.USBW)
         {
-            Name (_HID, "PNP0D10")  // _HID: Hardware ID
+            Name (_HID, "PNP0D10" /* XHCI USB Controller with debug */)  // _HID: Hardware ID
             Name (_UID, "WAKE")  // _UID: Unique ID
-
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
                 Return (\_SB.PCI0.XHC._PRW ())
