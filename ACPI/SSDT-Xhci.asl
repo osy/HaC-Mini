@@ -114,19 +114,55 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (HS07) // not used
+            Scope (HS07) // internal USB 2.0 header
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Return (Zero)
+                    Return (Zero) // use HX07 instead
                 }
             }
 
-            Scope (HS08) // not used
+            Device (HX07)
+            {
+                Name (_ADR, 0x07)  // _ADR: Address
+                Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                {
+                    0xFF, 
+                    Zero, 
+                    Zero, 
+                    Zero
+                })
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    Local0 = Package (0x00) {}
+                    DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                    Return (Local0)
+                }
+            }
+
+            Scope (HS08) // internal USB 2.0 header
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Return (Zero)
+                    Return (Zero) // use HX08 instead
+                }
+            }
+
+            Device (HX08)
+            {
+                Name (_ADR, 0x08)  // _ADR: Address
+                Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                {
+                    0xFF, 
+                    Zero, 
+                    Zero, 
+                    Zero
+                })
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    Local0 = Package (0x00) {}
+                    DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                    Return (Local0)
                 }
             }
 
