@@ -1,2 +1,2 @@
-https://github.com/osy86/AMFIExemption/releases/download/v1.1/AMFIExemption-v1.1.zip
+https://github.com/osy/AMFIExemption/releases/download/v1.1/AMFIExemption-v1.1.zip
 329f2a5c93d569635e84daeb3f5fdb2af5ba06d2b9cec20d8868306903338c09

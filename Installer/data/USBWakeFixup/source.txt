@@ -1,2 +1,2 @@
-https://github.com/osy86/USBWakeFixup/releases/download/v1.0/USBWakeFixup-v1.0.zip
+https://github.com/osy/USBWakeFixup/releases/download/v1.0/USBWakeFixup-v1.0.zip
 e2621234de8a27b2deec363d58a0f951a5a86933f213f59250d0fa4a76ff643c

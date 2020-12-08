@@ -39,7 +39,7 @@ You should also disable Fast Boot from Windows settings as well as the NUC BIOS 
 
 ### Drivers
 
-Apple drivers \(including Apple keyboards\) should be installed as part of the Boot Camp installer. If you used an [Apple Wifi replacement](../post-installation/wifi.md), then you need to get the Broadcom drivers [here](https://github.com/osy86/HaC-Mini/releases/download/v2.1/BCM94360CS2.zip). Finally, you should download the NUC drivers [from Intel](https://downloadcenter.intel.com/product/126143/Intel-NUC-Kit-NUC8i7HVK).
+Apple drivers \(including Apple keyboards\) should be installed as part of the Boot Camp installer. If you used an [Apple Wifi replacement](../post-installation/wifi.md), then you need to get the Broadcom drivers [here](https://github.com/osy/HaC-Mini/releases/download/v2.1/BCM94360CS2.zip). Finally, you should download the NUC drivers [from Intel](https://downloadcenter.intel.com/product/126143/Intel-NUC-Kit-NUC8i7HVK).
 
 ### Booting to/from Windows
 

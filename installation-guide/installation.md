@@ -4,7 +4,7 @@ The HaC Mini installer will install the OpenCore bootloader along with patches, 
 
 ### Installer Download
 
-[Github](https://github.com/osy86/HaC-Mini/releases)
+[Github](https://github.com/osy/HaC-Mini/releases)
 
 ## New Install
 
@@ -77,7 +77,7 @@ Your NUC is now a Mac. It is recommended you follow the update steps below to in
 
 ## Update Existing Install
 
-When a macOS update is released, you should install it through normal means. Major macOS updates may not work 100% on day one and may have known issues, you should check the [issues page](https://github.com/osy86/HaC-Mini/issues) before a major upgrade. When a [new release](https://github.com/osy86/HaC-Mini/releases/latest) of HaC Mini comes out, you can follow the steps below to update the drivers and patches.
+When a macOS update is released, you should install it through normal means. Major macOS updates may not work 100% on day one and may have known issues, you should check the [issues page](https://github.com/osy/HaC-Mini/issues) before a major upgrade. When a [new release](https://github.com/osy/HaC-Mini/releases/latest) of HaC Mini comes out, you can follow the steps below to update the drivers and patches.
 
 {% hint style="danger" %}
 You should never use MultiBeast or similar OSX "distributions" \(ever. on any system.\) as they include broken and outdated patches and are not customized for your specific system. If you use a distribution, it is recommended that you back up your system then follow the "clean install" instructions above and then restore your files.

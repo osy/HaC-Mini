@@ -5,7 +5,7 @@
  * Note: USB/CIO RTD3 power management largly 
  * missing due to lack of GPIO pins.
  * 
- * Copyright (c) 2019 osy86
+ * Copyright (c) 2019 osy
  */
 #define TBT_HAS_COMPANION One
 #define TBT_HOTPLUG_GPE _E20
