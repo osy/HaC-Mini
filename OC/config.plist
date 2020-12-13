@@ -476,6 +476,8 @@
 			<true/>
 			<key>PanicNoKextDump</key>
 			<true/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>Misc</key>
