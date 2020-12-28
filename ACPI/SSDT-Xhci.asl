@@ -98,19 +98,19 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
                 }
             }
 
-            Scope (HS05) // not used
+            Scope (HS05) // internal USB 3.0 header (2.0 mode)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Return (Zero)
+                    Return (Zero) // skipped due to 15 port limit
                 }
             }
 
-            Scope (HS06) // not used
+            Scope (HS06) // internal USB 3.0 header (2.0 mode)
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Return (Zero)
+                    Return (Zero) // skipped due to 15 port limit
                 }
             }
 
@@ -226,19 +226,19 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "Xhci", 0x00001000)
             {
             }
 
-            Scope (SS05) // not used
+            Scope (SS05) // internal USB 3.0 header
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Return (Zero)
+                    Return (Zero) // skipped due to 15 port limit
                 }
             }
 
-            Scope (SS06) // not used
+            Scope (SS06) // internal USB 3.0 header
             {
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Return (Zero)
+                    Return (Zero) // skipped due to 15 port limit
                 }
             }
 
