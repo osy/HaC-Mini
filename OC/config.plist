@@ -474,6 +474,8 @@
 			<true/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>PanicNoKextDump</key>
 			<true/>
 		</dict>
