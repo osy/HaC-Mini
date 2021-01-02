@@ -39,6 +39,11 @@ do
         # TODO: better way of doing this
         $PLIST_BUDDY -c "Add :Kernel:Add:$i:MaxKernel string 19.9.9" "$CONFIG"
     fi
+    # Kexts which should be blocked before Big Sur
+    if [ $base == "CtlnaAHCIPort.kext" ]; then
+        # TODO: better way of doing this
+        $PLIST_BUDDY -c "Add :Kernel:Add:$i:MinKernel string 20.0.0" "$CONFIG"
+    fi
     base="${base/.kext/}"
     exe=`find "$line" -name "$base" -type f -maxdepth 3 | head -1`
     exe="${exe/$line\//}"
