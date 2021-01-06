@@ -2,7 +2,7 @@
 name: Bug report
 about: Issues after installation
 title: ''
-labels: bug
+labels: ''
 assignees: ''
 
 ---
