@@ -4,7 +4,7 @@
  * GPIO signal. After powering up, we need to do a 
  * OSUP handshake before the PID is revealed.
  * 
- * Copyright (c) 2019 osy86
+ * Copyright (c) 2019 osy
  */
 // Scope (\_SB.PCI0.RP05)
 // {

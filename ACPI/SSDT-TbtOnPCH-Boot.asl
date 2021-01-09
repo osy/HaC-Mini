@@ -3,7 +3,7 @@
  * We must do this early in _INI before XNU PCI 
  * enumeration. This code is only used at cold boot.
  * 
- * Copyright (c) 2019 osy86
+ * Copyright (c) 2019 osy
  */
 // Scope (\_SB.PCI0.RP05)
 // {

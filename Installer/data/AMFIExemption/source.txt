@@ -1,2 +1,2 @@
-https://github.com/osy86/AMFIExemption/releases/download/v1.0/AMFIExemption.kext.zip
-04c415f20442483083bd2e0ced4aa3eadbb73d469cb281922dcc80b0e3b74f59
+https://github.com/osy/AMFIExemption/releases/download/v1.1/AMFIExemption-v1.1.zip
+329f2a5c93d569635e84daeb3f5fdb2af5ba06d2b9cec20d8868306903338c09

@@ -15,12 +15,6 @@
 * [DW1820A Wifi](post-installation/dw1820a-wifi.md)
 * [Support](post-installation/support.md)
 
-## Legacy Guide \(Clover\)
-
-* [Getting Started](legacy-guide-clover/legacy-getting-started.md)
-* [Installation](legacy-guide-clover/legacy-installing-osx.md)
-* [Clover Settings Annotated](legacy-guide-clover/clover-settings-annotated.md)
-
 ## Technical Details <a id="details"></a>
 
 * [Metal Driver Fix](details/metal-driver-fix.md)
@@ -30,4 +24,10 @@
 * [HDA Fix](details/hda-fix.md)
 * [USB Fix](details/usb-fix.md)
 * [Secure Boot](details/secure-boot.md)
+
+## Legacy Guide \(Clover\)
+
+* [Getting Started](legacy-guide-clover/legacy-getting-started.md)
+* [Installation](legacy-guide-clover/legacy-installing-osx.md)
+* [Clover Settings Annotated](legacy-guide-clover/clover-settings-annotated.md)
 

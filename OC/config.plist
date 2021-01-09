@@ -474,6 +474,8 @@
 			<true/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
 			<key>PanicNoKextDump</key>
 			<true/>
 		</dict>
@@ -484,10 +486,10 @@
 		<dict>
 			<key>HibernateMode</key>
 			<string>Auto</string>
+			<key>PickerAttributes</key>
+			<integer>19</integer>
 			<key>PickerMode</key>
 			<string>External</string>
-			<key>PickerAttributes</key>
-			<integer>3</integer>
 		</dict>
 		<key>Security</key>
 		<dict>
@@ -495,12 +497,18 @@
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
+			<key>ApECID</key>
+			<integer>0</integer>
 			<key>AuthRestart</key>
+			<true/>
+			<key>BlacklistAppleUpdate</key>
 			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
+			<key>SecureBootModel</key>
+			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>

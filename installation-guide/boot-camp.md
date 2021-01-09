@@ -10,6 +10,10 @@ With OpenCore, booting Windows is done through Boot Camp, just as with a real Ma
 Note latest versions of macOS no longer have an option to create a USB. Either use macOS 10.14's Boot Camp Assistrant or create an installer USB from Windows on another machine.
 {% endhint %}
 
+{% hint style="info" %}
+macOS does not support Boot Camp if you have two SSDs installed. You must manually install Windows, which is outside the scope of this guide.
+{% endhint %}
+
 1. Launch **Boot Camp Assistant** from Launchpad \(it's in the Other folder on a fresh install\).
 2. Follow the directions in the assistant to partition your SSD and create a Windows 10 installer USB.
 3. After the process is done, _before restarting_, we need to delete some irrelevant drivers that do not apply to the NUC. The list of files to delete from the newly created Windows 10 installer USB is listed below.
@@ -35,7 +39,7 @@ You should also disable Fast Boot from Windows settings as well as the NUC BIOS 
 
 ### Drivers
 
-Apple drivers \(including Apple keyboards\) should be installed as part of the Boot Camp installer. If you used an [Apple Wifi replacement](../post-installation/wifi.md), then you need to get the Broadcom drivers [here](https://github.com/osy86/HaC-Mini/releases/download/v2.1/BCM94360CS2.zip). Finally, you should download the NUC drivers [from Intel](https://downloadcenter.intel.com/product/126143/Intel-NUC-Kit-NUC8i7HVK).
+Apple drivers \(including Apple keyboards\) should be installed as part of the Boot Camp installer. If you used an [Apple Wifi replacement](../post-installation/wifi.md), then you need to get the Broadcom drivers [here](https://github.com/osy/HaC-Mini/releases/download/v2.1/BCM94360CS2.zip). Finally, you should download the NUC drivers [from Intel](https://downloadcenter.intel.com/product/126143/Intel-NUC-Kit-NUC8i7HVK).
 
 ### Booting to/from Windows
 

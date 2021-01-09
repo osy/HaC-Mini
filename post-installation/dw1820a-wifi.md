@@ -1,6 +1,6 @@
 # DW1820A Wifi
 
-Although using a Wifi card from a real Mac is [recommended](wifi.md) due to native support, the community has developed an [alternative](https://github.com/osy86/HaC-Mini/issues/91) [solution](https://github.com/osy86/HaC-Mini/issues/113) to working Wifi and Bluetooth using the Dell DW1820A card. Note there are a few variants of this card and users have reported the most success with the "CN-08PKF4" model.
+Although using a Wifi card from a real Mac is [recommended](wifi.md) due to native support, the community has developed an [alternative](https://github.com/osy/HaC-Mini/issues/91) [solution](https://github.com/osy/HaC-Mini/issues/113) to working Wifi and Bluetooth using the Dell DW1820A card. Note there are a few variants of this card and users have reported the most success with the "CN-08PKF4" model.
 
 ![Make sure you get the &quot;CN-08PKF4&quot; model.](../.gitbook/assets/dell-dw1820a.png)
 
@@ -8,5 +8,6 @@ This card requires additional kernel patches to work and users have reported com
 
 ## Installation
 
-In the HaC Mini installer, make sure to check the option for **Dell DW1820A**.
+1. In BIOS, under Power, disable PCIE ASPM
+2. In the HaC Mini installer, make sure to check the option for **Dell DW1820A**.
 

@@ -1,14 +1,14 @@
 # Support
 
-Support is provided in the [Github issue tracker](https://github.com/osy86/HaC-Mini/issues). **Please search before posting.** If there is no existing ticket, it is important that you follow the instructions in the template for a new ticket and provide all the requested information! Issues without the requested information may be rejected.
+Support is provided in the [Github issue tracker](https://github.com/osy/HaC-Mini/issues). **Please search before posting.** If there is no existing ticket, it is important that you follow the instructions in the template for a new ticket and provide all the requested information! Issues without the requested information may be rejected.
 
 Do **not** ask for help in tonymacx86 \(better yet, stop going to tonymacx86!\). They do not permit discussion of anything except for their own "approved" installation methods--which are all pretty problematic. We tried to provide help there in the past but was banned for linking to a non-tonymac approved guide.
 
 ## Known Issues
 
-Outstanding issues are tracked and worked on in the [Github issues](https://github.com/osy86/HaC-Mini/issues). Some of the most common unresolved issues are documented here along with possible workarounds.
+Outstanding issues are tracked and worked on in the [Github issues](https://github.com/osy/HaC-Mini/issues). Some of the most common unresolved issues are documented here along with possible workarounds.
 
-### [USB disconnected on sleep wakeup](https://github.com/osy86/HaC-Mini/issues/8)
+### [USB disconnected on sleep wakeup](https://github.com/osy/HaC-Mini/issues/8)
 
 This is a hardware issue and cannot be worked around without Intel support or extensive kernel patching. If you require a USB device to not be disconnected \(an external HDD for example\), you can use the blue USB 3.0 Type A port on the front of the NUC. This port is connected to the CPU directly \(does not go through the buggy PCH\) and does not exhibit the same wakeup issue. However, it does experience a separate issue where if you have the device connected before powering on, then it will get disconnected after the first sleep. You should either plug in the device after OSX boots or suffer a single disconnect before the issue goes away.
 
@@ -33,6 +33,12 @@ Before asking for help, make sure you try all the following troubleshooting advi
 ### Getting into boot picker menu
 
 Reboot and when you see the boot logo, you need to hold or repeatedly tap the Alt key \(Opt key on Apple keyboards\). Sometimes holding works and sometimes tapping works and sometimes neither works. This is a known issue with OpenCore and you have to keep trying.
+
+### "This copy ... is damaged, and can’t be used to install macOS."
+
+If you get this message while installing, make sure your BIOS clock is set to the correct time and that you are connected to the internet.
+
+If that did not solve the issue, follow the [install instructions](../installation-guide/installation.md) again starting from the top, but this time do not select "Patch OSX Installer" after running the package. Finally, after installation, you have to follow the [upgrade instructions](../installation-guide/installation.md#update-existing-install).
 
 ### Reset NVRAM
 
