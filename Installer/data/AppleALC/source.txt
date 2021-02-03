@@ -1,2 +1,2 @@
-https://github.com/acidanthera/AppleALC/releases/download/1.5.6/AppleALC-1.5.6-RELEASE.zip
-2e9b9d976886810d94002937864abd497e7f8f01b6a4405fc8eda3e6c54bbf0b
+https://github.com/acidanthera/AppleALC/releases/download/1.5.7/AppleALC-1.5.7-RELEASE.zip
+f1683bbfd89f75cc6669abe934f7bd8c47790eb398bce339aafcc9f6fa056d91
