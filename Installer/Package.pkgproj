@@ -12893,7 +12893,7 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>LANGUAGE</key>
 												<string>English</string>
 												<key>VALUE</key>
-												<string>Wifi for stock Intel Wireless card. Requires HeliPort (https://github.com/OpenIntelWireless/HeliPort) to manage.</string>
+												<string>Wifi for stock Intel Wireless card.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
