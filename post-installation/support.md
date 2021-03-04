@@ -56,9 +56,9 @@ Sometimes incorrect settings and boot-args will cause issues. You need to [get i
 
 Make sure you are on the [latest BIOS version](https://downloadcenter.intel.com/product/126143). Also try resetting BIOS to factory settings and then re-do the [needed changes](../installation-guide/bios-settings.md).
 
-### Remove Wifi Card
+### Remove/disable Wifi Card and second M.2 drive
 
-There are known compatibility issues with the [DW1820A](dw1820a-wifi.md) and the Intel wireless card. If you cannot boot, remove the card and try again.
+There are known compatibility issues with the [DW1820A](dw1820a-wifi.md) and the Intel wireless card. There are also known issues with having a second M.2 drive installed \(for example Boot Camp Utility does not work if you have two internal drives\). One troubleshooting advice is to disable the hardware in BIOS and see if the problem persists. Alternatively, you may wish to physically remove the hardware while debugging the issue.
 
 ### Reinstall HaC Mini
 
