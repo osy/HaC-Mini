@@ -305,6 +305,11 @@
 				AwASWQ==
 				</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>ec-device</key>
+				<string>Intel_EC_V5</string>
+			</dict>
 		</dict>
 	</dict>
 	<key>Kernel</key>
