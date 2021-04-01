@@ -1,8 +1,6 @@
 # Support
 
-Support is provided in the [Github issue tracker](https://github.com/osy86/HaC-Mini/issues). **Please search before posting.** If there is no existing ticket, it is important that you follow the instructions in the template for a new ticket and provide all the requested information! Issues without the requested information may be rejected.
-
-Do **not** ask for help in tonymacx86 \(better yet, stop going to tonymacx86!\). They do not permit discussion of anything except for their own "approved" installation methods--which are all pretty problematic. We tried to provide help there in the past but was banned for linking to a non-tonymac approved guide.
+Check out the [Github Discussions](https://github.com/osy/HaC-Mini/discussions) for community discussion and support if you need help getting things set up. If you are running into issues or kernel panics or other bugs, please open a [Github issue](https://github.com/osy/HaC-Mini/issues) after doing a search to make sure the issue is not already reported. When opening an issue, please provide all the information in the template. If you are getting a panic or crash, please attach the crash log either as a text file or as a picture of the screen \(if it crashes during boot\). You need to [enable verbose logging](support.md#enable-verbose-boot) to see the crash log at boot.
 
 ## Known Issues
 
