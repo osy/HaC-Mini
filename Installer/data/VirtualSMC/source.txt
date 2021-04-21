@@ -1,2 +1,2 @@
-https://github.com/osy/VirtualSMC/releases/download/1.2.2-beta/VirtualSMC-1.2.2-beta-RELEASE.zip
-a5e2cc14545a3fcb8202d0940223ebea9b705573ab952b706b2f085f9f3beffe
+https://github.com/osy/VirtualSMC/releases/download/1.2.3-beta/VirtualSMC-1.2.3-beta-RELEASE.zip
+3928e7e4a583be2d0749ccf6b66d0d04772ea428b50414a1d326212b426d4297
