@@ -11483,7 +11483,7 @@
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>只在你有屏幕闪烁问题时选中此选项。一旦安装此选项，当屏幕开始闪烁时，你应该将屏幕睡眠后重新启动。这个临时方法有可能会降低你的电脑运行速度。</string>
+										<string>Apple服务需要使用唯一标示码。默认情况下，标示码将会继承本地原有OpenCore配置中的值。如果该选项被选中，将忽略原有的唯一标示码，并重新生成唯一标示码。</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -11513,7 +11513,7 @@
 										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
-										<string>减少屏幕闪烁</string>
+										<string>重新生成唯一标示码</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
