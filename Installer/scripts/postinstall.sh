@@ -63,6 +63,18 @@ echo "Installing ACPI"
 echo "Installing kexts"
 ./install_kexts.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/Kexts"
 
+if [ -f "$INSTALLER_TEMP/force_io80211family" ]; then
+    echo "Forcing IO80211Family to load on boot"
+    $PLIST_BUDDY -c "Add :Kernel:Force array" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0 dict" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0:Arch string Any" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0:BundlePath string System/Library/Extensions/IO80211Family.kext" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0:Enabled bool true" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0:Identifier string com.apple.iokit.IO80211Family" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0:ExecutablePath string Contents/MacOS/IO80211Family" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Add :Kernel:Force:0:PlistPath string Contents/Info.plist" "$NEW_CONFIG"
+fi
+
 echo "Setting up unique identifiers..."
 ./copy_serial.sh "$OLD_CONFIG" "$NEW_CONFIG"
 
