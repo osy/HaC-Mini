@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v1.3.0/AirportItlwm_v1.3.0_stable_Mojave.kext.zip
+c04e1b240ea5b4730072b788595854673643d3e8a33ba8ba6399d2f90638c885
