@@ -48,8 +48,7 @@ do
         $PLIST_BUDDY -c "Add :Kernel:Add:$i:MinKernel string $minKernel" "$CONFIG"
         rm "$KEXTDIR/$base.MinKernel.txt" # no longer needed
     fi
-    base="${base/.kext/}"
-    exe=`find "$line" -name "$base" -type f -maxdepth 3 | head -1`
+    exe=`find "$line" -path "*/Contents/MacOS/*" -type f -maxdepth 3 | head -1`
     exe="${exe/$line\//}"
     echo "ExecutablePath: $exe"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:ExecutablePath string $exe" "$CONFIG"
