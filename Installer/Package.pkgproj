@@ -686,6 +686,22 @@
 																	<integer>0</integer>
 																</dict>
 																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/HaCMiniSupport/CtlnaAHCIPort.kext.MinKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
 																	<key>BUNDLE_CAN_DOWNGRADE</key>
 																	<false/>
 																	<key>BUNDLE_POSTINSTALL_PATH</key>
@@ -6149,6 +6165,22 @@
 															<key>CHILDREN</key>
 															<array>
 																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/AirportBrcmFixup/AirPortBrcm4360_Injector.kext.MaxKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
 																	<key>BUNDLE_CAN_DOWNGRADE</key>
 																	<false/>
 																	<key>BUNDLE_POSTINSTALL_PATH</key>
@@ -11063,11 +11095,169 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/OpenIntelWireless/itlwm.kext</string>
+																	<string>data/OpenIntelWireless_BigSur/AirportItlwm.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PAYLOAD_FILENAME</key>
+																	<string>AirportItlwm_BigSur.kext</string>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_BigSur/AirportItlwm_BigSur.kext.MaxKernel.txt</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_BigSur/AirportItlwm_BigSur.kext.MinKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_Catalina/AirportItlwm.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PAYLOAD_FILENAME</key>
+																	<string>AirportItlwm_Catalina.kext</string>
+																	<key>PERMISSIONS</key>
 																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_Catalina/AirportItlwm_Catalina.kext.MaxKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_Catalina/AirportItlwm_Catalina.kext.MinKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>BUNDLE_CAN_DOWNGRADE</key>
+																	<false/>
+																	<key>BUNDLE_POSTINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>BUNDLE_PREINSTALL_PATH</key>
+																	<dict>
+																		<key>PATH_TYPE</key>
+																		<integer>1</integer>
+																	</dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_Mojave/AirportItlwm.kext</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PAYLOAD_FILENAME</key>
+																	<string>AirportItlwm_Mojave.kext</string>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_Mojave/AirportItlwm_Mojave.kext.MaxKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>data/OpenIntelWireless_Mojave/AirportItlwm_Mojave.kext.MinKernel.txt</string>
+																	<key>PATH_TYPE</key>
+																	<integer>1</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
 																	<key>TYPE</key>
 																	<integer>3</integer>
 																	<key>UID</key>
@@ -11212,6 +11402,8 @@
 				</dict>
 				<key>PREINSTALL_PATH</key>
 				<dict>
+					<key>PATH</key>
+					<string>scripts/set_force_io80211family.sh</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
@@ -11243,7 +11435,7 @@
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>1.0</string>
+				<string>2.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
