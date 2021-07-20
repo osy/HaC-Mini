@@ -97,7 +97,7 @@ UINT_32 SiLib::ComputePipeFromCoord(
 }
 ```
 
-The names sound promising because issues with "tiling" definitely corrosponds with the observed behaviour. Search for these function names actually gets us a hit in `AMDMTLBronzeDriver.bundle`! But it turns out to be false hope because even though addrlib is included in Apple's drivers \(multiple times actually; it's found in the OpenGL drivers and the graphics accelerator kext as well\), it seems to be vestigal code that's never called. It's likely that addrlib is used previously at some point but was later parts were replaced by a closed-source implementation.
+The names sound promising because issues with "tiling" definitely corrosponds with the observed behaviour. Search for these function names actually gets us a hit in `AMDMTLBronzeDriver.bundle`! But it turns out to be false hope because even though addrlib is included in Apple's drivers \(multiple times actually; it's found in the OpenGL drivers and the graphics accelerator kext as well\), it seems to be vestigial code that's never called. It's likely that addrlib is used previously at some point but was later parts were replaced by a closed-source implementation.
 
 ### Texture Issues
 
