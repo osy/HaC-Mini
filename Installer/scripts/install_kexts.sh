@@ -34,18 +34,21 @@ do
     echo "PlistPath:      $info"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:PlistPath string $info" "$CONFIG"
     base=`basename $kext`
-    # Kexts which should be blocked in Big Sur
-    if [ $base == "AirPortBrcm4360_Injector.kext" -o $base == "GK701HIDDevice.kext" ]; then
-        # TODO: better way of doing this
-        $PLIST_BUDDY -c "Add :Kernel:Add:$i:MaxKernel string 19.9.9" "$CONFIG"
+    # Find MaxKernel config
+    maxKernel=`cat "$KEXTDIR/$base.MaxKernel.txt" 2> /dev/null || true`
+    if [ ! -z "$maxKernel" ]; then
+        echo "MaxKernel:      $maxKernel"
+        $PLIST_BUDDY -c "Add :Kernel:Add:$i:MaxKernel string $maxKernel" "$CONFIG"
+        rm "$KEXTDIR/$base.MaxKernel.txt" # no longer needed
     fi
-    # Kexts which should be blocked before Big Sur
-    if [ $base == "CtlnaAHCIPort.kext" ]; then
-        # TODO: better way of doing this
-        $PLIST_BUDDY -c "Add :Kernel:Add:$i:MinKernel string 20.0.0" "$CONFIG"
+    # Find MinKernel config
+    minKernel=`cat "$KEXTDIR/$base.MinKernel.txt" 2> /dev/null || true`
+    if [ ! -z "$minKernel" ]; then
+        echo "MinKernel:      $minKernel"
+        $PLIST_BUDDY -c "Add :Kernel:Add:$i:MinKernel string $minKernel" "$CONFIG"
+        rm "$KEXTDIR/$base.MinKernel.txt" # no longer needed
     fi
-    base="${base/.kext/}"
-    exe=`find "$line" -name "$base" -type f -maxdepth 3 | head -1`
+    exe=`find "$line" -path "*/Contents/MacOS/*" -type f -maxdepth 3 | head -1`
     exe="${exe/$line\//}"
     echo "ExecutablePath: $exe"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:ExecutablePath string $exe" "$CONFIG"

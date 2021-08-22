@@ -17,6 +17,7 @@
 
 ## Technical Details <a id="details"></a>
 
+* [Hades Canyon NUC](details/hades-canyon-nuc.md)
 * [Metal Driver Fix](details/metal-driver-fix.md)
 * [Thunderbolt 3 Fix \(Part 1\)](details/thunderbolt-3-fix.md)
 * [Thunderbolt 3 Fix \(Part 2\)](details/thunderbolt-3-fix-part-2.md)

@@ -49,5 +49,5 @@ This is the only Hackintosh project developed from scratch to target a specific 
 
 #### Not Working/Issues
 
-Please report and track [issues here](https://github.com/osy/HaC-Mini/issues).
+Please report and track [issues here](https://github.com/osy86/HaC-Mini/issues).
 

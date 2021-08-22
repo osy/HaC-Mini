@@ -305,6 +305,11 @@
 				AwASWQ==
 				</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>ec-device</key>
+				<string>Intel_EC_V5</string>
+			</dict>
 		</dict>
 	</dict>
 	<key>Kernel</key>
@@ -486,6 +491,10 @@
 		<dict>
 			<key>HibernateMode</key>
 			<string>Auto</string>
+			<key>LauncherOption</key>
+			<string>Full</string>
+			<key>LauncherPath</key>
+			<string>Default</string>
 			<key>PickerAttributes</key>
 			<integer>19</integer>
 			<key>PickerMode</key>
@@ -503,8 +512,6 @@
 			<true/>
 			<key>BlacklistAppleUpdate</key>
 			<true/>
-			<key>BootProtect</key>
-			<string>Bootstrap</string>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
@@ -579,8 +586,6 @@
 		<dict>
 			<key>KeyForgetThreshold</key>
 			<integer>5</integer>
-			<key>KeyMergeThreshold</key>
-			<integer>2</integer>
 			<key>KeySupport</key>
 			<true/>
 			<key>KeySupportMode</key>

@@ -30,7 +30,7 @@ Note all data on the USB drive **will be erased**.
       7. UEFI Drivers -&gt; UsbKbDxe-64 \(needed for FileVault support\)
       8. FileVault 2 UEFI Drivers -&gt; AppleUISupport-64 \(for FileVault support\)
 6. Once the installation completes, you should see a new drive named **EFI** get mounted.
-7. Download the [HaC Mini release package](https://github.com/osy/HaC-Mini/releases) and merge the `EFI` directory into the one on the EFI drive. Replace any existing file \(which should just be _config.plist_\).
+7. Download the [HaC Mini release package](https://github.com/osy86/HaC-Mini/releases) and merge the `EFI` directory into the one on the EFI drive. Replace any existing file \(which should just be _config.plist_\).
 8. Safely remove the USB drive.
 
 ### Installing macOS
