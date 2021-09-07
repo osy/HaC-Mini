@@ -1,2 +1,2 @@
-https://github.com/OpenIntelWireless/itlwm/releases/download/v1.3.0/AirportItlwm_v1.3.0_stable_BigSur.kext.zip
-6000aeb7c6778c6b4ba8b215af26324e4751ca04784a701a790a1dbc1a6bd1ec
+https://github.com/OpenIntelWireless/itlwm/releases/download/v2.0.0/AirportItlwm_v2.0.0_stable_BigSur.kext.zip
+ea43819f5813cbe2ff75a6aa9d8d4234b15cdc0b162e6b1da7a25fdf30f59337
