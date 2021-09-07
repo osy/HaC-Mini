@@ -50,6 +50,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "GpuSpoof", 0x00001000)
                             "model", Buffer() { "Unknown" },
                             "device-id", Buffer() { 0xdf, 0x67, 0x00, 0x00 },
                             "revision-id", Buffer() { 0xc2, 0x00, 0x00, 0x00 },
+                            "no-gfx-spoof", Buffer() { 0x01, 0x00, 0x00, 0x00 },
                         }
                     Index(Local0, 1) = MODL ()
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))

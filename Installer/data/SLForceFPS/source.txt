@@ -1,2 +1,2 @@
-https://github.com/osy/SLForceFPS/releases/download/v1.0/SLForceFPS.zip
-928ea23bf7ca4d9149ac41b2e7465a85992567f2f1448bd1c99b0347a1ffd2d6
+https://github.com/osy/SLForceFPS/releases/download/v1.1/SLForceFPS.zip
+7688eb8c78a01a92a177bec752a33612c1286cbea81a9faa6a98262035381bdb
