@@ -298,17 +298,17 @@
 				AA==
 				</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>ec-device</key>
+				<string>Intel_EC_V5</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				AwASWQ==
 				</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
-			<dict>
-				<key>ec-device</key>
-				<string>Intel_EC_V5</string>
 			</dict>
 		</dict>
 	</dict>
@@ -528,10 +528,10 @@
 			<dict/>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
-				<key>run-efi-updater</key>
-				<string>No</string>
 				<key>boot-args</key>
 				<string>alcid=11 agdpmod=ignore -disablegfxfirmware</string>
+				<key>run-efi-updater</key>
+				<string>No</string>
 			</dict>
 		</dict>
 		<key>WriteFlash</key>
@@ -574,13 +574,39 @@
 			<key>JumpstartHotPlug</key>
 			<true/>
 		</dict>
+		<key>AppleInput</key>
+		<dict>
+			<key>GraphicsInputMirroring</key>
+			<true/>
+		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>HfsPlus.efi</string>
-			<string>OpenCanopy.efi</string>
-			<string>OpenRuntime.efi</string>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>HfsPlus.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenCanopy.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenRuntime.efi</string>
+			</dict>
 		</array>
 		<key>Input</key>
 		<dict>

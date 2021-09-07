@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v2.0.0/AirportItlwm_v2.0.0_stable_Monterey.kext.zip
+9b10d555cec1b764681d14a69348f9ba5e373145e04353d76993857c34295f7a

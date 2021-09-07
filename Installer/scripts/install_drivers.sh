@@ -14,5 +14,8 @@ while read line
 do
     driver="${line/$DRIVERSDIR\//}"
     echo "Found $driver"
-    $PLIST_BUDDY -c "Add :UEFI:Drivers:0 string $driver" "$CONFIG"
+    $PLIST_BUDDY -c "Add :UEFI:Drivers:0 dict" "$CONFIG"
+    $PLIST_BUDDY -c "Add :UEFI:Drivers:0:Path string $driver" "$CONFIG"
+    $PLIST_BUDDY -c "Add :UEFI:Drivers:0:Arguments string" "$CONFIG"
+    $PLIST_BUDDY -c "Add :UEFI:Drivers:0:Enabled bool true" "$CONFIG"
 done
