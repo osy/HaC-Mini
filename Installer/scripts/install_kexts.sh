@@ -23,14 +23,14 @@ do
         # VirtualSMC has to be second, or VSMC plugins
         # will not work
         i=1
-    elif [ $kext == "BlueToolFixup.kext" -a $at -gt 0 ]; then
+    elif [ $kext == "SMCSuperIO.kext" -a $at -gt 0 ]; then
         # VirtualSMC has to be second, or VSMC plugins
         # will not work
-        i=100
-    elif [ $kext == "BrcmPatchRAM3.kext" -a $at -gt 0 ]; then
+        i=2
+    elif [ $kext == "SMCProcessor.kext" -a $at -gt 0 ]; then
         # VirtualSMC has to be second, or VSMC plugins
         # will not work
-        i=101
+        i=3
     else
         i=$at
     fi
