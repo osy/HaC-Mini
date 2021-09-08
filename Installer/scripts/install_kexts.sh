@@ -23,6 +23,14 @@ do
         # VirtualSMC has to be second, or VSMC plugins
         # will not work
         i=1
+    #BlueToolFixup must be loaded after Polaris22Fixup or WEG, or stuck IOResourceMatch in Monterey b6.
+    # Might be bug or race conditions on BlueToolFixup Side
+    elif [ $kext == "Polaris22Fixup.kext" -a $at -gt 0 ]; then
+        i=2
+    elif [ $kext == "WhateverGreen.kext" -a $at -gt 0 ]; then
+        i=3
+    elif [ $kext == "BlueToolFixup.kext" -a $at -gt 0 ]; then
+        i=4
     else
         i=$at
     fi
