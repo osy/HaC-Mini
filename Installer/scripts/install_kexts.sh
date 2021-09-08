@@ -23,14 +23,6 @@ do
         # VirtualSMC has to be second, or VSMC plugins
         # will not work
         i=1
-    elif [ $kext == "SMCSuperIO.kext" -a $at -gt 0 ]; then
-        # VirtualSMC has to be second, or VSMC plugins
-        # will not work
-        i=2
-    elif [ $kext == "SMCProcessor.kext" -a $at -gt 0 ]; then
-        # VirtualSMC has to be second, or VSMC plugins
-        # will not work
-        i=3
     else
         i=$at
     fi
