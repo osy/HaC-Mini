@@ -24,7 +24,7 @@ done | sort | \
 while read line
 do
     priority=`echo $line | awk '{ print $1 }'`
-    file=`echo $line | awk '{ print $2 }'`
+    file=`echo $line | awk '{$1=""; print substr($0,2)}'`
     echo "Found $file (priority $priority)"
     kext="${file/$KEXTDIR\//}"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i dict" "$CONFIG"
