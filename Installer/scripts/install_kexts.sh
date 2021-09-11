@@ -9,36 +9,29 @@ PLIST_BUDDY="/usr/libexec/PlistBuddy"
 $PLIST_BUDDY -c "Delete :Kernel:Add" "$CONFIG" || true
 $PLIST_BUDDY -c "Add :Kernel:Add array" "$CONFIG"
 
-at=0
+i=0
 find "$KEXTDIR" -name '*.kext' -type d | \
 while read line
 do
-    echo "Found $line"
-    kext="${line/$KEXTDIR\//}"
-    if [ $kext == "Lilu.kext" ]; then
-        # we need Lilu to be first on the list
-        # or the computer can't boot
-        i=0
-    elif [ $kext == "VirtualSMC.kext" -a $at -gt 0 ]; then
-        # VirtualSMC has to be second, or VSMC plugins
-        # will not work
-        i=1
-    #BlueToolFixup must be loaded after Polaris22Fixup or WEG, or stuck IOResourceMatch in Monterey b6.
-    # Might be bug or race conditions on BlueToolFixup Side
-    elif [ $kext == "Polaris22Fixup.kext" -a $at -gt 0 ]; then
-        i=2
-    elif [ $kext == "WhateverGreen.kext" -a $at -gt 0 ]; then
-        i=3
-    elif [ $kext == "BlueToolFixup.kext" -a $at -gt 0 ]; then
-        i=4
-    else
-        i=$at
+    _pf="$line.Priority.txt"
+    _priority=9999
+    if [ -f "$_pf" ]; then
+        _priority=`cat "$_pf"`
+        rm "$_pf"
     fi
+    echo "$_priority $line"
+done | sort | \
+while read line
+do
+    priority=`echo $line | awk '{ print $1 }'`
+    file=`echo $line | awk '{ print $2 }'`
+    echo "Found $file (priority $priority)"
+    kext="${file/$KEXTDIR\//}"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i dict" "$CONFIG"
     echo "BundlePath:     $kext"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:BundlePath string $kext" "$CONFIG"
-    info=`find "$line" -name 'Info.plist' -type f -maxdepth 2 | head -1`
-    info="${info/$line\//}"
+    info=`find "$file" -name 'Info.plist' -type f -maxdepth 2 | head -1`
+    info="${info/$file\//}"
     echo "PlistPath:      $info"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:PlistPath string $info" "$CONFIG"
     base=`basename $kext`
@@ -56,10 +49,10 @@ do
         $PLIST_BUDDY -c "Add :Kernel:Add:$i:MinKernel string $minKernel" "$CONFIG"
         rm "$KEXTDIR/$base.MinKernel.txt" # no longer needed
     fi
-    exe=`find "$line" -path "*/Contents/MacOS/*" -type f -maxdepth 3 | head -1`
-    exe="${exe/$line\//}"
+    exe=`find "$file" -path "*/Contents/MacOS/*" -type f -maxdepth 3 | head -1`
+    exe="${exe/$file\//}"
     echo "ExecutablePath: $exe"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:ExecutablePath string $exe" "$CONFIG"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i:Enabled bool true" "$CONFIG"
-    at=`expr $at + 1`
+    i=`expr $i + 1`
 done
