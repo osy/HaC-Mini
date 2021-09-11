@@ -20,11 +20,11 @@ do
         rm "$_pf"
     fi
     echo "$_priority $line"
-done | sort -n | \
+done | sort | \
 while read line
 do
     priority=`echo $line | awk '{ print $1 }'`
-    file=`echo $line | awk '{ $1=""; print substr($0,2) }'`
+    file=`echo $line | awk '{$1=""; print substr($0,2)}'`
     echo "Found $file (priority $priority)"
     kext="${file/$KEXTDIR\//}"
     $PLIST_BUDDY -c "Add :Kernel:Add:$i dict" "$CONFIG"
