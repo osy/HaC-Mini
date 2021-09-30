@@ -1,2 +1,2 @@
-https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/v2.0.0/IntelBluetooth.zip
-f4cfd4a00a348f12e9767e780e13f50145c84df4162041c186fe3fd65bb8b900
+https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/v2.0.1/IntelBluetoothFirmware-v2.0.1.zip
+99c4ef9808b2d9e52afff3129a0ad16e7ae42e16f201dc156dfa55bc99bb3102
