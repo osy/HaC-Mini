@@ -543,6 +543,8 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>AdviseFeatures</key>
+			<true/>
 			<key>MLB</key>
 			<string>C07823609GUKXPGFB</string>
 			<key>ROM</key>

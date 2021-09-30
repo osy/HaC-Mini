@@ -81,7 +81,7 @@ echo "Setting up unique identifiers..."
 if [ -f "$INSTALLER_TEMP/security" ]; then
     echo "Setting secure boot settings..."
     $PLIST_BUDDY -c "Set :Misc:Security:Vault Secure" "$NEW_CONFIG"
-    $PLIST_BUDDY -c "Set :Misc:Security:SecureBootModel j174" "$NEW_CONFIG"
+    $PLIST_BUDDY -c "Set :Misc:Security:SecureBootModel Default" "$NEW_CONFIG"
     echo "Generating secure vault..."
     ./sign.command "$EFI_ROOT_DIR/EFI/OC"
     rm -rf "$EFI_ROOT_DIR/EFI/OC/Keys" # make sure to delete the private keys
