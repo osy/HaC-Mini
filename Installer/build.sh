@@ -38,6 +38,8 @@ do
     fi
     echo "Extracting $file to $output"
     unzip -o "$file" -d "$output"
+    # strip single directory unzips
+    mv "$output/${file%.*}/"* "$output" 2> /dev/null || true
 done
 
 echo "Compiling ASL..."
