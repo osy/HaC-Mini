@@ -1,2 +1,2 @@
-https://github.com/osy/HaC-Mini/releases/download/v2.0/HaCMiniSupport-v2.0.zip
-e303bb055a1c06d863cd007eacb5a7432bf9fa2d6d642dda5353b34b97ca51b5
+https://github.com/osy/HaC-Mini/releases/download/v3.1.0/HaCMiniSupport-v3.1.zip
+44f7f49e0f82c1140ff7dd36eb91147a52b758b37b4457413c4564eb69b85d91
