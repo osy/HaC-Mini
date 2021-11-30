@@ -575,6 +575,10 @@
 			<true/>
 			<key>JumpstartHotPlug</key>
 			<true/>
+			<key>MinDate</key>
+			<integer>20180621</integer>
+			<key>MinVersion</key>
+			<integer>748077008000000</integer>
 		</dict>
 		<key>AppleInput</key>
 		<dict>
