@@ -31,7 +31,7 @@ Note all data on the USB drive **will be erased**.
 3. Open up Disk Utility to format your USB drive:
    1. Find your USB drive in the left sidebar under External \(if there are multiple sub-drives under your USB drive, select the top-most one\). You may need to choose **View** -&gt; **Show All Devices** in order to see the full disk.
    2. Press the "Erase" button on the top toolbar.
-   3. Give the name **Installer** and make sure to select **GUID Partition Map** as the Scheme.
+   3. Give the name **Installer** and make sure to select **MacOS Extended (Journaled)** as the Format and **GUID Partition Map** as the Scheme.
    4. Press Erase, wait until it completes, and quit Disk Utility.
 4. Open up Terminal and create the installer
    1. Run the following command `sudo "/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia" --volume /Volumes/Installer` and type in your password when prompted.
