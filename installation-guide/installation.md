@@ -78,7 +78,7 @@ We will be doing a clean installation. That means the SSD will be wiped and **an
 ## Install or Update HaC Mini Patches
 
 {% hint style="info" %}
-This section is optional (but recommended) if you've followed "Patching OSX Installer" above. It is required for users os macOS Big Sur (11.0) and higher.
+This section is optional (but recommended) if you've followed "Patching OSX Installer" above. It is required for users on macOS Big Sur (11.0) and higher.
 {% endhint %}
 
 When a macOS update is released, you should install it through normal means. Major macOS updates may not work 100% on day one and may have known issues, you should check the [issues page](https://github.com/osy86/HaC-Mini/issues) before a major upgrade. When a [new release](https://github.com/osy86/HaC-Mini/releases/latest) of HaC Mini comes out, you can follow the steps below to update the drivers and patches. Always update HaC Mini first before updating macOS to avoid potential boot issues.
