@@ -87,6 +87,10 @@ When a macOS update is released, you should install it through normal means. Maj
 You should never follow instructions or install drivers found on other Hackintosh sites and "distributions" as they do not apply to HaC Mini. When applicable, follow instructions from Apple's KB site or instructions for Mac mini.
 {% endhint %}
 
+{% hint style="info" %}
+If you do not have Xcode or Xcode Command Line Tools installed, you need to run `xcode-select --install` in Terminal if you plan to enable secure boot.
+{% endhint %}
+
 1. Download the installer and run **HaCMini.pkg**
 2. Run the installer to completion
    1. You may wish to click _Customize_ at the third step to install additional drivers and optional patches.
