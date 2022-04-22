@@ -19,6 +19,7 @@ DefinitionBlock ("", "SSDT", 2, "OSY86 ", "BrcmFix", 0x00001000)
                         {
                             "pci-aspm-default", Buffer() { 0x00, 0x00 },
                             "brcmfx-country", Buffer() { "#a" },
+                            "brcmfx-delay", Buffer() { 0x00, 0x08 },
                         }
                     DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
                     Return (Local0)
