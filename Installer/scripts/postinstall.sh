@@ -50,11 +50,6 @@ if [ -f "$INSTALLER_TEMP/showpicker" ]; then
     $PLIST_BUDDY -c "Add :Misc:Boot:Timeout integer 5" "$NEW_CONFIG"
 fi
 
-if [ -f "$INSTALLER_TEMP/boot_hidpi" ]; then
-    echo "Enabling HiDPI"
-    $PLIST_BUDDY -c "Add :NVRAM:Add:4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14:UIScale data " "$NEW_CONFIG"
-fi
-
 # Add files to config
 echo "Installing drivers"
 ./install_drivers.sh "$NEW_CONFIG" "$EFI_ROOT_DIR/EFI/OC/Drivers"

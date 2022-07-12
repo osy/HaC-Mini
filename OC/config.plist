@@ -627,6 +627,8 @@
 		<dict>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>UIScale</key>
+			<integer>0</integer>
 		</dict>
 		<key>Quirks</key>
 		<dict>
