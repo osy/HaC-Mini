@@ -38,8 +38,13 @@ do
     fi
     echo "Extracting $file to $output"
     unzip -o "$file" -d "$output"
-    # strip single directory unzips
-    mv "$output/${file%.*}/"* "$output" 2> /dev/null || true
+    # strip single directory unzips; special path case for OpenIntelWireless
+    if [[ "$output" == *"OpenIntelWireless"* ]]
+    then
+        mv "$output/"*/*.kext "$output" 2> /dev/null || true
+    else
+        mv "$output/${file%.*}/"* "$output" 2> /dev/null || true
+    fi
 done
 
 echo "Compiling ASL..."
