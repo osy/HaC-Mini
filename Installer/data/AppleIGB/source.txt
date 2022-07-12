@@ -1,0 +1,2 @@
+https://github.com/donatengit/AppleIGB/releases/download/v0.4-eee-stall/AppleIGB-RELEASE.kext.zip
+bf51b5994895bf04ee9b84172fa954d78a71af37074b3d04afbc6bdd0938bd77
