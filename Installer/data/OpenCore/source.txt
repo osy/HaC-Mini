@@ -1,2 +1,2 @@
-https://github.com/dortania/build-repo/releases/download/OpenCorePkg-b06c6b3/OpenCore-0.8.3-RELEASE.zip
-2d67baefa2088368a71159a263b59d54ab46b5f91cd1ba89f592615ecf1fb303
+https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.5/OpenCore-0.8.5-RELEASE.zip
+29bd6c818e8214278930d05997d906b1c33af0af175097f8c824ec8fc58d2301

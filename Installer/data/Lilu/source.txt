@@ -1,2 +1,2 @@
-https://github.com/dortania/build-repo/releases/download/Lilu-e816fac/Lilu-1.6.1-RELEASE.zip
-6be115c23d502f5234b8e11878b2c71492ab494916d3f2dfe7127b8d6896b50b
+https://github.com/acidanthera/Lilu/releases/download/1.6.2/Lilu-1.6.2-RELEASE.zip
+1f828eb59a8cc2ad28f24af44b5559a2d21352d3a2b6c1525ced15b344d03b44
