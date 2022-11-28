@@ -70,6 +70,11 @@ if [ -f "$INSTALLER_TEMP/force_io80211family" ]; then
     $PLIST_BUDDY -c "Add :Kernel:Force:0:PlistPath string Contents/Info.plist" "$NEW_CONFIG"
 fi
 
+if [ -f "$INSTALLER_TEMP/notrim" ]; then
+    echo "Disabling TRIM on boot"
+    $PLIST_BUDDY -c "Add :Kernel:Quirks:SetApfsTrimTimeout integer 0" "$NEW_CONFIG"
+fi
+
 echo "Setting up unique identifiers..."
 ./copy_serial.sh "$OLD_CONFIG" "$NEW_CONFIG"
 
