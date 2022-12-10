@@ -88,7 +88,7 @@ You should never follow instructions or install drivers found on other Hackintos
 {% endhint %}
 
 {% hint style="info" %}
-If you do not have Xcode or Xcode Command Line Tools installed, you need to run `xcode-select --install` in Terminal if you plan to enable secure boot.
+If you do not have Xcode or Xcode Command Line Tools installed, you need to run `xcode-select --install` followed by `sudo xcodebuild -license` in Terminal if you plan to enable secure boot.
 {% endhint %}
 
 1. Download the installer and run **HaCMini.pkg**
