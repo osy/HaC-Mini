@@ -1,2 +1,2 @@
-https://github.com/acidanthera/WhateverGreen/releases/download/1.6.1/WhateverGreen-1.6.1-RELEASE.zip
-2b0e562123d0c16f6196568912206b4311004bd409a0211802466d9f305e4bf4
+https://github.com/acidanthera/WhateverGreen/releases/download/1.6.3/WhateverGreen-1.6.3-RELEASE.zip
+1262837d6cc8434b6077e914588c6633c128b631df626c3a3b38b478c27a133d
