@@ -13615,15 +13615,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>OpenCore mit Treibern, Patches und Konfigurationen für NUC Hades Canyon.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>OpenCore引导程序和为NUC冥王峡谷定制的驱动、补丁和配置。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Chargeur OpenCore avec pilotes, correctifs et configurations pour NUC Hades Canyon.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>OpenCore mit Treibern, Patches und Konfigurationen für NUC Hades Canyon.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -13649,6 +13655,12 @@
 										<key>VALUE</key>
 										<string>HaC Mini</string>
 									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>HaC Mini</string>
+									</dict>
 								</array>
 								<key>TYPE</key>
 								<integer>0</integer>
@@ -13668,15 +13680,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Nur verfügbar, wenn das Ziel ein OSX-Installationsprogramm ist. Dadurch wird das Installationsprogramm gepatcht, um HaC mini nach der Installation von OSX auf dem Ziel zu installieren. Das Installationsprogramm sollte nur für NUC Hades Canyon verwendet werden. Beachten Sie, dass alle hier ausgewählten benutzerdefinierten Installationsoptionen nur für das Installationsprogramm gelten. Wenn Sie in Ihrer Installation benutzerdefinierte Optionen verwenden möchten, führen Sie diese nach der Installation von OSX auf dem Zielcomputer aus.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>只在为macOS安装器打补丁时可用。该补丁会使macOS安装器在安装完成之后自动安装HaC Mini。该程序包不应用于除NUC冥王峡谷之外的设备。请注意当这个选项被选中后，所有的自定义安装选项都只会应用于macOS安装器。如果你希望在安装完成的macOS系统中使用这些自定义选项，请在macOS安装完成后再次运行此程序包。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Uniquement disponible si la cible est un programme d'installation OSX. Cela corrigera le programme d'installation pour installer HaC mini sur la cible après l'installation d'OSX. Le programme d'installation ne doit être utilisé que sur NUC Hades Canyon. Notez que toutes les options d'installation personnalisée sélectionnées ici ne s'appliquent qu'au programme d'installation. Si vous souhaitez utiliser des options personnalisées dans votre installation, veuillez l'exécuter sur la machine cible après l'installation d'OSX.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Nur verfügbar, wenn das Ziel ein OSX-Installationsprogramm ist. Dadurch wird das Installationsprogramm gepatcht, um HaC mini nach der Installation von OSX auf dem Ziel zu installieren. Das Installationsprogramm sollte nur für NUC Hades Canyon verwendet werden. Beachten Sie, dass alle hier ausgewählten benutzerdefinierten Installationsoptionen nur für das Installationsprogramm gelten. Wenn Sie in Ihrer Installation benutzerdefinierte Optionen verwenden möchten, führen Sie diese nach der Installation von OSX auf dem Zielcomputer aus.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -13736,15 +13754,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>OSX Installer patchen</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>为macOS安装器安装补丁</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Patcher le programme d'installation de macOS</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>OSX Installer patchen</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -13765,15 +13789,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Wenn diese Option aktiviert ist, wird die vorhandene EFI nach /Library/EFI-Backups kopiert. Andernfalls wird die vorhandene EFI/OC einschließlich aller Konfigurationen, Patches, Treiber usw. gelöscht.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>如果该选项被选中，本地原有的OpenCore EFI将会被复制到/Library/EFI-Backups中。否则，原有的/EFI/OC和所有的配置、补丁、驱动等将会被删除。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Si cette case est cochée, l'installation existante sera copiée dans /Library/EFI-Backups. Sinon, l'EFI/OC existant sera supprimé, y compris toutes les configurations, correctifs, pilotes, etc.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Wenn diese Option aktiviert ist, wird die vorhandene EFI nach /Library/EFI-Backups kopiert. Andernfalls wird die vorhandene EFI/OC einschließlich aller Konfigurationen, Patches, Treiber usw. gelöscht.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -13795,15 +13825,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Vorhandene OC EFI sichern</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>备份原有OpenCore EFI</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Sauvegarder l'OC EFI existant</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Vorhandene OC EFI sichern</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -13824,15 +13860,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Für Apple-Dienste sind eindeutige Kennungen (unique identifiers) erforderlich. Standardmäßig werden Kennungen aus einer vorhandenen OC-Installation kopiert. Andernfalls wird es generiert. Wenn Sie dies aktivieren, werden alle vorhandenen Daten ignoriert und Kennungen werden wieder neu generiert.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>Apple服务需要使用唯一标示码。默认情况下，标示码将会继承本地原有OpenCore配置中的值。如果该选项被选中，将忽略原有的唯一标示码，并重新生成唯一标示码。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Des identifiants uniques sont requis pour les services Apple. Par défaut, les identifiants sont copiés à partir d'une installation OC existante. Sinon, il sera généré. Le réglage de ceci ignorera toutes les données existantes et sera toujours régénéré.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Für Apple-Dienste sind eindeutige Kennungen (unique identifiers) erforderlich. Standardmäßig werden Kennungen aus einer vorhandenen OC-Installation kopiert. Andernfalls wird es generiert. Wenn Sie dies aktivieren, werden alle vorhandenen Daten ignoriert und Kennungen werden wieder neu generiert.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -13854,15 +13896,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Eindeutige Kennungen generieren</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>重新生成唯一标示码</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Régénérer des identifiants uniques</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Eindeutige Kennungen generieren</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -13886,15 +13934,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Richtet OC-signierte "Vault"-Funktionen ein. Wenn aktiviert, muss der "Vault" neu generiert und neu signiert werden, nachdem Änderungen vorgenommen wurden. Möglicherweise müssen Sie macOS auch nach der Wiederherstellung neu installieren.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>启用OpenCore签名保护功能。一旦启用，你必须在做出任何修改后重新生成并签名才可引导。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Active les fonctionnalités du coffre-fort signé OpenCore. Si cette option est activée, vous devez regénérer et signer à nouveau le coffre-fort après avoir apporté des modifications. Vous devrez peut-être également réinstaller macOS à partir de la partition de récupération.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Richtet OC-signierte "Vault"-Funktionen ein. Wenn aktiviert, muss der "Vault" neu generiert und neu signiert werden, nachdem Änderungen vorgenommen wurden. Möglicherweise müssen Sie macOS auch nach der Wiederherstellung neu installieren.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -13916,15 +13970,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Startsicherheit aktivieren</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>启用引导安全选项</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Activer la sécurité de démarrage</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Startsicherheit aktivieren</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -13945,15 +14005,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Zeigt Startmeldungen anstelle des Apple-Logos und des Fortschrittsbalkens an.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>显示详细的启动信息而不是苹果标志和进度条。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Afficher les messages de démarrage au lieu du logo Apple et de la barre de progression.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Zeigt Startmeldungen anstelle des Apple-Logos und des Fortschrittsbalkens an.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -13975,15 +14041,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Verbose-Start</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>详细模式</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Démarrage verbeux</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Verbose-Start</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -14004,15 +14076,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Deaktiviert den automatischen Neustart bei Kernel-Panik, aktiviert Symbole im Panikprotokoll und fügt zusätzliche Debug-Protokollierung hinzu.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>防止内核崩溃时系统自动重新启动，添加了详细日志引导标识符以记录详细调试日志。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Désactive le redémarrage automatique en cas de panique, active les symboles dans le journal de panique, ajoute une journalisation de débogage supplémentaire.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Deaktiviert den automatischen Neustart bei Kernel-Panik, aktiviert Symbole im Panikprotokoll und fügt zusätzliche Debug-Protokollierung hinzu.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14034,15 +14112,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Debug-Modus</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>调试模式</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Mode débogage</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Debug-Modus</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -14063,15 +14147,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Zeigt das Boot-Picker-Menü bei jedem Start 5 Sekunden lang an. Dies kann Probleme mit einem schwarzen Bildschirm beim Start umgehen.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>在每次启动时都显示5秒的引导菜单。这有时候可以解决启动后黑屏的问题。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Affichez le menu du sélecteur de démarrage pendant 5 secondes à chaque démarrage. Cela peut résoudre les problèmes avec un écran noir au démarrage.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Zeigt das Boot-Picker-Menü bei jedem Start 5 Sekunden lang an. Dies kann Probleme mit einem schwarzen Bildschirm beim Start umgehen.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14093,15 +14183,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Startmenü anzeigen</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>显示引导菜单</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Afficher le menu de démarrage</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Startmenü anzeigen</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -14122,15 +14218,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Wählen Sie diese Option, um vorhandene boot-args zu löschen. Nur erforderlich, wenn Sie boot-args in der Vergangenheit manuell geändert haben. Beim nächsten Neustart werden die boot-args mit der Standardeinstellung in config.plist überschrieben (auf die obigen Optionen eingestellt). Möglicherweise muss SIP deaktiviert werden (andernfalls schlägt die Installation möglicherweise fehl). Das Löschen des NVRAM aus dem OpenCore-Startmenü erreicht denselben Zweck.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>选中该选项以重置引导参数（boot-args）。只有在你手动调整过引导参数时需要使用。选中后，在下一次重新启动时，config.plist中的引导参数将被你现在所选的参数覆盖，反之则会保留。这可能需要禁用系统完整性保护（SIP），否则可能会导致安装失败。在OpenCore引导菜单中重置NVRAM也可以达到同样的效果。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Sélectionnez cette option pour effacer les arguments de démarrage existants. Nécessaire uniquement si vous avez modifié manuellement les arguments de démarrage dans le passé. Au prochain redémarrage, "boot-args" sera remplacé par la valeur par défaut dans config.plist (définie sur les options ci-dessus). Peut nécessiter la désactivation de SIP (l'installation peut échouer sinon). Effacer la NVRAM du menu de démarrage OpenCore atteint le même objectif.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Wählen Sie diese Option, um vorhandene boot-args zu löschen. Nur erforderlich, wenn Sie boot-args in der Vergangenheit manuell geändert haben. Beim nächsten Neustart werden die boot-args mit der Standardeinstellung in config.plist überschrieben (auf die obigen Optionen eingestellt). Möglicherweise muss SIP deaktiviert werden (andernfalls schlägt die Installation möglicherweise fehl). Das Löschen des NVRAM aus dem OpenCore-Startmenü erreicht denselben Zweck.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14152,15 +14254,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>boot-args zurücksetzen</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>重置引导参数（boot-args）</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Réinitialiser "boot-args"</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>boot-args zurücksetzen</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -14179,15 +14287,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Passen Sie die Starteinstellungen an. Möglicherweise muss das NVRAM gelöscht werden, damit Änderungen angewendet werden können.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>自定义引导设置。这可能需要重置NVRAM来生效。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Personnalisez les paramètres de démarrage. Peut nécessiter l'effacement de la NVRAM pour que les modifications s'appliquent.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Passen Sie die Starteinstellungen an. Möglicherweise muss das NVRAM gelöscht werden, damit Änderungen angewendet werden können.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -14207,15 +14321,21 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Boot Optionen</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>引导选项</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Options de démarrage</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Boot Optionen</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -14239,15 +14359,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Verwenden Sie Thunderbolt als eine PCIe-Brücke. Unterstützt Hotplug. Voll kompatibel mit Windows. Unterstützt keine nativen OSX Thunderbolt-Funktionen und eingeschränkte Unterstützung für Apple Thunderbolt-Geräte. Verursacht unter OSX manchmal Panik, wenn nichts angeschlossen ist.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>将雷雳作为PCIE桥。支持热拔插。与Windows完全兼容。不支持macOS原生雷雳功能，对Apple雷雳设备有限支持。可能会造成在无设备插入时系统内核错误</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Utilise Thunderbolt comme pont PCIE. Prend en charge la connexion à chaud. Entièrement compatible avec Windows. Ne prend pas en charge les fonctionnalités Thunderbolt natives de macOS et la prise en charge des appareils Thunderbolt Apple est limitée. Provoque parfois une panique macOS lorsque rien n'est branché.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Verwenden Sie Thunderbolt als eine PCIe-Brücke. Unterstützt Hotplug. Voll kompatibel mit Windows. Unterstützt keine nativen OSX Thunderbolt-Funktionen und eingeschränkte Unterstützung für Apple Thunderbolt-Geräte. Verursacht unter OSX manchmal Panik, wenn nichts angeschlossen ist.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14298,15 +14424,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Volle Thunderbolt-Unterstützung mit nativen Apple-Treibern. Erfordert nach dem Neustart das Patchen der NVM-Firmware (das Tool wird unter /Applications/Thunderbolt Patcher.app installiert). Die Windows-Kompatibilität ist eingeschränkt (USB funktioniert, kein Thunderbolt-Hotplug unter Windows).</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>由苹果原生驱动提供完整雷雳支持。需要在安装完成重新启动之后对NVM固件打补丁（工具将被安装到/Applications/Thunderbolt Patcher.app）。Windows有限兼容性（USB可用，不支持雷雳设备热拔插）。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Prise en charge complète de Thunderbolt avec les pilotes natifs Apple. Nécessite la mise à jour du micrologiciel NVM (l'outil sera installé sur /Applications/Thunderbolt Patcher.app) après le redémarrage. La compatibilité Windows est limitée (l'USB fonctionne, pas de connexion Thunderbolt à chaud sous Windows).</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Volle Thunderbolt-Unterstützung mit nativen Apple-Treibern. Erfordert nach dem Neustart das Patchen der NVM-Firmware (das Tool wird unter /Applications/Thunderbolt Patcher.app installiert). Die Windows-Kompatibilität ist eingeschränkt (USB funktioniert, kein Thunderbolt-Hotplug unter Windows).</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14380,15 +14512,21 @@
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Installiert die Thunderbolt 3 Unblocker-Erweiterung, um nicht unterstützte Peripheriegeräte (wie den Razer Core) zu umgehen. Gilt nur für native Thunderbolt.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>安装Thunderbolt 3 Unblocker内核扩展以绕过外设支持限制（如雷蛇战核Razer Core）。只可用于原生雷雳选项。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Installe l'extension Thunderbolt 3 Unblocker pour contourner les périphériques non pris en charge (tels que le Razer Core). Applicable uniquement à Thunderbolt natif.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Installiert die Thunderbolt 3 Unblocker-Erweiterung, um nicht unterstützte Peripheriegeräte (wie den Razer Core) zu umgehen. Gilt nur für native Thunderbolt.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14495,17 +14633,23 @@
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Thunderbolt-Unterstützung</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>雷雳支持。
 该选项需要更多的支持信息，请确保你阅读并理解以下内容： 
 https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#comparison</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Prise en charge de Thunderbolt</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Thunderbolt-Unterstützung</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -14557,15 +14701,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Sehr empfehlenswert. Verschiedene Patches für GPU/Display. Einschließlich: Intel QuickSync-Unterstützung und Behebung einer Kernel-Panik beim Verbose-Start. Einige Benutzer melden jedoch Probleme mit diesem Treiber. Daher ist es möglich, es zu deaktivieren, um festzustellen, ob Anzeigeprobleme behoben sind.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>强烈推荐。包含多个对显示/GPU的补丁。包括：英特尔QuickSync支持，修复一个详细模式下的内核错误。然而，有用户报告此驱动可能导致问题，因此提供此选项以解决一些显示问题。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Hautement recommandé. Plusieurs correctifs concernant l'affichage/GPU. Y compris : la prise en charge d'Intel QuickSync et la correction des panique du noyau lors d'un démarrage verbeux. Cependant, certains utilisateurs signalent des problèmes avec ce pilote, il est donc possible de le désactiver pour voir s'il résout les problèmes d'affichage.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Sehr empfehlenswert. Verschiedene Patches für GPU/Display. Einschließlich: Intel QuickSync-Unterstützung und Behebung einer Kernel-Panik beim Verbose-Start. Einige Benutzer melden jedoch Probleme mit diesem Treiber. Daher ist es möglich, es zu deaktivieren, um festzustellen, ob Anzeigeprobleme behoben sind.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14616,6 +14766,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Hautement recommandé. Active Airplay sur Mac et d'autres fonctionnalités dès Monterey.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>强烈推荐。开启Monterey的Airplay to Mac等功能。</string>
@@ -14663,16 +14819,22 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Patches für diese Drittanbieter-Netzwerkkarte. Stellen Sie sicher, dass PCIe ASPM im BIOS deaktiviert ist. Unterstützte Modelle: CN-08PKF4.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>这是一个针对第三方无线网卡的补丁。请保证在BIOS设置中"PCI-E ASPM"已被禁用。
 支持的型号：CN-08PKF4</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Correctifs pour cette carte réseau tierce. Assurez-vous que PCIE ASPM est désactivé dans le BIOS. Modèle pris en charge : CN-08PKF4.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Patches für diese Drittanbieter-Netzwerkkarte. Stellen Sie sicher, dass PCIe ASPM im BIOS deaktiviert ist. Unterstützte Modelle: CN-08PKF4.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14723,15 +14885,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Treiber für die serienmäßige Intel Wireless-Karte. Nur Bluetooth (kein WLAN). Unterstützte Modelle: 3165, 3168, 726x, 8265, 926x, 9560, AX200, AX201</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>原机自带的Intel无线模块驱动。该驱动只包含蓝牙（没有Wi-Fi）。支持的型号：3165, 3168, 726x, 8265, 926x, 9560, AX200, AX201</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Pilote pour la carte sans fil Intel d'origine. Bluetooth uniquement (pas de Wi-Fi). Modèles pris en charge : 3165, 3168, 726x, 8265, 926x, 9560, AX200, AX201</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Treiber für die serienmäßige Intel Wireless-Karte. Nur Bluetooth (kein WLAN). Unterstützte Modelle: 3165, 3168, 726x, 8265, 926x, 9560, AX200, AX201</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14786,6 +14954,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>WLAN für serienmäßige Intel Wireless-Karte.</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Wifi pour la carte sans fil Intel d'origine.</string>
+											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -14826,6 +15000,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Driver for the LAN2 port for macOS 12.0+. On older versions of macOS, Small Tree drivers are always used regardless if this is checked or not. This driver is still unstable and sometimes causes panics.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Pilote pour le port LAN2 pour macOS 12.0+. Sur les anciennes versions de macOS, les pilotes Small Tree sont toujours utilisés, que cette option soit cochée ou non. Ce pilote est toujours instable et provoque parfois des paniques.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -14890,15 +15070,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Treiber</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>驱动程序</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Pilotes</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Treiber</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -14922,15 +15108,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>AMD UVD/VCE für Hardware-Video-Codec-Funktionen verwenden.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>使用AMD UVD/VCE作为硬件视频编解码器。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Utilise AMD UVD/VCE pour les fonctionnalités de codec vidéo matériel.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>AMD UVD/VCE für Hardware-Video-Codec-Funktionen verwenden.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -15026,16 +15218,22 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Empfohlen. Erfordert, dass Intel IGPU im BIOS aktiviert ist. Verwenden Sie Intel QuickSync für Hardware-Video-Codec-Funktionen.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>推荐此选项。使用Intel QuickSync进行硬件编解码。
 需要在BIOS中启用Intel IGPU。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Recommandé. Nécessite l'activation de l'IGPU Intel dans le BIOS. Utilise Intel QuickSync pour les fonctionnalités de codec vidéo matériel.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Empfohlen. Erfordert, dass Intel IGPU im BIOS aktiviert ist. Verwenden Sie Intel QuickSync für Hardware-Video-Codec-Funktionen.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -15101,15 +15299,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Wählen Sie den zu verwendenden Hardware-Videodecodierer/-codierer aus. WhateverGreen erforderlich. Möglicherweise muss das NVRAM gelöscht werden, damit Änderungen angewendet werden können.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>选择你要使用哪个设备进行视频硬件编码/解码。需要WhateverGreen。可能需要重置NVRAM才可生效。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Sélectionnez le décodeur/encodeur vidéo matériel à utiliser. WhateverGreen requis. Peut nécessiter l'effacement de la NVRAM pour que les modifications s'appliquent.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Wählen Sie den zu verwendenden Hardware-Videodecodierer/-codierer aus. WhateverGreen erforderlich. Möglicherweise muss das NVRAM gelöscht werden, damit Änderungen angewendet werden können.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -15129,15 +15333,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Hardware-Video-Codec</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>硬件视频编解码器选择</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Codec vidéo matériel</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Hardware-Video-Codec</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -15161,15 +15371,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Wählen Sie diese Option nur aus, wenn Probleme mit dem Flackern des Bildschirms auftreten. Nach der Installation sollten Sie den NUC in den Ruhezustand versetzen und dann das Display aktivieren, wenn der Bildschirm zu flackern beginnt. Diese Problemumgehung erhöht den CPU- und Stromverbrauch und kann Ihren Computer verlangsamen.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>只在你有屏幕闪烁问题时选中。安装后，一旦屏幕开始闪烁，你应该关闭后再启动你的显示器。这个补丁会提高CPU占用率，并有可能降低你的电脑运行速度。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>A sélectionner uniquement si vous rencontrez des problèmes de scintillement d'écran. Une fois installé, lorsque l'écran commence à clignoter, vous devriez mettre en veille et rallumer l'écran. Cette solution de contournement augmentera l'utilisation du processeur et de l'alimentation et pourrait ralentir votre ordinateur.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Wählen Sie diese Option nur aus, wenn Probleme mit dem Flackern des Bildschirms auftreten. Nach der Installation sollten Sie den NUC in den Ruhezustand versetzen und dann das Display aktivieren, wenn der Bildschirm zu flackern beginnt. Diese Problemumgehung erhöht den CPU- und Stromverbrauch und kann Ihren Computer verlangsamen.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -15191,15 +15407,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Bildschirmflimmern verhindern</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>减少屏幕闪烁</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Réduire le scintillement de l'écran</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Bildschirmflimmern verhindern</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -15220,15 +15442,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>Einige NVMe-Geräte geraten zufällig in Panik (z.B. Samsung PM981). Dies ist nur erforderlich, wenn aufgrund von NVMe Abstürze auftreten.</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>一些NVMe设备会导致随机Panic，如三星PM981。只有你在遇到这种情况的时候才选中这个选项。</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Certains appareils NVMe paniqueront au hasard (Samsung PM981 par exemple). Ceci n'est nécessaire uniquemnt si vous rencontrez des plantages dus à NVMe.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>Einige NVMe-Geräte geraten zufällig in Panik (z.B. Samsung PM981). Dies ist nur erforderlich, wenn aufgrund von NVMe Abstürze auftreten.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -15250,15 +15478,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											</dict>
 											<dict>
 												<key>LANGUAGE</key>
-												<string>German</string>
-												<key>VALUE</key>
-												<string>NVMe Panik Fix</string>
-											</dict>
-											<dict>
-												<key>LANGUAGE</key>
 												<string>Simplified Chinese</string>
 												<key>VALUE</key>
 												<string>NVMe Panic 修复</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Correctif panique NVMe</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>German</string>
+												<key>VALUE</key>
+												<string>NVMe Panik Fix</string>
 											</dict>
 										</array>
 										<key>TYPE</key>
@@ -15276,6 +15510,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<string>English</string>
 												<key>VALUE</key>
 												<string>This fixes an issue with increased boot times on some NVMe drives. However, disabling TRIM may impact the lifespan of the SSD and should be enabled with caution.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Cela résout un problème d'augmentation des temps de démarrage sur certains lecteurs NVMe. Attention, la désactivation de TRIM peut avoir un impact sur la durée de vie du SSD et doit être activée avec prudence.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -15295,6 +15535,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>NVMe Disable TRIM</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>NVMe Désactiver TRIM</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -15311,6 +15557,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<string>English</string>
 												<key>VALUE</key>
 												<string>Big Sur removed support for some SATA controllers. This workaround adds them back but may cause issues if you are using an NVMe SSD.</string>
+											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Big Sur a enlevé la prise en charge de certains contrôleurs SATA. Cette solution de contournement les rajoute mais peut causer des problèmes si vous utilisez un SSD NVMe.</string>
 											</dict>
 										</array>
 										<key>OPTIONS</key>
@@ -15330,6 +15582,12 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>SATA support (macOS 11+)</string>
 											</dict>
+											<dict>
+												<key>LANGUAGE</key>
+												<string>French</string>
+												<key>VALUE</key>
+												<string>Prise en charge SATA (macOS 11+)</string>
+											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
@@ -15347,15 +15605,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Optionale Patches zur Problemumgehung von Treiberproblemen. Installieren Sie nur, wenn Probleme auftreten, da diese die Systemstabilität beeinträchtigen können.</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>可选的驱动补丁。只在你遇到特定问题时选中这些选项，因为它们可能会导致系统不稳定。</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Correctifs facultatifs pour résoudre les problèmes de pilote. Installez uniquement si vous rencontrez des problèmes, car ils peuvent réduire la stabilité du système.</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Optionale Patches zur Problemumgehung von Treiberproblemen. Installieren Sie nur, wenn Probleme auftreten, da diese die Systemstabilität beeinträchtigen können.</string>
 									</dict>
 								</array>
 								<key>OPTIONS</key>
@@ -15375,15 +15639,21 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 									</dict>
 									<dict>
 										<key>LANGUAGE</key>
-										<string>German</string>
-										<key>VALUE</key>
-										<string>Problemumgehungen</string>
-									</dict>
-									<dict>
-										<key>LANGUAGE</key>
 										<string>Simplified Chinese</string>
 										<key>VALUE</key>
 										<string>可选补丁</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>French</string>
+										<key>VALUE</key>
+										<string>Correctifs supplémentaires</string>
+									</dict>
+									<dict>
+										<key>LANGUAGE</key>
+										<string>German</string>
+										<key>VALUE</key>
+										<string>Problemumgehungen</string>
 									</dict>
 								</array>
 								<key>TYPE</key>
@@ -15475,22 +15745,33 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 					</dict>
 					<dict>
 						<key>LANGUAGE</key>
-						<string>German</string>
+						<string>Simplified Chinese</string>
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>languages/de-de/introduction.rtfd</string>
+							<string>languages/zh-cn/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
 					</dict>
 					<dict>
 						<key>LANGUAGE</key>
-						<string>Simplified Chinese</string>
+						<string>French</string>
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>languages/zh-cn/introduction.rtfd</string>
+							<string>languages/fr-fr/introduction.rtfd</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>German</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>languages/de-de/introduction.rtfd</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -15533,22 +15814,33 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 					</dict>
 					<dict>
 						<key>LANGUAGE</key>
-						<string>German</string>
+						<string>Simplified Chinese</string>
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>languages/de-de/readme.rtf</string>
+							<string>languages/zh-cn/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
 					</dict>
 					<dict>
 						<key>LANGUAGE</key>
-						<string>Simplified Chinese</string>
+						<string>French</string>
 						<key>VALUE</key>
 						<dict>
 							<key>PATH</key>
-							<string>languages/zh-cn/readme.rtf</string>
+							<string>languages/fr-fr/readme.rtf</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>German</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>languages/de-de/readme.rtf</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -15572,13 +15864,19 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 					</dict>
 					<dict>
 						<key>LANGUAGE</key>
-						<string>German</string>
+						<string>Simplified Chinese</string>
 						<key>VALUE</key>
 						<string>HaC Mini</string>
 					</dict>
 					<dict>
 						<key>LANGUAGE</key>
-						<string>Simplified Chinese</string>
+						<string>French</string>
+						<key>VALUE</key>
+						<string>HaC Mini</string>
+					</dict>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>German</string>
 						<key>VALUE</key>
 						<string>HaC Mini</string>
 					</dict>
