@@ -1,2 +1,2 @@
-https://github.com/acidanthera/FeatureUnlock/releases/download/1.0.9/FeatureUnlock-1.0.9-RELEASE.zip
-776fcabbd3039d854e896c6572f06ce906620a5acf87b4b7bce125e3090dae82
+https://github.com/acidanthera/FeatureUnlock/releases/download/1.1.3/FeatureUnlock-1.1.3-RELEASE.zip
+1fc6fc927f62df09dd88937ddfa17ad092e324614d608e73219d67e6d6612fca
