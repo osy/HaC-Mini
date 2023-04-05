@@ -30,7 +30,11 @@ Before asking for help, make sure you try all the following troubleshooting advi
 
 ### Getting into boot picker menu
 
-Reboot and when you see the boot logo, you need to hold or repeatedly tap the Alt key (Opt key on Apple keyboards). Sometimes holding works and sometimes tapping works and sometimes neither works. This is a known issue with OpenCore and you have to keep trying.
+Reboot and when you see the boot logo, press F10 when starting up the computer and you should see the BIOS boot menu.
+
+* If you see the name of your boot device, select it and immediately tap the Alt key (Opt key on Apple keyboards) until the OpenCore boot picker shows up.
+* If you see one entry for "OpenCore", select it and immediately tap the Alt key repeatedly (Opt key on Apple keyboards) until the OpenCore boot picker shows up.
+* If you see multiple entries for "OpenCore" or if selecting it fails (for example, it throws you back in the BIOS menu), then you need to reset your BIOS settings and follow the [first part of the guide](../installation-guide/bios-settings.md) again.
 
 ### "This copy ... is damaged, and can’t be used to install macOS."
 
