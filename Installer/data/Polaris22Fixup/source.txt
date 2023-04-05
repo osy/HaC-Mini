@@ -1,2 +1,2 @@
-https://github.com/goodbest/Polaris22Fixup/releases/download/v1.3.7/Polaris22Fixup.kext.zip
+https://github.com/goodbest/Polaris22Fixup/releases/download/v1.3.7/Polaris22Fixup-v1.3.7.zip
 2f5d1de46901be13dc9481fac0a55dd4caeb6328940625c8f460c10ea5b1be4c
