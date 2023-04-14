@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v2.2.0-alpha/AirportItlwm-Ventura-v2.2.0-DEBUG-alpha-ddd2768.zip
+ae6bdd14ba15918ee71fcb7a78819d84ab7775a7b924a97972d29c2e64aecaa9
