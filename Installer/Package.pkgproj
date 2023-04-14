@@ -778,7 +778,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/HaCMiniSupport/NUCO2SDXC.kext</string>
+																	<string>data/BigSurSDXC/BigSurSDXC.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -794,7 +794,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/HaCMiniSupport/NUCO2SDXC.kext.MinKernel.txt</string>
+																	<string>data/BigSurSDXC/BigSurSDXC.kext.MinKernel.txt</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
