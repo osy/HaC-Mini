@@ -11039,6 +11039,8 @@
 																	<string>data/OpenIntelWireless_Ventura/AirportItlwm.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
+																	<key>PAYLOAD_FILENAME</key>
+																	<string>AirportItlwm_Ventura.kext</string>
 																	<key>PERMISSIONS</key>
 																	<integer>493</integer>
 																	<key>TYPE</key>
