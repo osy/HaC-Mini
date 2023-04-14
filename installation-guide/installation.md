@@ -39,10 +39,6 @@ Note all data on the USB drive **will be erased**.
 
 ### Patching OSX Installer
 
-{% hint style="info" %}
-macOS Big Sur (11.0) and higher no longer supports installer patching. Skip this section if this applies to you.
-{% endhint %}
-
 We will use the HaC Mini installer (link at top of the page) to modify the vanilla OSX installer to install HaC Mini automatically after OSX installation completes.
 
 1. Make sure your OSX installer USB is inserted and open **HaCMini.pkg**
@@ -52,8 +48,8 @@ We will use the HaC Mini installer (link at top of the page) to modify the vanil
    1. Make sure you do **not** select your booted drive or you will install HaC Mini on the computer you're currently using.
    2. If the OSX installer USB cannot be selected, make sure the installer is for OSX 10.14.5 or later.
 5. Press _Continue_ and then _Customize_
-6. Check _Patch OSX installer_ if it is not disabled
-   1. If the option is disabled, make sure you selected the OSX installer USB as the destination in the previous step.
+6. (Optional) Check _Patch OSX installer_
+   1. If the option is disabled and you are installing macOS Catalina or earlier, make sure you selected the OSX installer USB as the destination in the previous step.
    2. If it is still disabled, the macOS installer is not compatible. You can still proceed, however, you must follow the [update section](installation.md#update-existing-install) after installing macOS.
 7. Press _Install_ and finish the installation.
 
