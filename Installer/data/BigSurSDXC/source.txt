@@ -1,0 +1,2 @@
+https://github.com/dortania/OpenCore-Legacy-Patcher/blob/f1d67923c827be2deebb1172333e7f0afb340583/payloads/Kexts/Misc/BigSurSDXC-v1.0.0.zip?raw=true
+cae42ad863f5d4ae8a622ce1a9632f7268952fdeeb43306fe7f0d2be7275d3f8
