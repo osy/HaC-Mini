@@ -11036,7 +11036,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>data/OpenIntelWireless_Ventura/AirportItlwm_Ventura.kext</string>
+																	<string>data/OpenIntelWireless_Ventura/AirportItlwm.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
