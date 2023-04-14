@@ -90,7 +90,7 @@ else
 fi
 
 echo "Unmounting ESP..."
-umount "$EFI_ROOT_DIR"
+umount "$EFI_ROOT_DIR" || true
 rm -f "$EFI_ROOT_DIR"
 
 if [ -f "$INSTALLER_TEMP/faketmp" ]; then
