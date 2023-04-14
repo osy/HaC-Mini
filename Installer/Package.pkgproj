@@ -13929,21 +13929,21 @@
 																	<key>BUNDLE_POSTINSTALL_PATH</key>
 																	<dict>
 																		<key>PATH_TYPE</key>
-																		<integer>0</integer>
+																		<integer>1</integer>
 																	</dict>
 																	<key>BUNDLE_PREINSTALL_PATH</key>
 																	<dict>
 																		<key>PATH_TYPE</key>
-																		<integer>0</integer>
+																		<integer>1</integer>
 																	</dict>
 																	<key>CHILDREN</key>
 																	<array/>
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>/Users/topiga/Documents/GitHub/HaC-Mini/Installer/data/BigSurSDXC/BigSurSDXC.kext</string>
+																	<string>data/BigSurSDXC/BigSurSDXC.kext</string>
 																	<key>PATH_TYPE</key>
-																	<integer>0</integer>
+																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
 																	<integer>493</integer>
 																	<key>TYPE</key>
@@ -13957,25 +13957,9 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>/Users/topiga/Documents/GitHub/HaC-Mini/Installer/data/BigSurSDXC/BigSurSDXC.kext.MinKernel.txt</string>
+																	<string>data/BigSurSDXC/BigSurSDXC.kext.MinKernel.txt</string>
 																	<key>PATH_TYPE</key>
-																	<integer>0</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>/Users/topiga/Documents/GitHub/HaC-Mini/Installer/data/BigSurSDXC/source.txt</string>
-																	<key>PATH_TYPE</key>
-																	<integer>0</integer>
+																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
 																	<integer>420</integer>
 																	<key>TYPE</key>
@@ -14047,7 +14031,7 @@
 							<key>PATH_TYPE</key>
 							<integer>2</integer>
 							<key>PERMISSIONS</key>
-							<integer>509</integer>
+							<integer>493</integer>
 							<key>TYPE</key>
 							<integer>2</integer>
 							<key>UID</key>
@@ -14135,13 +14119,13 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
-				<true/>
+				<false/>
 				<key>IDENTIFIER</key>
-				<string>com.osy86.hacmini.newsdxc</string>
+				<string>com.osy86.hacmini.driversdxc</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
-				<string>BigSurSDXC</string>
+				<string>DriverSDXC</string>
 				<key>OVERWRITE_PERMISSIONS</key>
 				<false/>
 				<key>PAYLOAD_SIZE</key>
@@ -14158,7 +14142,7 @@
 			<key>TYPE</key>
 			<integer>0</integer>
 			<key>UUID</key>
-			<string>3604DF85-4597-4092-A512-C4ED5A81FE58</string>
+			<string>921CC6FA-8C1A-4426-9E63-CBB5F831E04C</string>
 		</dict>
 	</array>
 	<key>PROJECT</key>
@@ -15451,12 +15435,6 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>Driver for the SDXC port for macOS 12.0+. On older versions of macOS, another driver is used by default, so enabling this on lower versions is useless. This driver is still in testing. It comes from OpenCore Legacy Patcher.</string>
 											</dict>
-											<dict>
-												<key>LANGUAGE</key>
-												<string>French</string>
-												<key>VALUE</key>
-												<string>Pilote pour le port de cartes SD pour macOS 12 et supérieur. Avec les anciennes versions de macOS, un autre pilote est activé par défaut, ainsi, activer celui-ci est inutile pour les versions antérieures. Ce pilote est en phase de test, il vient d'OpenCore Legacy Patcher</string>
-											</dict>
 										</array>
 										<key>OPTIONS</key>
 										<dict>
@@ -15466,7 +15444,7 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 											<integer>2</integer>
 										</dict>
 										<key>PACKAGE_UUID</key>
-										<string>3604DF85-4597-4092-A512-C4ED5A81FE58</string>
+										<string>921CC6FA-8C1A-4426-9E63-CBB5F831E04C</string>
 										<key>TITLE</key>
 										<array>
 											<dict>
@@ -15475,17 +15453,11 @@ https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix-part-3#compariso
 												<key>VALUE</key>
 												<string>SDXC Driver (Experimental)</string>
 											</dict>
-											<dict>
-												<key>LANGUAGE</key>
-												<string>French</string>
-												<key>VALUE</key>
-												<string>Pilote SDXC (Experimental)</string>
-											</dict>
 										</array>
 										<key>TYPE</key>
 										<integer>0</integer>
 										<key>UUID</key>
-										<string>BABDC0C5-5CF1-4130-8507-D9DEBE0BF41C</string>
+										<string>C22DEA0A-72B2-40B5-93A6-D2CBEBAB3166</string>
 									</dict>
 								</array>
 								<key>DESCRIPTION</key>
