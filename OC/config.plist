@@ -477,10 +477,6 @@
 			<true/>
 			<key>AppleXcpmCfgLock</key>
 			<true/>
-			<key>DisableIoMapper</key>
-			<true/>
-			<key>DisableIoMapperMapping</key>
-			<true/>
 			<key>DisableLinkeditJettison</key>
 			<true/>
 			<key>PanicNoKextDump</key>
