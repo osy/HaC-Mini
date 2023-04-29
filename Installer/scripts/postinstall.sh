@@ -91,7 +91,7 @@ fi
 
 echo "Unmounting ESP..."
 umount "$EFI_ROOT_DIR" || true
-rm -f "$EFI_ROOT_DIR"
+rmdir "$EFI_ROOT_DIR" || true
 
 if [ -f "$INSTALLER_TEMP/faketmp" ]; then
     rmdir -p "$DEST_TMP" || true
