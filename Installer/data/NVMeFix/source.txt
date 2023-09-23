@@ -1,2 +1,2 @@
-https://github.com/acidanthera/NVMeFix/releases/download/1.1.0/NVMeFix-1.1.0-RELEASE.zip
-9ad186673ec7a1a9bd5785dc23695bec2b7c7496ccffc10aa282c655250ab7f4
+https://github.com/acidanthera/NVMeFix/releases/download/1.1.1/NVMeFix-1.1.1-RELEASE.zip
+ee6f381f909aa307711d63ea4b29099d9e9aca16d0d5bcc371533a7fa9177a91
