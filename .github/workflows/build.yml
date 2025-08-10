@@ -17,10 +17,10 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
       - name: Cache DMGs
         id: cache-dmgs
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: dmgs
           key: packages-dmg
@@ -32,12 +32,12 @@ jobs:
       - name: Install Packages
         run: |
           hdiutil attach dmgs/Packages.dmg
-          sudo installer -pkg /Volumes/Packages*/packages/Packages.pkg -target /
+          sudo installer -pkg /Volumes/Packages*/*.pkg -target /
           hdiutil detach /Volumes/Packages*
       - name: Build Package
         run: Installer/build.sh
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Installer
           path: Installer/build/HaCMini.pkg
@@ -48,7 +48,7 @@ jobs:
     if: github.event_name == 'release'
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: Installer
       - name: Upload Release Asset

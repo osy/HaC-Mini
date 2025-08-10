@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Catalina.kext.zip
+68ce60fa7c1f625ba3d07e8ad1b36798e6fffe076f7d0cd021db39b09367d7fb

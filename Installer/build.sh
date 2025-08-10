@@ -8,6 +8,9 @@ THUNDERBOLT="$BASEDIR/../Thunderbolt"
 PACKAGES_BUILD=/usr/local/bin/packagesbuild
 DATA="$BASEDIR/data"
 IASL="$DATA/ACPI/iasl"
+# for better git file tracking, distinguish kext url data(RAW_DATA) and build data (DATA)
+RAW_DATA="$BASEDIR/raw_data"
+cp -r "$DATA" "$RAW_DATA"
 
 if [ ! -f "$PACKAGES_BUILD" ]; then
     echo "Please install http://s.sudre.free.fr/Software/Packages/about.html"
@@ -39,9 +42,10 @@ do
     echo "Extracting $file to $output"
     unzip -o "$file" -d "$output"
     # strip single directory unzips; special path case for OpenIntelWireless
-    if [[ "$output" == *"OpenIntelWireless"* ]]
+    if [[ "$output" == *"AirportItlwm"* ]]
     then
-        mv "$output/"*/*.kext "$output" 2> /dev/null || true
+        file=`basename "$output"`
+        mv "$output"/AirportItlwm.kext "$output"/"$file".kext 2> /dev/null || true
     else
         mv "$output/${file%.*}/"* "$output" 2> /dev/null || true
     fi
@@ -77,3 +81,7 @@ sed 's/enable_currentUserHome="false"//g;s/enable_localSystem="false"//g' "$BASE
 mv "$BASEDIR/build/HaCMini/Distribution.new" "$BASEDIR/build/HaCMini/Distribution"
 pkgutil --flatten "$BASEDIR/build/HaCMini" "$BASEDIR/build/HaCMini.pkg"
 rm -rf "$BASEDIR/build/HaCMini"
+# for better git file tracking, keep only the kext url data, but not the extracted files.
+# comment the following lines if you modify Packages.
+rm -rf "$DATA" 
+mv "$RAW_DATA" "$DATA"

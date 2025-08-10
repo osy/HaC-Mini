@@ -1,2 +1,2 @@
-https://github.com/acidanthera/AppleALC/releases/download/1.8.1/AppleALC-1.8.1-RELEASE.zip
-d6f3b8ba88eeb4b6c3d9e2e24efeb0bfeb6b54519075d68d33a24ffaa4ac7646
+https://github.com/acidanthera/AppleALC/releases/download/1.9.5/AppleALC-1.9.5-RELEASE.zip
+6e76e2e04b3e67942a0a6d5eec75999f77a2d6c19fb3f4b269806cf1927e2550

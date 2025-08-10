@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Ventura.kext.zip
+7ea19307ef9ae08991d911e6f1de59e682444e21dbcd6342b5e0a037f19c860e

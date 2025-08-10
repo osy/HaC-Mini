@@ -1,0 +1,2 @@
+https://github.com/dortania/OpenCore-Legacy-Patcher/raw/1.5.0/payloads/Kexts/Wifi/IO80211FamilyLegacy-v1.0.0.zip
+e681dcc76a2cd2cea4b0ad5f27a3c816055fde3cdccd890dd10a3e2c84e96d93

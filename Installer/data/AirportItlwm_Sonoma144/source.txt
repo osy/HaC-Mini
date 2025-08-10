@@ -1,0 +1,2 @@
+https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Sonoma14.4.kext.zip
+7ef12a8037eb9bc795828c348f4fa0728b8ade57aa0984b037816ef91c2d5119
